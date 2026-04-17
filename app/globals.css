@@ -132,10 +132,12 @@ body {
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  margin: 25px 0 10px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 10px;
   color: #1db954;
-  text-shadow: 0 0 15px rgba(29, 185, 84, 0.7);
+  text-shadow:
+    0 0 4px #1db954,  /* inner shine */
+    0 0 10px #00ff88; /* crisp outer glow */
   animation: fadeSlideDown 1.2s ease forwards;
 }
 
