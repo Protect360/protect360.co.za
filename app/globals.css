@@ -77,18 +77,19 @@ body {
 .hero {
   position: relative;
   text-align: center;
-  padding: 120px 20px 60px;
+  padding: 80px 20px 40px;
   background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
+/* ===== Hero Content ===== */
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  gap: 10px;
 }
 
 /* ===== Slogan Box ===== */
@@ -114,9 +115,9 @@ body {
 /* ===== Hero Logo ===== */
 .hero-logo {
   display: block;
-  margin: 40px auto 40px;
-  width: 80%;
-  max-width: 700px;
+  margin: 10px auto;
+  width: 85%;
+  max-width: 720px;
   height: auto;
 }
 
