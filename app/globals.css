@@ -62,7 +62,6 @@ body {
   font-weight: 700;
 }
 
-/* Two-tone logo effect */
 .two-tone {
   background: linear-gradient(to right, #1db954, #007bff);
   -webkit-background-clip: text;
@@ -118,13 +117,6 @@ body {
   min-height: 100vh;
 }
 
-.slogan {
-  text-align: center;
-  padding: 60px 20px 20px;
-  font-size: 1.3rem;
-  color: #ccc;
-}
-
 .interactive-services {
   display: flex;
   justify-content: center;
@@ -168,7 +160,6 @@ body {
   line-height: 1.4;
 }
 
-/* Optional: pause animation on hover */
 .service-card:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
@@ -178,10 +169,13 @@ body {
 .brands {
   text-align: center;
   margin-top: 80px;
+  background-color: #0a1a2f;
+  padding: 60px 20px;
 }
 
 .brands h2 {
-  margin-bottom: 20px;
+  color: #1db954;
+  margin-bottom: 30px;
 }
 
 .brand-scroll {
@@ -230,7 +224,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* Grid layout for service boxes */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -266,7 +259,6 @@ body {
   line-height: 1.4;
 }
 
-/* Fade-in animation for each box */
 .fade-in {
   animation: fadeInBox 0.8s ease forwards;
 }
@@ -352,47 +344,9 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.fade-in {
-  animation: fadeIn 1.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 /* ===== Footer ===== */
 .footer {
   text-align: center;
   padding: 25px 20px;
   background-color: #081423;
   color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid #1db954;
-}
-
-.footer-content p {
-  margin: 6px 0;
-}
-
-.footer-links a {
-  color: #1db954;
-  text-decoration: none;
-  margin: 0 6px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #fff;
-}
-
-/* ===== Layout Structure ===== */
-.layout-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-}
