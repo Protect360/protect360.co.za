@@ -63,7 +63,7 @@ export default function Navbar() {
             <li><Link href="/products">Products</Link></li>
             <li><Link href="/services">Services</Link></li>
             <li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/about">About</Link></li>
+            <li><Link href="/about">About Us</Link></li>
             <li><Link href="/reviews">Reviews</Link></li>
             <li><Link href="/gallery">Gallery</Link></li>
           </>
@@ -75,7 +75,7 @@ export default function Navbar() {
             {!isProducts && <li><Link href="/products">Products</Link></li>}
             {!isServices && <li><Link href="/services">Services</Link></li>}
             {!isContact && <li><Link href="/contact">Contact</Link></li>}
-            {!isAbout && <li><Link href="/about">About</Link></li>}
+            {!isAbout && <li><Link href="/about">About Us</Us></Link></li>}
           </>
         )}
       </ul>
