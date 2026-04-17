@@ -37,14 +37,13 @@ export default function HomePage() {
 
   return (
     <main className="home-page">
-      {/* Slogan */}
-      <section className="slogan">
-        <p>Your first choice for uncompromising security solutions.</p>
-      </section>
-
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content">
+        <div className="slogan-box">
+    <p>Your first choice for uncompromising security solutions.</p>
+  </div>
+
+  <div className="hero-content">
           <h1 className="hero-heading two-tone">Protect 360 (Pty) Ltd</h1>
           <p className="hero-subheading">Home & Business Security Systems</p>
           <div className="hero-buttons">
