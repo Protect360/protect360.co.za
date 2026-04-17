@@ -111,7 +111,7 @@ body {
   text-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
 }
 
-/* ===== Interactive Services ===== */
+/* ===== Interactive Services (Home Page) ===== */
 .interactive-services {
   text-align: center;
 }
@@ -192,7 +192,7 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* ===== Services Page Refined ===== */
+/* ===== Services Page (Individual Boxes) ===== */
 .services-page {
   text-align: center;
   padding: 60px 20px;
@@ -215,7 +215,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* Grid layout for individual service boxes */
+/* Grid layout for service boxes */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

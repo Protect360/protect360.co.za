@@ -5,27 +5,60 @@ export default function ServicesPage() {
       <section className="services-block">
         <h2>CORE SERVICES</h2>
         <p>Security Systems We Install and Support</p>
-        <ul>
-          <li><strong>Alarm Systems</strong> — Instant alerts for intrusion detection and rapid response through integrated monitoring.</li>
-          <li><strong>Electric Fencing</strong> — Strong perimeter defense that deters threats and reinforces property boundaries.</li>
-          <li><strong>CCTV Systems</strong> — 24/7 high-definition monitoring with clear footage and remote viewing access.</li>
-          <li><strong>Gate & Door Automation</strong> — Secure and convenient entry solutions for residential and commercial properties.</li>
-          <li><strong>Access Control</strong> — Biometric and card-based systems to manage and track authorized entry points.</li>
-          <li><strong>Intercom Systems</strong> — Clear communication between entry points and occupants for tighter visitor control.</li>
-        </ul>
+        <div className="services-grid">
+          <div className="service-box fade-in">
+            <strong>Alarm Systems</strong>
+            <span>Instant alerts for intrusion detection and rapid response through integrated monitoring.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Electric Fencing</strong>
+            <span>Strong perimeter defense that deters threats and reinforces property boundaries.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>CCTV Systems</strong>
+            <span>24/7 high-definition monitoring with clear footage and remote viewing access.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Gate & Door Automation</strong>
+            <span>Secure and convenient entry solutions for residential and commercial properties.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Access Control</strong>
+            <span>Biometric and card-based systems to manage and track authorized entry points.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Intercom Systems</strong>
+            <span>Clear communication between entry points and occupants for tighter visitor control.</span>
+          </div>
+        </div>
       </section>
 
       {/* Complete Service Lifecycle */}
       <section className="services-block">
         <h2>OUR EXPERTISE BEYOND PRODUCTS</h2>
         <p>Complete Service Lifecycle</p>
-        <ul>
-          <li><strong>Installation</strong> — Professional setup, testing, and optimization for flawless performance.</li>
-          <li><strong>Assessments & Quotes</strong> — On-site evaluations and transparent, tailored quotations before commitment.</li>
-          <li><strong>Maintenance & Repairs</strong> — Scheduled maintenance and responsive repairs to ensure system reliability.</li>
-          <li><strong>Add-Ons & Upgrades</strong> — Seamless expansion with additional cameras, access control, or fencing upgrades.</li>
-          <li><strong>Fault-Finding & Troubleshooting</strong> — Fast diagnostics and issue resolution to minimize downtime and restore security.</li>
-        </ul>
+        <div className="services-grid">
+          <div className="service-box fade-in">
+            <strong>Installation</strong>
+            <span>Professional setup, testing, and optimization for flawless performance.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Assessments & Quotes</strong>
+            <span>On-site evaluations and transparent, tailored quotations before commitment.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Maintenance & Repairs</strong>
+            <span>Scheduled maintenance and responsive repairs to ensure system reliability.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Add-Ons & Upgrades</strong>
+            <span>Seamless expansion with additional cameras, access control, or fencing upgrades.</span>
+          </div>
+          <div className="service-box fade-in">
+            <strong>Fault-Finding & Troubleshooting</strong>
+            <span>Fast diagnostics and issue resolution to minimize downtime and restore security.</span>
+          </div>
+        </div>
       </section>
     </main>
   );
