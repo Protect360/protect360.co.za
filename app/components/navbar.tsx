@@ -20,8 +20,8 @@ export default function Navbar() {
           <Image
             src="/logos/logo.png"
             alt="Protect 360 Logo"
-            width={140}
-            height={70}
+            width={60}
+            height={60}
             priority
             className="navbar-logo"
           />
