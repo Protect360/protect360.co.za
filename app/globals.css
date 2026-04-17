@@ -130,6 +130,7 @@ body {
     -1px 0 #007bff,  /* blue left edge */
     0 1px #1db954,   /* green bottom edge */
     0 -1px #007bff;  /* blue top edge */
+}
 
 /* Buttons */
 .btn {
