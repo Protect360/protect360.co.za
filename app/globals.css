@@ -12,7 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0a1a2f;
-  padding: 20px 60px;
+  padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -20,13 +20,16 @@ body {
 }
 
 .navbar-logo img {
-  height: 70px;
-  margin-right: 20px;
-  transition: transform 0.3s ease;
+  height: 60px;
 }
 
-.navbar-logo img:hover {
-  transform: scale(1.05);
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 .navbar-links {
@@ -37,15 +40,37 @@ body {
   padding: 0;
 }
 
-.navbar-links a {
+.navbar-links li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-.navbar-links a:hover {
+.navbar-links li a:hover {
   color: #1db954;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #0a1a2f;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  }
+  .navbar-links.open {
+    display: flex;
+  }
 }
 
 /* ===== Hero Section ===== */
@@ -330,9 +355,24 @@ body {
 /* ===== Footer ===== */
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px 20px;
   background-color: #081423;
-  font-size: 0.9rem;
   color: #aaa;
+  font-size: 0.9rem;
   border-top: 1px solid #1db954;
+}
+
+.footer-content p {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: #1db954;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
 }
