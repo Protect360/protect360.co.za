@@ -109,8 +109,6 @@ body {
   max-width: 90%;
   margin: 0 auto 30px;
   display: block;
-  filter: drop-shadow(0 0 12px rgba(29, 185, 84, 0.4));
-  animation: fadeSlideDown 1.2s ease forwards;
 }
 
 /* Buttons */
