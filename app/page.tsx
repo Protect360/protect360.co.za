@@ -1,104 +1,93 @@
-import Image from 'next/image';
-
 export default function HomePage() {
   return (
     <main className="home-page">
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-heading">Protect 360 (Pty) Ltd</h1>
-          <p className="hero-subheading">
-            Home & Business Security Systems — built with precision, reliability, and trust.
-          </p>
+          {/* Logo-style company name */}
+          <h1 className="hero-heading two-tone">Protect 360 (Pty) Ltd</h1>
+          <p className="hero-subheading">Home & Business Security Systems</p>
           <div className="hero-buttons">
             <a href="https://wa.me/27791836591" className="btn btn-primary">
-              Chat on WhatsApp
+              WhatsApp
             </a>
             <a href="tel:+27791836591" className="btn btn-secondary">
-              Call Us
+              Phone
             </a>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="services-overview">
+      {/* Slogan */}
+      <section className="slogan">
+        <p>Your first choice for uncompromising security solutions.</p>
+      </section>
+
+      {/* Interactive Services */}
+      <section className="interactive-services">
         <h2>Our Core Services</h2>
-        <ul className="service-list">
-          <li>Alarm Systems</li>
-          <li>Electric Fencing</li>
-          <li>CCTV Systems</li>
-          <li>Gate & Door Automation</li>
-          <li>Access Control</li>
-          <li>Intercom Systems</li>
-          <li>Maintenance & Repairs</li>
-          <li>Fault‑Finding & Troubleshooting</li>
-        </ul>
-      </section>
-
-      {/* Contact Section */}
-      <section className="contact-section">
-        <h2>Ready to secure what matters most?</h2>
-        <p>Tell us about your requirements and we’ll reach out with a tailored solution.</p>
-
-        <div className="contact-details">
-          <div className="contact-info">
-            <p><strong>Phone:</strong> +27 79 183 6591</p>
-            <p><strong>Email:</strong> info@protect360.co.za</p>
-            <p><strong>Address:</strong> 79 Voortrekker Road, Nigel, Gauteng, 1490</p>
-            <p><strong>Operating Hours:</strong></p>
-            <ul>
-              <li>Mon – Thu: 07:30 – 17:00</li>
-              <li>Fri: 08:00 – 15:00</li>
-              <li>Sat: 08:30 – 13:00</li>
-              <li>Sun: Closed</li>
-            </ul>
+        <div className="services-grid">
+          <div className="service-item">
+            <span className="glow-text">Alarm Systems</span>
+            <div className="tooltip">Instant alerts for intrusion detection and rapid response through integrated monitoring.</div>
           </div>
-
-          <div className="contact-form">
-            <form>
-              <label>Name</label>
-              <input type="text" placeholder="Your full name" />
-              <label>Email</label>
-              <input type="email" placeholder="you@example.com" />
-              <label>Project details</label>
-              <textarea placeholder="What type of security solution do you need?" />
-              <button type="submit" className="btn btn-primary">Send Enquiry</button>
-            </form>
+          <div className="service-item">
+            <span className="glow-text">Electric Fencing</span>
+            <div className="tooltip">Strong perimeter defense that deters threats and reinforces property boundaries.</div>
           </div>
-        </div>
-
-        <div className="map fade-in">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.905679497489!2d28.468212417443848!3d-26.4265202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e94d96e6124e2bb%3A0xa898d04de78aae9a!2sProtect%20360%20(Pty)%20Ltd.!5e0!3m2!1sen!2sza!4v1776407686854!5m2!1sen!2sza"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div className="service-item">
+            <span className="glow-text">CCTV Systems</span>
+            <div className="tooltip">24/7 high-definition monitoring with clear footage and remote viewing access.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Gate & Door Automation</span>
+            <div className="tooltip">Secure and convenient entry solutions for residential and commercial properties.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Access Control</span>
+            <div className="tooltip">Biometric and card-based systems to manage and track authorized entry points.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Intercom Systems</span>
+            <div className="tooltip">Clear communication between entry points and occupants for tighter visitor control.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Installation</span>
+            <div className="tooltip">Professional setup, testing, and optimization for flawless performance.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Assessments & Quotes</span>
+            <div className="tooltip">On-site evaluations and transparent, tailored quotations before commitment.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Maintenance & Repairs</span>
+            <div className="tooltip">Scheduled maintenance and responsive repairs to ensure system reliability.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Add-Ons & Upgrades</span>
+            <div className="tooltip">Seamless expansion with additional cameras, access control, or fencing upgrades.</div>
+          </div>
+          <div className="service-item">
+            <span className="glow-text">Fault-Finding & Troubleshooting</span>
+            <div className="tooltip">Fast diagnostics and issue resolution to minimize downtime and restore security.</div>
+          </div>
         </div>
       </section>
 
-      {/* Trusted Brands */}
+      {/* Brands Section */}
       <section className="brands">
-        <h2>Trusted Brands</h2>
-        <p>Official Brands We Work With</p>
-        <div className="brand-logos">
-          <Image src="/brands/dsc.png" alt="DSC" width={100} height={100} />
-          <Image src="/brands/texecom.png" alt="Texecom" width={100} height={100} />
-          <Image src="/brands/paradox.png" alt="Paradox" width={100} height={100} />
-          <Image src="/brands/ids.png" alt="IDS" width={100} height={100} />
-          <Image src="/brands/hikvision.png" alt="Hikvision" width={100} height={100} />
-          <Image src="/brands/dahua.png" alt="Dahua" width={100} height={100} />
-          <Image src="/brands/hilook.png" alt="HiLook" width={100} height={100} />
+        <h2>Official Brands We Work With</h2>
+        <div className="brand-scroll">
+          <img src="/brands/dsc.png" alt="DSC" />
+          <img src="/brands/texecom.png" alt="Texecom" />
+          <img src="/brands/paradox.png" alt="Paradox" />
+          <img src="/brands/ids.png" alt="IDS" />
+          <img src="/brands/hikvision.png" alt="Hikvision" />
+          <img src="/brands/dahua.png" alt="Dahua" />
+          <img src="/brands/hilook.png" alt="HiLook" />
+          {/* Add more logos here */}
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2026 Protect 360 (Pty) Ltd. All rights reserved.</p>
-      </footer>
     </main>
   );
 }
