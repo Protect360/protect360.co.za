@@ -45,11 +45,12 @@ export default function HomePage() {
 
   <div className="hero-content">
     <Image
-      src="/logos/logo-text.png"
+      src="/logos/logo text.png"
       alt="Protect 360 Logo"
       className="hero-logo"
       width={200}
       height={200}
+      priority
     />
 
     <div className="hero-buttons">
