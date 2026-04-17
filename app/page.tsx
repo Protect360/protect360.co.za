@@ -51,18 +51,11 @@ export default function HomePage() {
       </section>
 
       {/* Carousel Services */}
-      <section className="carousel-services">
-        <div className="carousel-container">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`carousel-box ${index === activeIndex ? "active" : ""}`}
-            >
-              {service}
-            </div>
-          ))}
-        </div>
-      </section>
+<section className="carousel-services">
+  <div className="carousel-box active">
+    {services[activeIndex]}
+  </div>
+</section>
 
       {/* Brands Section */}
       <section className="brands">
