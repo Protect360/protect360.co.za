@@ -15,14 +15,15 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
+      <div className="navbar-left">
         <Link href="/">
           <Image
             src="/logos/logo.png"
             alt="Protect 360 Logo"
-            width={120}
-            height={60}
+            width={140}
+            height={70}
             priority
+            className="navbar-logo"
           />
         </Link>
       </div>
