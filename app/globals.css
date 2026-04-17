@@ -388,7 +388,7 @@ body {
   flex: 1;
 }
 
-/* ===== Homepage Single‑Box Carousel ===== */
+/* ===== Homepage Sliding Carousel ===== */
 .carousel-services {
   display: flex;
   justify-content: center;
@@ -396,6 +396,7 @@ body {
   padding: 60px 20px;
   background-color: #081423;
   min-height: 180px;
+  overflow: hidden;
 }
 
 .carousel-box {
@@ -407,12 +408,30 @@ body {
   font-weight: 600;
   font-size: 1.3rem;
   box-shadow: 0 0 25px rgba(29, 185, 84, 0.6);
-  transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.8s ease;
-  opacity: 1;
   text-align: center;
+  position: relative;
+  animation: slideIn 0.8s ease forwards;
 }
 
-.carousel-box.active {
+/* Slide‑in from right to left */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Glow effect for active box */
+.carousel-box.slide {
   transform: scale(1.1);
   box-shadow: 0 0 35px rgba(29, 185, 84, 0.9);
+}
+
+/* Pause animation on hover */
+.carousel-services:hover .carousel-box {
+  animation-play-state: paused;
 }

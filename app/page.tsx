@@ -19,13 +19,21 @@ export default function HomePage() {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+
+  const startCarousel = () => {
+    const id = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 2500);
+    setIntervalId(id);
+  };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % services.length);
-    }, 2500); // change every 2.5 seconds
-    return () => clearInterval(interval);
-  }, [services.length]);
+    startCarousel();
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <main className="home-page">
@@ -51,11 +59,15 @@ export default function HomePage() {
       </section>
 
       {/* Carousel Services */}
-<section className="carousel-services">
-  <div className="carousel-box active">
-    {services[activeIndex]}
-  </div>
-</section>
+      <section
+        className="carousel-services"
+        onMouseEnter={() => intervalId && clearInterval(intervalId)}
+        onMouseLeave={() => startCarousel()}
+      >
+        <div key={activeIndex} className="carousel-box slide">
+          {services[activeIndex]}
+        </div>
+      </section>
 
       {/* Brands Section */}
       <section className="brands">
