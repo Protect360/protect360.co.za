@@ -123,16 +123,13 @@ body {
   font-size: 1.3rem;
   margin-bottom: 30px;
   font-weight: 700;
-  color: transparent; /* base text transparent for gradient fill */
-  background: linear-gradient(to right, #1db954, #007bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff; /* solid base text */
+  text-align: center;
   text-shadow:
-    1px 1px 0 #1db954,   /* green outline */
-    -1px -1px 0 #007bff, /* blue outline */
-    1px -1px 0 #1db954,  /* diagonal blend */
-    -1px 1px 0 #007bff;  /* opposite diagonal blend */
-}
+    1px 0 #1db954,   /* green right edge */
+    -1px 0 #007bff,  /* blue left edge */
+    0 1px #1db954,   /* green bottom edge */
+    0 -1px #007bff;  /* blue top edge */
 
 /* Buttons */
 .btn {
