@@ -135,11 +135,11 @@ body {
   letter-spacing: 0.5px;
   margin: 20px 0 10px;
   color: #1db954;
- /* Crisp, shiny glow */
+ /* Clean, sharp shine — no fog */
   text-shadow:
-    0 0 2px #1db954,   /* sharp inner edge */
-    0 0 6px #00ff88,   /* bright highlight */
-    0 0 12px #00ff88;  /* subtle outer shine */
+    0 0 1px #1db954,   /* crisp edge */
+    0 0 3px #1db954,   /* subtle glow */
+    0 0 6px #00ff88;   /* light accent */
   animation: fadeSlideDown 1.2s ease forwards;
 }
 
@@ -147,7 +147,7 @@ body {
 @keyframes fadeSlideDown {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-25px);
   }
   to {
     opacity: 1;
