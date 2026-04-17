@@ -1,24 +1,39 @@
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
+"use client";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
+  // === Carousel Logic ===
+  const services = [
+    "Alarm Systems",
+    "Electric Fencing",
+    "CCTV Systems",
+    "Gate & Door Automation",
+    "Access Control",
+    "Intercom Systems",
+    "Installation",
+    "Assessments & Quotes",
+    "Maintenance & Repairs",
+    "Add‑Ons & Upgrades",
+    "Fault‑Finding & Troubleshooting",
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setActiveIndex((prev) => (prev + 1) % 11); // 11 = number of services
-  }, 2500); // change every 2.5 seconds
-  return () => clearInterval(interval);
-}, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 2500); // change every 2.5 seconds
+    return () => clearInterval(interval);
+  }, [services.length]);
 
   return (
     <main className="home-page">
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          {/* Logo-style company name */}
-          <h1 className="hero-heading two-tone">Protect 360 (Pty) Ltd</h1>
-          <p className="hero-subheading">Home & Business Security Systems</p>
+          <h1 className="hero-heading two-tone">Protect 360 (Pty) Ltd</h1>
+          <p className="hero-subheading">Home & Business Security Systems</p>
           <div className="hero-buttons">
             <a href="https://wa.me/27791836591" className="btn btn-primary">
               WhatsApp
@@ -36,34 +51,22 @@ useEffect(() => {
       </section>
 
       {/* Carousel Services */}
-<section className="carousel-services">
-  <div className="carousel-container">
-    {[
-      "Alarm Systems",
-      "Electric Fencing",
-      "CCTV Systems",
-      "Gate & Door Automation",
-      "Access Control",
-      "Intercom Systems",
-      "Installation",
-      "Assessments & Quotes",
-      "Maintenance & Repairs",
-      "Add‑Ons & Upgrades",
-      "Fault‑Finding & Troubleshooting",
-    ].map((service, index) => (
-      <div
-        key={index}
-        className={`carousel-box ${index === activeIndex ? "active" : ""}`}
-      >
-        {service}
-      </div>
-    ))}
-  </div>
-</section>
+      <section className="carousel-services">
+        <div className="carousel-container">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`carousel-box ${index === activeIndex ? "active" : ""}`}
+            >
+              {service}
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Brands Section */}
       <section className="brands">
-        <h2>Official Brands We Work With</h2>
+        <h2>Official Brands We Work With</h2>
         <div className="brand-scroll">
           <Image src="/brands/dsc.png" alt="DSC" width={100} height={100} />
           <Image src="/brands/texecom.png" alt="Texecom" width={100} height={100} />
@@ -72,7 +75,6 @@ useEffect(() => {
           <Image src="/brands/hikvision.png" alt="Hikvision" width={100} height={100} />
           <Image src="/brands/dahua.png" alt="Dahua" width={100} height={100} />
           <Image src="/brands/hilook.png" alt="HiLook" width={100} height={100} />
-          {/* Add more logos here */}
         </div>
       </section>
     </main>
