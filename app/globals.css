@@ -83,6 +83,14 @@ body {
   overflow: hidden;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* centers vertically */
+  min-height: 100%;         /* ensures full height usage */
+}
+
 /* ===== Slogan Box ===== */
 .slogan-box {
   position: absolute;
@@ -105,10 +113,19 @@ body {
 
 /* ===== Hero Logo ===== */
 .hero-logo {
-  width: 420px;
-  max-width: 100%;
-  margin: 0 auto 30px;
   display: block;
+  margin: 40px auto 40px;
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 95%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
 }
 
 /* Buttons */
