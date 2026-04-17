@@ -1,40 +1,90 @@
+/* ===== Base Styles ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #0a1a2f; /* dark blue theme */
+  background-color: #0a1a2f;
   color: #fff;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 8px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a1a2f;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.btn-primary {
-  background-color: #1db954; /* green WhatsApp style */
-  color: #fff;
+.navbar-logo img {
+  height: 60px;
+  transition: transform 0.3s ease;
 }
 
-.btn-secondary {
-  background-color: #007bff; /* blue */
-  color: #fff;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-.hover-bounce:hover {
+.navbar-logo img:hover {
   transform: scale(1.05);
 }
 
-/* Hero Section */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #1db954;
+}
+
+/* ===== Mobile Navbar ===== */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Hide links on mobile until toggled */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0a1a2f;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+/* ===== Hero Section ===== */
 .hero {
   text-align: center;
   padding: 100px 20px;
@@ -51,7 +101,36 @@ body {
   margin-bottom: 30px;
 }
 
-/* Animations */
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #1db954;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.hover-bounce:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Animations ===== */
 .animate-fade-in {
   animation: fadeIn 1.5s ease forwards;
 }
@@ -72,13 +151,11 @@ body {
 .animate-staggered li:nth-child(4) { animation-delay: 0.8s; }
 .animate-staggered li:nth-child(5) { animation-delay: 1s; }
 .animate-staggered li:nth-child(6) { animation-delay: 1.2s; }
-/* Add more nth-child delays as needed */
 
 .animate-pulse {
   animation: pulse 2s infinite;
 }
 
-/* Keyframes */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -95,7 +172,7 @@ body {
   100% { transform: scale(1); }
 }
 
-/* Sections */
+/* ===== Highlights Section ===== */
 .highlights {
   padding: 60px 20px;
   text-align: center;
@@ -111,18 +188,21 @@ body {
   font-size: 1.1rem;
 }
 
+/* ===== Service Area Section ===== */
 .service-area {
   padding: 60px 20px;
   text-align: center;
 }
 
+/* ===== Call to Action Section ===== */
 .cta {
   text-align: center;
   padding: 80px 20px;
   background: linear-gradient(135deg, #1c3b5a, #0a1a2f);
 }
 
-.brands, .testimonials {
+/* ===== Trusted Brands Section ===== */
+.brands {
   padding: 60px 20px;
   text-align: center;
 }
@@ -135,4 +215,18 @@ body {
 
 .brand-logos img:hover {
   filter: brightness(1.2);
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-placeholder {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #1db954;
+  border-radius: 8px;
+  background-color: #0f2a45;
 }

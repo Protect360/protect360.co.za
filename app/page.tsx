@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function HomePage() {
   return (
     <main className="home-page">
@@ -48,14 +50,14 @@ export default function HomePage() {
           Serving Nigel and surrounding Gauteng areas. Larger projects considered nationwide.
         </p>
         <div className="map animate-pulse">
-          {/* Map embed or placeholder */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!..."
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.905679497489!2d28.468212417443848!3d-26.4265202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e94d96e6124e2bb%3A0xa898d04de78aae9a!2sProtect%20360%20(Pty)%20Ltd.!5e0!3m2!1sen!2sza!4v1776407686854!5m2!1sen!2sza"
             width="100%"
-            height="300"
+            height="350"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>
@@ -78,14 +80,13 @@ export default function HomePage() {
         <h2>Trusted Brands</h2>
         <p>Official Brands We Work With</p>
         <div className="brand-logos">
-          {/* Replace with actual logo images */}
-          <img src="/logos/dsc.png" alt="DSC" />
-          <img src="/logos/texecom.png" alt="Texecom" />
-          <img src="/logos/paradox.png" alt="Paradox" />
-          <img src="/logos/ids.png" alt="IDS" />
-          <img src="/logos/hikvision.png" alt="Hikvision" />
-          <img src="/logos/dahua.png" alt="Dahua" />
-          <img src="/logos/hilook.png" alt="HiLook" />
+          <Image src="/brands/dsc.png" alt="DSC" width={100} height={100} />
+          <Image src="/brands/texecom.png" alt="Texecom" width={100} height={100} />
+          <Image src="/brands/paradox.png" alt="Paradox" width={100} height={100} />
+          <Image src="/brands/ids.png" alt="IDS" width={100} height={100} />
+          <Image src="/brands/hikvision.png" alt="Hikvision" width={100} height={100} />
+          <Image src="/brands/dahua.png" alt="Dahua" width={100} height={100} />
+          <Image src="/brands/hilook.png" alt="HiLook" width={100} height={100} />
         </div>
       </section>
 
@@ -93,7 +94,6 @@ export default function HomePage() {
       <section className="testimonials">
         <h2>What Our Clients Say</h2>
         <p>We are building our public testimonial base. Be the first to share your experience.</p>
-        {/* Placeholder for testimonials */}
         <div className="testimonial-placeholder">
           <p>Recent customer feedback will appear here.</p>
         </div>
