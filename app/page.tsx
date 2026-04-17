@@ -1,6 +1,16 @@
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function HomePage() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveIndex((prev) => (prev + 1) % 11); // 11 = number of services
+  }, 2500); // change every 2.5 seconds
+  return () => clearInterval(interval);
+}, []);
+
   return (
     <main className="home-page">
       {/* Hero Section */}
@@ -41,7 +51,10 @@ export default function HomePage() {
       "Add‑Ons & Upgrades",
       "Fault‑Finding & Troubleshooting",
     ].map((service, index) => (
-      <div key={index} className={`carousel-box ${index === 0 ? "active" : ""}`}>
+      <div
+        key={index}
+        className={`carousel-box ${index === activeIndex ? "active" : ""}`}
+      >
         {service}
       </div>
     ))}
