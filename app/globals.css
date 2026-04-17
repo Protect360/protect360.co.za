@@ -123,22 +123,15 @@ body {
   font-size: 1.3rem;
   margin-bottom: 30px;
   font-weight: 700;
-  color: #fff;
-  text-align: center;
-  position: relative;
-}
-
-.hero-subheading::before {
-  content: "Home & Business Security Systems";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  color: transparent;
+  color: transparent; /* base text transparent for gradient fill */
+  background: linear-gradient(to right, #1db954, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow:
-    1px 1px 0 #1db954,
-    -1px -1px 0 #007bff;
-  z-index: -1;
+    1px 1px 0 #1db954,   /* green outline */
+    -1px -1px 0 #007bff, /* blue outline */
+    1px -1px 0 #1db954,  /* diagonal blend */
+    -1px 1px 0 #007bff;  /* opposite diagonal blend */
 }
 
 /* Buttons */
