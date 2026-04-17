@@ -129,11 +129,26 @@ body {
 /* ===== Slogan ===== */
 .slogan {
   text-align: center;
-  font-size: 1.2rem;
-  margin-top: -20px;
-  margin-bottom: 60px;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 40px 0 20px;
   color: #1db954;
-  text-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
+  text-shadow: 0 0 15px rgba(29, 185, 84, 0.7);
+  animation: fadeSlideDown 1.2s ease forwards;
+}
+
+/* Smooth entrance animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== Interactive Services ===== */

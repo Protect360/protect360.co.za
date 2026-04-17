@@ -37,6 +37,11 @@ export default function HomePage() {
 
   return (
     <main className="home-page">
+      {/* Slogan */}
+      <section className="slogan">
+        <p>Your first choice for uncompromising security solutions.</p>
+      </section>
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
@@ -51,11 +56,6 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-      </section>
-
-      {/* Slogan */}
-      <section className="slogan">
-        <p>Your first choice for uncompromising security solutions.</p>
       </section>
 
       {/* Carousel Services */}
