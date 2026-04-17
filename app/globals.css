@@ -95,10 +95,10 @@ body {
 /* ===== Slogan Box ===== */
 .slogan-box {
   position: absolute;
-  top: 25px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 75%;
+  width: 85%;
   background: linear-gradient(135deg, #0a1a2f, #1c3b5a);
   border-radius: 10px;
   padding: 14px 0;
@@ -115,7 +115,7 @@ body {
 /* ===== Hero Logo ===== */
 .hero-logo {
   display: block;
-  margin: 10px auto;
+  top: 50px;
   width: 85%;
   max-width: 720px;
   height: auto;
