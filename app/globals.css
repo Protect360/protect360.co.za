@@ -135,11 +135,6 @@ body {
   letter-spacing: 0.5px;
   margin: 20px 0 10px;
   color: #1db954;
- /* Clean, sharp shine — no fog */
-  text-shadow:
-    0 0 1px #1db954,   /* crisp edge */
-    0 0 3px #1db954,   /* subtle glow */
-    0 0 6px #00ff88;   /* light accent */
   animation: fadeSlideDown 1.2s ease forwards;
 }
 
