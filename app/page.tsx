@@ -1,62 +1,63 @@
-"use client";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-
-export default function HomePage() {
-  const services = [
-    { title: "Alarm Systems", description: "Instant alerts for intrusion detection and rapid response through integrated monitoring." },
-    { title: "Electric Fencing", description: "Strong perimeter defense that deters threats and reinforces property boundaries." },
-    { title: "CCTV Systems", description: "24/7 high-definition monitoring with clear footage and remote viewing access." },
-    { title: "Access Control", description: "Biometric and card-based systems to manage and track authorized entry points." },
-    { title: "Gate & Door Automation", description: "Secure and convenient entry solutions for residential and commercial properties." },
-    { title: "Intercom Systems", description: "Clear communication between entry points and occupants for tighter visitor control." },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  // Auto-swap cards every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % services.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [services.length]);
-
+export default function ServicesPage() {
   return (
-    <main className="home">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Protect 360 (Pty) Ltd</h1>
-          <p>Your first choice for uncompromising security solutions.</p>
-          <a href="/contact" className="btn btn-primary">Get in Touch</a>
-        </div>
-      </section>
-
-      {/* Animated Services Section */}
-      <section className="interactive-services">
+    <main className="services-page">
+      {/* Core Services */}
+      <section className="services-block">
+        <h2>CORE SERVICES</h2>
+        <p>Security Systems We Install and Support</p>
         <div className="services-grid">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`service-card ${index === activeIndex ? "active" : ""}`}
-            >
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
-          ))}
+          <div className="service-box">
+            <strong>Alarm Systems</strong>
+            <span>Instant alerts for intrusion detection and rapid response through integrated monitoring.</span>
+          </div>
+          <div className="service-box">
+            <strong>Electric Fencing</strong>
+            <span>Strong perimeter defense that deters threats and reinforces property boundaries.</span>
+          </div>
+          <div className="service-box">
+            <strong>CCTV Systems</strong>
+            <span>24/7 high-definition monitoring with clear footage and remote viewing access.</span>
+          </div>
+          <div className="service-box">
+            <strong>Gate & Door Automation</strong>
+            <span>Secure and convenient entry solutions for residential and commercial properties.</span>
+          </div>
+          <div className="service-box">
+            <strong>Access Control</strong>
+            <span>Biometric and card-based systems to manage and track authorized entry points.</span>
+          </div>
+          <div className="service-box">
+            <strong>Intercom Systems</strong>
+            <span>Clear communication between entry points and occupants for tighter visitor control.</span>
+          </div>
         </div>
       </section>
 
-      {/* Brands Section */}
-      <section className="brands">
-        <h2>Trusted Brands We Install and Support</h2>
-        <div className="brand-logos">
-          <Image src="/brands/hikvision.svg" alt="Hikvision" width={100} height={40} />
-          <Image src="/brands/dahua.svg" alt="Dahua" width={100} height={40} />
-          <Image src="/brands/dsc.png" alt="DSC" width={100} height={40} />
-          <Image src="/brands/paradox.png" alt="Paradox" width={100} height={40} />
-          <Image src="/brands/texecom.svg" alt="Texecom" width={100} height={40} />
+      {/* Complete Service Lifecycle */}
+      <section className="services-block">
+        <h2>OUR EXPERTISE BEYOND PRODUCTS</h2>
+        <p>Complete Service Lifecycle</p>
+        <div className="services-grid">
+          <div className="service-box">
+            <strong>Installation</strong>
+            <span>Professional setup, testing, and optimization for flawless performance.</span>
+          </div>
+          <div className="service-box">
+            <strong>Assessments & Quotes</strong>
+            <span>On-site evaluations and transparent, tailored quotations before commitment.</span>
+          </div>
+          <div className="service-box">
+            <strong>Maintenance & Repairs</strong>
+            <span>Scheduled maintenance and responsive repairs to ensure system reliability.</span>
+          </div>
+          <div className="service-box">
+            <strong>Add-Ons & Upgrades</strong>
+            <span>Seamless expansion with additional cameras, access control, or fencing upgrades.</span>
+          </div>
+          <div className="service-box">
+            <strong>Fault-Finding & Troubleshooting</strong>
+            <span>Fast diagnostics and issue resolution to minimize downtime and restore security.</span>
+          </div>
         </div>
       </section>
     </main>
