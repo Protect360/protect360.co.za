@@ -349,9 +349,24 @@ body {
 /* ===== Footer ===== */
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px 20px;
   background-color: #081423;
-  font-size: 0.9rem;
   color: #aaa;
+  font-size: 0.9rem;
   border-top: 1px solid #1db954;
+}
+
+.footer-content p {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: #1db954;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
 }
