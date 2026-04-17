@@ -103,32 +103,14 @@ body {
   z-index: 10;
 }
 
-/* Hero Heading */
-.hero-heading {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-/* Two-tone logo effect */
-.two-tone {
-  background: linear-gradient(to right, #1db954, #007bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ===== Hero Subheading ===== */
-.hero-subheading {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-  font-weight: 700;
-  color: #fff; /* solid base text */
-  text-align: center;
-  text-shadow:
-    1px 0 #1db954,   /* green right edge */
-    -1px 0 #007bff,  /* blue left edge */
-    0 1px #1db954,   /* green bottom edge */
-    0 -1px #007bff;  /* blue top edge */
+/* ===== Hero Logo ===== */
+.hero-logo {
+  width: 420px;
+  max-width: 90%;
+  margin: 0 auto 30px;
+  display: block;
+  filter: drop-shadow(0 0 12px rgba(29, 185, 84, 0.4));
+  animation: fadeSlideDown 1.2s ease forwards;
 }
 
 /* Buttons */

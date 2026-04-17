@@ -44,18 +44,24 @@ export default function HomePage() {
   </div>
 
   <div className="hero-content">
-          <h1 className="hero-heading two-tone">Protect 360 (Pty) Ltd</h1>
-          <p className="hero-subheading">Home & Business Security Systems</p>
-          <div className="hero-buttons">
-            <a href="https://wa.me/27791836591" className="btn btn-primary">
-              WhatsApp
-            </a>
-            <a href="tel:+27791836591" className="btn btn-secondary">
-              Phone
-            </a>
-          </div>
-        </div>
-      </section>
+    <Image
+      src="/logos/protect360-logo.png"
+      alt="Protect 360 Logo"
+      className="hero-logo"
+      width={200}
+      height={200}
+    />
+
+    <div className="hero-buttons">
+      <a href="https://wa.me/27791836591" className="btn btn-primary">
+        WhatsApp
+      </a>
+      <a href="tel:+27791836591" className="btn btn-secondary">
+        Phone
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Carousel Services */}
       <section
