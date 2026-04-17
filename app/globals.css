@@ -408,9 +408,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   background-color: #081423;
-  min-height: 180px;
+  min-height: 160px;
   overflow: hidden;
 }
 
