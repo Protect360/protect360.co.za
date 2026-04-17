@@ -78,8 +78,8 @@ body {
   position: relative;
   text-align: center;
   padding: 120px 20px 60px;
-  background: radial-gradient(circle at top, #1c3b5a 0%, #0a1a2f 80%);
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6);
+  background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
@@ -87,8 +87,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;  /* centers vertically */
-  min-height: 100%;         /* ensures full height usage */
+  justify-content: center;
+  min-height: 100%;
 }
 
 /* ===== Slogan Box ===== */
