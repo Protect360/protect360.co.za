@@ -129,7 +129,14 @@ body {
   }
 }
 
-/* Buttons */
+/* ===== Hero Buttons ===== */
+.hero-buttons {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 24px;
