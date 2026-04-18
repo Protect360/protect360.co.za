@@ -263,10 +263,9 @@ html, body {
   white-space: nowrap;
   animation: scrollBrands 60s linear infinite;
   padding: 5px 0;
-  width: 100%;
+  width: max-content;
   height: 140px;
   box-sizing: border-box;
-  position: relative;
 }
 
 .brand-scroll::before,

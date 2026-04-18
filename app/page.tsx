@@ -71,41 +71,39 @@ const [activeIndex, setActiveIndex] = useState(0);
       <section className="brands">
   <h2>Official Brands We Work With</h2>
   <div className="brand-scroll">
-    <div className="brand-track">
-      {/* 15 logos here */}
-      <div className="brand-box"><Image src="/brands/ajax.png" alt="Ajax" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/centurion.png" alt="Centurion" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/csb.png" alt="CSB" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/dahua.png" alt="Dahua" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/dsc.png" alt="DSC" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/forbatt.png" alt="Forbatt" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/hikvision.png" alt="Hikvision" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/hilook.png" alt="HiLook" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/ids.png" alt="IDS" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/nemtek.png" alt="Nemtek" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/paradox.png" alt="Paradox" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/sherlotronics.png" alt="Sherlotronics" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/texecom.png" alt="Texecom" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/tiandy.png" alt="Tiandy" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/zkteco.png" alt="ZKTeco" width={120} height={60} /></div>
+    {/* 15 logos */}
+    <div className="brand-box"><Image src="/brands/ajax.png" alt="Ajax" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/centurion.png" alt="Centurion" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/csb.png" alt="CSB" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/dahua.png" alt="Dahua" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/dsc.png" alt="DSC" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/forbatt.png" alt="Forbatt" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hikvision.png" alt="Hikvision" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hilook.png" alt="HiLook" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/ids.png" alt="IDS" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/nemtek.png" alt="Nemtek" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/paradox.png" alt="Paradox" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/sherlotronics.png" alt="Sherlotronics" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/texecom.png" alt="Texecom" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/tiandy.png" alt="Tiandy" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/zkteco.png" alt="ZKTeco" width={120} height={60} /></div>
 
-      {/* Duplicate sequence for seamless loop */}
-      <div className="brand-box"><Image src="/brands/ajax.png" alt="Ajax" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/centurion.png" alt="Centurion" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/csb.png" alt="CSB" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/dahua.png" alt="Dahua" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/dsc.png" alt="DSC" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/forbatt.png" alt="Forbatt" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/hikvision.png" alt="Hikvision" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/hilook.png" alt="HiLook" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/ids.png" alt="IDS" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/nemtek.png" alt="Nemtek" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/paradox.png" alt="Paradox" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/sherlotronics.png" alt="Sherlotronics" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/texecom.png" alt="Texecom" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/tiandy.png" alt="Tiandy" width={120} height={60} /></div>
-      <div className="brand-box"><Image src="/brands/zkteco.png" alt="ZKTeco" width={120} height={60} /></div>
-    </div>
+    {/* Duplicate sequence for seamless loop */}
+    <div className="brand-box"><Image src="/brands/ajax.png" alt="Ajax" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/centurion.png" alt="Centurion" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/csb.png" alt="CSB" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/dahua.png" alt="Dahua" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/dsc.png" alt="DSC" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/forbatt.png" alt="Forbatt" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hikvision.png" alt="Hikvision" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hilook.png" alt="HiLook" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/ids.png" alt="IDS" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/nemtek.png" alt="Nemtek" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/paradox.png" alt="Paradox" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/sherlotronics.png" alt="Sherlotronics" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/texecom.png" alt="Texecom" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/tiandy.png" alt="Tiandy" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/zkteco.png" alt="ZKTeco" width={120} height={60} /></div>
   </div>
 </section>
      </main>
