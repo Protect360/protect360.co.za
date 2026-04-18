@@ -298,10 +298,10 @@ html, body {
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 42vh;        /* slightly shorter hero */
-    margin-top: -20px;       /* reduce upward pull */
-    margin-bottom: -20px;    /* reduce overlap causing bottom block */
-    padding-top: 20px;       /* balanced spacing for logo */
+    min-height: 42vh;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    padding-top: 20px;
     padding-bottom: 10px;
   }
 
