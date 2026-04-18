@@ -298,7 +298,7 @@ html, body {
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 62vh;
+    min-height: 42vh;
     margin-top: 40px;
     margin-bottom: 0;
     padding-top: 20px;
