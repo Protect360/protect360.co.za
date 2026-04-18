@@ -304,6 +304,7 @@ html, body {
     padding-top: 15px;
     padding-bottom: 0;
     background-color: #081423;
+    border-bottom: 1px solid #081423;
   }
 
   .slogan-slide {
