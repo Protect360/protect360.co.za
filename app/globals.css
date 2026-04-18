@@ -73,6 +73,49 @@ body {
   }
 }
 
+/* ===== Layout Structure ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures full viewport height */
+}
+
+.main-content {
+  flex: 1; /* pushes footer down */
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px 15px;
+  background-color: #081423;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #1db954;
+  margin-top: auto; /* anchors footer to bottom */
+}
+
+.footer-content p {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: #1db954;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
 /* ===== Hero Section ===== */
 .hero {
   position: relative;
@@ -234,29 +277,4 @@ body {
 @keyframes scrollBrands {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
-
-/* ===== Footer ===== */
-.footer {
-  text-align: center;
-  padding: 25px 20px;
-  background-color: #081423;
-  color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid #1db954;
-}
-
-.footer-content p {
-  margin: 6px 0;
-}
-
-.footer-links a {
-  color: #1db954;
-  text-decoration: none;
-  margin: 0 6px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #fff;
 }
