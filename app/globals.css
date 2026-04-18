@@ -299,8 +299,8 @@ html, body {
 @media (max-width: 768px) {
   .hero {
     min-height: 42vh;
-    margin-top: -40px;
-    margin-bottom: -40px;
+    margin-top: -30px;
+    margin-bottom: -10px;
     padding-top: 20px;
     padding-bottom: 10px;
   }
