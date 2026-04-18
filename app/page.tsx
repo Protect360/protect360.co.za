@@ -65,15 +65,34 @@ export default function HomePage() {
 </section>
 
       {/* Carousel Services */}
-      <section
-        className="carousel-services"
-        onMouseEnter={() => intervalId && clearInterval(intervalId)}
-        onMouseLeave={() => startCarousel()}
-      >
-        <div key={activeIndex} className="carousel-box slide">
-          {services[activeIndex]}
-        </div>
-      </section>
+      <section className="carousel-services">
+  <div className="carousel-track">
+    <div className="carousel-box">
+      Assessments & Quotes
+      <div className="carousel-description">
+        Free on‑site evaluations and tailored security recommendations for your property.
+      </div>
+    </div>
+    <div className="carousel-box">
+      CCTV Monitoring
+      <div className="carousel-description">
+        24/7 video surveillance with smart alerts and remote access.
+      </div>
+    </div>
+    <div className="carousel-box">
+      Intercom Systems
+      <div className="carousel-description">
+        Secure communication and access control for homes and offices.
+      </div>
+    </div>
+    <div className="carousel-box">
+      Electric Fencing
+      <div className="carousel-description">
+        High‑voltage perimeter protection for maximum deterrence.
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Brands Section */}
       <section className="brands">
