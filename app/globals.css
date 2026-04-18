@@ -299,10 +299,10 @@ html, body {
 @media (max-width: 768px) {
   .hero {
     min-height: 42vh;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding-top: 15px;
-    padding-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
   }
 
   .hero-logo {
