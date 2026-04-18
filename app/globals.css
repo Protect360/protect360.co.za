@@ -98,8 +98,8 @@ body {
 
 /* ===== Hero Logo ===== */
 .hero-logo {
-  width: 75%;
-  max-width: 640px;
+  width: 100%;
+  max-width: 720px;
   height: auto;
   margin: 0 auto;
 }
