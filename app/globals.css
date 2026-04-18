@@ -247,7 +247,7 @@ html, body {
 .brands {
   text-align: center;
   padding: 15px 10px;
-  background-color: #bfc8d1;
+  background-color: #0a1a2f;
 }
 
 .brands h2 {
@@ -278,8 +278,7 @@ html, body {
   width: 320px;
   height: 120px;
   border-radius: 10px;
-  background: radial-gradient(circle at top, #081423 0%, #081423 80%);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  background: radial-gradient(circle at top, #bfc8d1 0%, #bfc8d1 80%);
   flex-shrink: 0;
 }
 
