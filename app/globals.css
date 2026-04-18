@@ -239,7 +239,7 @@ body {
 /* ===== Carousel Boxes ===== */
 .carousel-box {
   width: 280px;
-  min-height: 200px; /* ensures all boxes match tallest one */
+  min-height: 140px; /* ensures all boxes match tallest one */
   flex-shrink: 0;
   background-color: #0a1a2f;
   border: 1px solid #1db954;
