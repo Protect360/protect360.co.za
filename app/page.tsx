@@ -18,13 +18,13 @@ export default function HomePage() {
     "24/7 Support",
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (paused) return;
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % boxes.length);
+      setOffset((prev) => (prev + 1) % boxes.length);
     }, 2500);
     return () => clearInterval(interval);
   }, [paused, boxes.length]);
@@ -63,13 +63,20 @@ export default function HomePage() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="carousel-track">
+        <div
+          className="carousel-track"
+          style={{
+            transform: `translateX(-${offset * 260}px)`,
+          }}
+        >
           {boxes.map((box, i) => {
+            // Determine position relative to center
+            const centerIndex = (offset + 2) % boxes.length;
             let className = "carousel-box";
-            if (i === activeIndex) className += " active";
+            if (i === centerIndex) className += " active";
             else if (
-              i === (activeIndex + 1) % boxes.length ||
-              i === (activeIndex - 1 + boxes.length) % boxes.length
+              i === (centerIndex + 1) % boxes.length ||
+              i === (centerIndex - 1 + boxes.length) % boxes.length
             )
               className += " side";
             return <div key={i} className={className}>{box}</div>;

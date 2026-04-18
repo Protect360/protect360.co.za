@@ -198,7 +198,7 @@ body {
   flex: 1;
 }
 
-/* ===== Homepage Carousel (True Center Focus) ===== */
+/* ===== Homepage Carousel (Scrolling Center Focus) ===== */
 .carousel-services {
   width: 100%;
   display: flex;
@@ -212,9 +212,8 @@ body {
 .carousel-track {
   display: flex;
   gap: 40px;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.8s ease;
+  align-items: center;
 }
 
 .carousel-box {
@@ -250,7 +249,7 @@ body {
   box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
 }
 
-/* Smooth hover pause */
+/* Pause on hover */
 .carousel-services:hover .carousel-track {
   transition: none;
 }
