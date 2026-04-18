@@ -298,7 +298,7 @@ html, body {
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 55vh;
+    min-height: 45vh;
     margin-top: -5px;
     margin-bottom: 30px;
     padding-top: 15px;
@@ -307,7 +307,7 @@ html, body {
   }
 
   .slogan-slide {
-    margin-top: -1px;
+    margin-top: -2px;
     background-color: #081423;
   }
 
