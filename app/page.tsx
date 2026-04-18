@@ -55,17 +55,17 @@ const [activeIndex, setActiveIndex] = useState(0);
       </section>
 
       {/* ===== Carousel Services with Slogan ===== */}
-      <section
-        className="carousel-services"
-      >
-        <div className="slogan-slide">
-          <p>Your first choice for uncompromising security solutions.</p>
-        </div>
+<section className="carousel-services">
+  {/* Slogan */}
+  <div className="slogan-slide">
+    Your first choice for uncompromising security solutions.
+  </div>
 
-              <div key={activeIndex} className="carousel-box slide">
-                {services[activeIndex]}
-              </div>
-            </section>
+  {/* Active service block */}
+  <div key={activeIndex} className="carousel-box slide">
+    {services[activeIndex]}
+  </div>
+</section>
           </main>
         );
       }
