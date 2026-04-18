@@ -194,7 +194,11 @@ html, body {
   font-size: 1.8rem;
   font-weight: 700;
   color: #1db954;
+  margin-top: 10px;
   margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1s ease-out forwards;
 }
 
 /* ===== Homepage Sliding Services ===== */
@@ -223,18 +227,18 @@ html, body {
   animation: slideIn 0.8s ease forwards;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
+@keyframes slideUp {
+  0% {
     opacity: 0;
+    transform: translateY(40px);
   }
-  to {
-    transform: translateX(0);
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .carousel-box.slide {
   transform: scale(1.1);
-  box-shadow: 0 0 35px rgba(29, 185, 84, 0.9);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.9);
 }
