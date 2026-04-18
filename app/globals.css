@@ -208,21 +208,6 @@ body {
   padding: 30px 0;
 }
 
-.carousel-track {
-  display: flex;
-  gap: 40px;
-  animation: scrollCarousel 25s linear infinite;
-}
-
-.carousel-services:hover .carousel-track {
-  animation-play-state: paused; /* pause on hover */
-}
-
-@keyframes scrollCarousel {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* continuous flow */
-}
-
 /* ===== Carousel Track ===== */
 .carousel-track {
   display: flex;
@@ -233,7 +218,12 @@ body {
 }
 
 .carousel-services:hover .carousel-track {
-  animation-play-state: paused;
+  animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* continuous flow */
 }
 
 /* ===== Carousel Boxes ===== */
