@@ -239,7 +239,7 @@ body {
 /* ===== Carousel Boxes ===== */
 .carousel-box {
   width: 280px;
-  height: 160px;
+  min-height: 200px; /* ensures all boxes match tallest one */
   flex-shrink: 0;
   background-color: #0a1a2f;
   border: 1px solid #1db954;
@@ -248,8 +248,10 @@ body {
   font-weight: 600;
   font-size: 1.3rem;
   display: flex;
+  flex-direction: column; /* stack title and description vertically */
   justify-content: center;
   align-items: center;
+  text-align: center;
   box-shadow: 0 0 15px rgba(29, 185, 84, 0.4);
   transition: all 0.3s ease;
   position: relative;
@@ -266,9 +268,9 @@ body {
 /* ===== Description Reveal ===== */
 .carousel-description {
   position: absolute;
-  bottom: 10px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%); /* centers vertically and horizontally */
   width: 90%;
   font-size: 0.9rem;
   color: #cfd8dc;
