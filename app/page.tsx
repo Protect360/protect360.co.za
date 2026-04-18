@@ -65,11 +65,11 @@ export default function HomePage() {
 >
   <div className="carousel-focus"></div> {/* fixed center window */}
   <div
-    className="carousel-track"
-    style={{
-      transform: `translateX(-${offset * 260}px)`,
-    }}
-  >
+  className="carousel-track"
+  style={{
+    transform: `translateX(calc(50vw - 130px - ${offset * 260}px))`,
+  }}
+>
     {boxes.map((box, i) => {
       const centerIndex = (offset + 2) % boxes.length;
       let className = "carousel-box";
