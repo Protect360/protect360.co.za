@@ -299,10 +299,23 @@ html, body {
 @media (max-width: 768px) {
   .hero {
     min-height: 42vh;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    margin-top: -5px;      /* slight upward pull to close top gap */
+    margin-bottom: 15px;   /* enough space to prevent footer block */
+    padding-top: 15px;     /* valid padding, no negative values */
+    padding-bottom: 0;     /* smooth transition to slogan */
+  }
+
+  .slogan-slide {
+    margin-top: 0;         /* remove split line between hero and slogan */
+  }
+
+  .brands {
+    margin-bottom: 0;      /* remove leftover space above footer */
+    padding-bottom: 10px;  /* keep logos breathing room */
+  }
+
+  .footer {
+    margin-top: 0;         /* ensure footer attaches directly to brands */
   }
 
   .hero-logo {
