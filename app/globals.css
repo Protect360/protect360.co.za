@@ -299,25 +299,28 @@ html, body {
 @media (max-width: 768px) {
   .hero {
     min-height: 42vh;
-    margin-top: -5px;      /* slight upward pull to close top gap */
-    margin-bottom: 15px;   /* enough space to prevent footer block */
-    padding-top: 15px;     /* valid padding, no negative values */
-    padding-bottom: 0;     /* smooth transition to slogan */
+    margin-top: -5px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 0;
+    background-color: #081423;
   }
 
   .slogan-slide {
-    margin-top: 0;         /* remove split line between hero and slogan */
+    margin-top: -1px;
+    background-color: #081423;
   }
 
   .brands {
-    margin-bottom: 0;      /* remove leftover space above footer */
-    padding-bottom: 10px;  /* keep logos breathing room */
+    margin-bottom: -1px;
+    background-color: #081423;
   }
 
   .footer {
-    margin-top: 0;         /* ensure footer attaches directly to brands */
+    margin-top: 0;
+    background-color: #081423;
   }
-
+  
   .hero-logo {
     height: 100px;
   }
@@ -328,6 +331,7 @@ html, body {
     gap: 8px;
   }
 }
+
 /* ===== Desktop viewport balance ===== */
 @media (min-width: 769px) {
   .hero {
