@@ -18,15 +18,15 @@ export default function HomePage() {
     "24/7 Support",
   ];
 
-  const [offset, setOffset] = useState(0);
+  const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (paused) return;
-    const interval = setInterval(() => {
-      setOffset((prev) => (prev + 1) % boxes.length);
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % boxes.length);
     }, 2500);
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, [paused, boxes.length]);
 
   return (
@@ -42,8 +42,6 @@ export default function HomePage() {
             src="/logos/logo text.png"
             alt="Protect 360 Logo"
             className="hero-logo"
-            width={720}
-            height={200}
           />
 
           <div className="hero-buttons">
@@ -57,18 +55,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Carousel Services ===== */}
-      <section className="carousel-services">
-  <div className="carousel-track">
-    {boxes.map((box, i) => (
-      <div key={i} className="carousel-box">{box}</div>
-    ))}
-    {boxes.map((box, i) => (
-      <div key={`dup-${i}`} className="carousel-box">{box}</div>
-    ))} {/* duplicate for seamless loop */}
-  </div>
-  <div className="carousel-center"></div> {/* fixed glow overlay */}
-</section>
+      {/* ===== Slideshow Services ===== */}
+      <section
+        className="slideshow-services"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <div className="slideshow-box active">{boxes[index]}</div>
+      </section>
 
       {/* ===== Brands Section ===== */}
       <section className="brands">
