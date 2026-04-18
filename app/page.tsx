@@ -28,13 +28,7 @@ const [activeIndex, setActiveIndex] = useState(0);
     return () => {
       clearInterval(id);
     };
-  }, []);
-
-  const startCarousel = () => {
-    const id = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % services.length);
-    }, 2500);
-  };
+  }, [services.length]);
 
   return (
     <main className="home-page">
@@ -78,6 +72,23 @@ const [activeIndex, setActiveIndex] = useState(0);
   <h2>Official Brands We Work With</h2>
   <div className="brand-scroll">
     {/* First sequence */}
+    <div className="brand-box"><Image src="/brands/ajax logo.png" alt="Ajax" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/centurion logo.png" alt="Centurion" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/csb logo.png" alt="CSB" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/dahua logo.png" alt="Dahua" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/dsc logo.png" alt="DSC" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/forbatt logo.png" alt="Forbatt" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hikvision logo.png" alt="Hikvision" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hilook logo.png" alt="HiLook" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/ids logo.png" alt="IDS" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/nemtek logo.png" alt="Nemtek" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/paradox logo.png" alt="Paradox" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/sherlotronics logo.png" alt="Sherlotronics" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/texecom logo.png" alt="Texecom" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/tiandy logo.png" alt="Tiandy" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/zkteco logo.png" alt="ZKTeco" width={120} height={60} /></div>
+
+    {/* Duplicate sequence for seamless loop */}
     <div className="brand-box"><Image src="/brands/ajax logo.png" alt="Ajax" width={120} height={60} /></div>
     <div className="brand-box"><Image src="/brands/centurion logo.png" alt="Centurion" width={120} height={60} /></div>
     <div className="brand-box"><Image src="/brands/csb logo.png" alt="CSB" width={120} height={60} /></div>
