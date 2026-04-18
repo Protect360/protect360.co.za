@@ -92,26 +92,6 @@ body {
   gap: 10px;
 }
 
-/* ===== Slogan Box ===== */
-.slogan-box {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  background: linear-gradient(135deg, #0a1a2f, #1c3b5a);
-  border-radius: 10px;
-  padding: 14px 0;
-  color: #1db954;
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(29, 185, 84, 0.4);
-  z-index: 10;
-}
-
 /* ===== Hero Logo ===== */
 .hero-logo {
   display: block;
@@ -196,6 +176,26 @@ body {
 
 .main-content {
   flex: 1;
+}
+
+/* ===== Slogan Box ===== */
+.slogan-box {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  background: linear-gradient(135deg, #0a1a2f, #1c3b5a);
+  border-radius: 10px;
+  padding: 14px 0;
+  color: #1db954;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(29, 185, 84, 0.4);
+  z-index: 10;
 }
 
 /* ===== Homepage Sliding Carousel ===== */

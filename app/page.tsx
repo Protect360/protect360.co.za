@@ -39,10 +39,6 @@ export default function HomePage() {
     <main className="home-page">
       {/* Hero Section */}
       <section className="hero">
-        <div className="slogan-box">
-    <p>Your first choice for uncompromising security solutions.</p>
-  </div>
-
   <div className="hero-content">
     <Image
       src="/logos/logo text.png"
@@ -61,16 +57,20 @@ export default function HomePage() {
   </div>
 </section>
 
-      {/* Carousel Services */}
-      <section
-        className="carousel-services"
-        onMouseEnter={() => intervalId && clearInterval(intervalId)}
-        onMouseLeave={() => startCarousel()}
-      >
-        <div key={activeIndex} className="carousel-box slide">
-          {services[activeIndex]}
-        </div>
-      </section>
+  {/* Carousel Services */}
+  <div className="slogan-box">
+    <p>Your first choice for uncompromising security solutions.</p>
+  </div>
+
+  <section
+    className="carousel-services"
+    onMouseEnter={() => intervalId && clearInterval(intervalId)}
+    onMouseLeave={() => startCarousel()}
+  >
+    <div key={activeIndex} className="carousel-box slide">
+      {services[activeIndex]}
+    </div>
+  </section>
 
       {/* Brands Section */}
       <section className="brands">
