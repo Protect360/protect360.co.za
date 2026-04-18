@@ -8,11 +8,16 @@ export const metadata = {
   keywords: [
     "Protect 360 (Pty) Ltd.",
     "Alarm Systems",
-    "CCTV Systems",
     "Electric Fencing",
-    "Access Control",
+    "CCTV Systems",
     "Gate & Door Automation",
+    "Access Control",
     "Intercom Systems",
+    "Installation",
+    "Assessments & Quotes",
+    "Maintenance & Repairs",
+    "Add‑Ons & Upgrades",
+    "Fault‑Finding & Troubleshooting",
   ],
   authors: [{ name: "Protect 360 (Pty) Ltd." }],
   openGraph: {
