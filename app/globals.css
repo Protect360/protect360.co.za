@@ -298,26 +298,21 @@ html, body {
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 50vh;
-    padding-top: -30px;
-    margin-bottom: -30px;
-    padding-top: 25px;
+    min-height: 42vh;        /* slightly shorter hero */
+    margin-top: -20px;       /* reduce upward pull */
+    margin-bottom: -20px;    /* reduce overlap causing bottom block */
+    padding-top: 20px;       /* balanced spacing for logo */
     padding-bottom: 10px;
   }
+
   .hero-logo {
-    height: 130px;
+    height: 100px;
   }
+
   .hero-buttons {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
-  }
-  .brands h2 {
-    font-size: 1.5rem;
-    transform: translateY(-8px);
-  }
-  .brand-scroll {
-    animation: scrollBrands 30s linear infinite;
   }
 }
 /* ===== Desktop viewport balance ===== */
