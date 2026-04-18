@@ -1,5 +1,5 @@
 "use client";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -15,9 +15,9 @@ export default function HomePage() {
     "Maintenance & Repairs",
     "Add-Ons & Upgrades",
     "Fault-Finding & Troubleshooting",
-    "24/7 Support"
+    "24/7 Support",
   ];
-  
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -31,21 +31,21 @@ export default function HomePage() {
 
   return (
     <main className="home-page">
-      {/* ===== Hero Slogan ===== */}
+      {/* ===== Hero Section ===== */}
       <section className="hero">
         <div className="slogan-box">
           <p>Your first choice for uncompromising security solutions.</p>
         </div>
 
-        {/* ===== Hero Logo ===== */}
         <div className="hero-content">
           <Image
             src="/logos/logo text.png"
             alt="Protect 360 Logo"
             className="hero-logo"
+            width={720}
+            height={200}
           />
 
-          {/* ===== Hero Buttons ===== */}
           <div className="hero-buttons">
             <a href="https://wa.me/27791836591" className="btn btn-primary">
               WhatsApp
@@ -81,13 +81,13 @@ export default function HomePage() {
       <section className="brands">
         <h2>Official Brands We Work With</h2>
         <div className="brand-scroll">
-          <Image src="/brands/dsc.png" alt="DSC" />
-          <Image src="/brands/texecom.png" alt="Texecom" />
-          <Image src="/brands/paradox.png" alt="Paradox" />
-          <Image src="/brands/ids.png" alt="IDS" />
-          <Image src="/brands/hikvision.png" alt="Hikvision" />
-          <Image src="/brands/dahua.png" alt="Dahua" />
-          <Image src="/brands/hilook.png" alt="HiLook" />
+          <Image src="/brands/dsc.png" alt="DSC" width={120} height={60} />
+          <Image src="/brands/texecom.png" alt="Texecom" width={120} height={60} />
+          <Image src="/brands/paradox.png" alt="Paradox" width={120} height={60} />
+          <Image src="/brands/ids.png" alt="IDS" width={120} height={60} />
+          <Image src="/brands/hikvision.png" alt="Hikvision" width={120} height={60} />
+          <Image src="/brands/dahua.png" alt="Dahua" width={120} height={60} />
+          <Image src="/brands/hilook.png" alt="HiLook" width={120} height={60} />
         </div>
       </section>
     </main>
