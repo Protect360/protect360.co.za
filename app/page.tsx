@@ -59,30 +59,30 @@ export default function HomePage() {
 
       {/* ===== Carousel Services ===== */}
       <section
-        className="carousel-services"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
-        <div
-          className="carousel-track"
-          style={{
-            transform: `translateX(-${offset * 260}px)`,
-          }}
-        >
-          {boxes.map((box, i) => {
-            // Determine position relative to center
-            const centerIndex = (offset + 2) % boxes.length;
-            let className = "carousel-box";
-            if (i === centerIndex) className += " active";
-            else if (
-              i === (centerIndex + 1) % boxes.length ||
-              i === (centerIndex - 1 + boxes.length) % boxes.length
-            )
-              className += " side";
-            return <div key={i} className={className}>{box}</div>;
-          })}
-        </div>
-      </section>
+  className="carousel-services"
+  onMouseEnter={() => setPaused(true)}
+  onMouseLeave={() => setPaused(false)}
+>
+  <div className="carousel-focus"></div> {/* fixed center window */}
+  <div
+    className="carousel-track"
+    style={{
+      transform: `translateX(-${offset * 260}px)`,
+    }}
+  >
+    {boxes.map((box, i) => {
+      const centerIndex = (offset + 2) % boxes.length;
+      let className = "carousel-box";
+      if (i === centerIndex) className += " active";
+      else if (
+        i === (centerIndex + 1) % boxes.length ||
+        i === (centerIndex - 1 + boxes.length) % boxes.length
+      )
+        className += " side";
+      return <div key={i} className={className}>{box}</div>;
+    })}
+  </div>
+</section>
 
       {/* ===== Brands Section ===== */}
       <section className="brands">

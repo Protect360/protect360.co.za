@@ -198,8 +198,9 @@ body {
   flex: 1;
 }
 
-/* ===== Homepage Carousel (Scrolling Center Focus) ===== */
+/* ===== Homepage Carousel (Fixed Center Focus) ===== */
 .carousel-services {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -209,13 +210,26 @@ body {
   perspective: 1000px;
 }
 
+/* Center focus window */
+.carousel-focus {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px; /* same as box width */
+  height: 140px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Track scrolls behind the focus window */
 .carousel-track {
   display: flex;
   gap: 40px;
-  transition: transform 0.8s ease;
   align-items: center;
+  transition: transform 0.8s ease;
 }
 
+/* Boxes */
 .carousel-box {
   width: 220px;
   height: 130px;
@@ -234,7 +248,7 @@ body {
   opacity: 0.7;
 }
 
-/* Center box glow and scale */
+/* Glow and scale for box in center focus */
 .carousel-box.active {
   transform: scale(1.4);
   opacity: 1;
@@ -242,7 +256,7 @@ body {
   z-index: 2;
 }
 
-/* Side boxes smaller and dimmer */
+/* Side boxes smaller */
 .carousel-box.side {
   transform: scale(0.8);
   opacity: 0.6;
