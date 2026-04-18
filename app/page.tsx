@@ -88,7 +88,7 @@ export default function HomePage() {
 
         {/* Official Brands Section */}
         <div className="brands">
-          <h2>Official Brands We Work With</h2>
+          <h2>Brands We Supply And Trust</h2>
           <div className="brand-scroll">
             {brands.map((brand, i) => (
               <Image

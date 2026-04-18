@@ -119,6 +119,8 @@ html, body {
 /* ===== Hero Section ===== */
 .hero {
   width: 100%;
+  margin-top: -50px;
+  margin-bottom: -50px;
   min-height: 45vh;
   display: flex;
   flex-direction: column;
@@ -199,7 +201,7 @@ html, body {
   font-size: 1.8rem;
   font-weight: 700;
   color: #1db954;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
@@ -223,7 +225,7 @@ html, body {
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 10px 0 25px 0;
   background-color: #0a1a2f;
   overflow: hidden;
 }
@@ -232,10 +234,11 @@ html, body {
   color: #fff;
   font-style: italic;
   font-family: "Orbitron", "Poppins", sans-serif;
-  font-size: 2rem;
-  margin-bottom: 25px;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transform: translateY(-10px);
 }
 
 /* Scroll container */
@@ -244,7 +247,7 @@ html, body {
   align-items: center;
   gap: 30px;
   width: max-content;
-  animation: scrollBrands 25s linear infinite;
+  animation: scrollBrands 30s linear infinite;
 }
 
 /* Logo boxes */
@@ -283,6 +286,7 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Main content spacing */
 .home-page .main-content {
   width: 100%;
   max-width: 1200px;
@@ -294,11 +298,11 @@ html, body {
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 50vh;
-    padding-top: 30px;
+    min-height: 40vh;
+    padding-top: 20px;
   }
   .hero-logo {
-    height: 160px;
+    height: 150px;
   }
   .hero-buttons {
     flex-direction: column;
@@ -306,8 +310,17 @@ html, body {
   }
   .brands h2 {
     font-size: 1.5rem;
+    transform: translateY(-8px);
   }
   .brand-scroll {
     animation: scrollBrands 35s linear infinite;
+  }
+}
+/* ===== Desktop viewport balance ===== */
+@media (min-width: 769px) {
+  .hero {
+    min-height: 45vh;
+    padding-top: 100px;
+    padding-bottom: 10px;
   }
 }
