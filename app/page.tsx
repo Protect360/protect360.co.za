@@ -58,30 +58,16 @@ export default function HomePage() {
       </section>
 
       {/* ===== Carousel Services ===== */}
-      <section
-  className="carousel-services"
-  onMouseEnter={() => setPaused(true)}
-  onMouseLeave={() => setPaused(false)}
->
-  <div className="carousel-frame"></div> {/* fixed center window */}
-  <div
-    className="carousel-track"
-    style={{
-      transform: `translateX(calc(50vw - 130px - ${offset * 260}px))`,
-    }}
-  >
-    {boxes.map((box, i) => {
-      const centerIndex = (offset + 2) % boxes.length;
-      let className = "carousel-box";
-      if (i === centerIndex) className += " active";
-      else if (
-        i === (centerIndex + 1) % boxes.length ||
-        i === (centerIndex - 1 + boxes.length) % boxes.length
-      )
-        className += " side";
-      return <div key={i} className={className}>{box}</div>;
-    })}
+      <section className="carousel-services">
+  <div className="carousel-track">
+    {boxes.map((box, i) => (
+      <div key={i} className="carousel-box">{box}</div>
+    ))}
+    {boxes.map((box, i) => (
+      <div key={`dup-${i}`} className="carousel-box">{box}</div>
+    ))} {/* duplicate for seamless loop */}
   </div>
+  <div className="carousel-center"></div> {/* fixed glow overlay */}
 </section>
 
       {/* ===== Brands Section ===== */}

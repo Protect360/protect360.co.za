@@ -198,34 +198,30 @@ body {
   flex: 1;
 }
 
-/* ===== Homepage Carousel (Perfect Center Focus) ===== */
+/* ===== Homepage Carousel (Stable Center Glow) ===== */
 .carousel-services {
   position: relative;
   width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
-  overflow: hidden;
 }
 
-.carousel-frame {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 240px; /* same as box width */
-  height: 140px;
-  pointer-events: none;
-  z-index: 5;
-}
-
+/* Track scrolls continuously */
 .carousel-track {
   display: flex;
   gap: 40px;
-  align-items: center;
-  transition: transform 0.8s ease;
+  animation: scrollTrack 25s linear infinite;
 }
 
+@keyframes scrollTrack {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Boxes */
 .carousel-box {
   width: 220px;
   height: 130px;
@@ -244,22 +240,15 @@ body {
   opacity: 0.7;
 }
 
-/* Center glow and scale */
-.carousel-box.active {
-  transform: scale(1.4);
-  opacity: 1;
+/* Fixed center glow overlay */
+.carousel-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 140px;
+  border-radius: 10px;
   box-shadow: 0 0 55px rgba(29, 185, 84, 1);
-  z-index: 2;
-}
-
-/* Side boxes smaller */
-.carousel-box.side {
-  transform: scale(0.8);
-  opacity: 0.6;
-  box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
-}
-
-/* Pause on hover */
-.carousel-services:hover .carousel-track {
-  transition: none;
+  pointer-events: none;
+  z-index: 5;
 }
