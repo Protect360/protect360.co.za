@@ -124,7 +124,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 20vh;
+  min-height: 30vh;
   padding: 20px 10px;
   background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
@@ -246,28 +246,29 @@ html, body {
 /* ===== Brands Section ===== */
 .brands {
   text-align: center;
-  padding: 15px 10px;
+  padding: 10px 0 5px; /* tighter spacing */
   background-color: #0a1a2f;
+  margin-top: 20px; /* slight gap from carousel */
 }
 
 .brands h2 {
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
 .brand-scroll {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   overflow: hidden;
   white-space: nowrap;
-  animation: scrollBrands 30s linear infinite;
-  padding: 10px 0;
+  animation: scrollBrands 35s linear infinite;
+  padding: 5px 0;
   width: 100%;
-  height: 160px;
+  height: 130px; /* section height */
   box-sizing: border-box;
 }
 
@@ -275,20 +276,21 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 320px;
-  height: 120px;
+  width: 260px; /* matched to largest logo */
+  height: 100px; /* balanced height */
   border-radius: 10px;
-  background: radial-gradient(circle at top, #bfc8d1 0%, #bfc8d1 80%);
+  background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
 }
 
 .brand-box img {
-  height: 70px;
+  height: 65px;
   filter: brightness(1);
   transition: none;
 }
 
 @keyframes scrollBrands {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-50%); } /* seamless loop */
 }
