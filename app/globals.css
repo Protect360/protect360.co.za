@@ -253,11 +253,14 @@ body {
   box-shadow: 0 0 15px rgba(29, 185, 84, 0.4);
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
 }
 
+/* Hide the title text when hovering */
 .carousel-box:hover {
   transform: scale(1.05);
   box-shadow: 0 0 35px rgba(29, 185, 84, 0.9);
+  color: transparent; /* hides the service name */
 }
 
 /* ===== Description Reveal ===== */
