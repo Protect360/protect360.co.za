@@ -12,7 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0a1a2f;
-  padding: 20px 40px;
+  padding: 10px 10px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -25,7 +25,7 @@ body {
 
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background: none;
   border: none;
   color: #fff;
@@ -35,7 +35,7 @@ body {
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 12px;
   margin: 0;
   padding: 0;
 }
@@ -51,7 +51,7 @@ body {
   color: #1db954;
 }
 
-/* Mobile */
+/* ===== Mobile Navbar ===== */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -59,7 +59,7 @@ body {
   .navbar-links {
     display: none;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     background-color: #0a1a2f;
     position: absolute;
     top: 70px;
@@ -118,19 +118,19 @@ html, body {
 
 /* ===== Hero Section ===== */
 .hero {
-  position: relative;
-  text-align: center;
+  width: 100%;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 32vh;
-  padding: 20px 10px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
   background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Hero Content ===== */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -139,23 +139,14 @@ html, body {
   gap: 10px;
 }
 
-/* ===== Hero Logo ===== */
 .hero-logo {
-  width: 100%;
-  max-width: 720px;
-  height: auto;
-  margin: 0 auto;
+  width: auto;
+  max-width: 768px;
+  height: 200px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  .hero-logo {
-    width: 90%;
-    max-width: 360px;
-    margin: 15px auto;
-  }
-}
-
-/* ===== Hero Buttons ===== */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -187,35 +178,31 @@ html, body {
   transform: scale(1.05);
 }
 
-/* ===== Carousel Services with Slogan ===== */
+/* ===== Carousel Services ===== */
 .carousel-services {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #081423;
-  padding-top: 0px;
-  padding-bottom: 0;
-  margin-top: -5px;
-  margin-bottom: -5px;
-  height: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 0;
+  height: auto;
   overflow: hidden;
 }
 
-/* Slogan styling */
 .slogan-slide {
   text-align: center;
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #1db954;
-  margin-top: 0px;
-  margin-bottom: 6px;
-  opacity: 1;
-  transform: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
-/* Carousel box styling */
 .carousel-box {
   background-color: #0a1a2f;
   border: 1px solid #1db954;
@@ -227,6 +214,100 @@ html, body {
   box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
   text-align: center;
   position: relative;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* ===== Brands Section (Seamless Scroll + Boxed Logos) ===== */
+.brands {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  background-color: #0a1a2f;
+  overflow: hidden;
+}
+
+.brands h2 {
+  color: #fff;
+  font-style: italic;
+  font-family: "Orbitron", "Poppins", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Scroll container */
+.brand-scroll {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  animation: scrollBrands 25s linear infinite;
+}
+
+/* Logo boxes */
+.brand-box {
+  background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
+  border-radius: 8px;
+  padding: 10px 20px;
+  min-width: 140px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.brand-box img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
+}
+
+/* Keyframes: seamless left scroll */
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== Homepage Alignment Fix ===== */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.home-page .main-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ===== Responsive adjustments for mobile ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh;
+    padding-top: 30px;
+  }
+  .hero-logo {
+    height: 160px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .brands h2 {
+    font-size: 1.5rem;
+  }
+  .brand-scroll {
+    animation: scrollBrands 35s linear infinite;
+  }
 }

@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="navbar-left">
         <Link href="/">
           <Image
-            src="/logos/logo.png"
+            src="/logos/logo-logo.png" // icon-only logo for navbar
             alt="Protect 360 Logo"
             width={60}
             height={60}
@@ -35,14 +35,16 @@ export default function Navbar() {
       </div>
 
       {/* Hamburger toggle for mobile */}
-      <div className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
+      >
+        ☰
+      </button>
 
       {/* Navigation Links */}
-      <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
+      <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
         {/* Show only Home link on Reviews and Gallery pages */}
         {(isReviews || isGallery) && (
           <li>

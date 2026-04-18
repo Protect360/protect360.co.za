@@ -27,6 +27,13 @@ export const metadata = {
     siteName: "Protect 360 (Pty) Ltd.",
     locale: "en_ZA",
     type: "website",
+    images: ["/logos/logo.png"], // Full logo for social previews
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Protect 360 (Pty) Ltd.",
+    description: "Home & Business Security Systems",
+    images: ["/logos/logo.png"], // Optional, covers Twitter if ever used
   },
 };
 
