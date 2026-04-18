@@ -300,9 +300,9 @@ html, body {
   .hero {
     min-height: 42vh;
     margin-top: -10px;
-    margin-bottom: 10px;
-    padding-top: -10px;
-    padding-bottom: -5px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 0;
   }
 
   .hero-logo {
