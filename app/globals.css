@@ -298,22 +298,26 @@ html, body {
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 40vh;
-    padding-top: 20px;
+    min-height: 50vh;
+    padding-top: -30px;
+    margin-bottom: -30px;
+    padding-top: 25px;
+    padding-bottom: 10px;
   }
   .hero-logo {
-    height: 150px;
+    height: 130px;
   }
   .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
   }
   .brands h2 {
     font-size: 1.5rem;
     transform: translateY(-8px);
   }
   .brand-scroll {
-    animation: scrollBrands 35s linear infinite;
+    animation: scrollBrands 30s linear infinite;
   }
 }
 /* ===== Desktop viewport balance ===== */
