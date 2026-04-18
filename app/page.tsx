@@ -19,14 +19,14 @@ export default function HomePage() {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
 
-  const startCarousel = () => {
-    const id = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % services.length);
-    }, 2500);
-    setIntervalId(id);
-  };
+const startCarousel = () => {
+  const id = setInterval(() => {
+    setActiveIndex((prev) => (prev + 1) % services.length);
+  }, 2500);
+  setIntervalId(id);
+};
 
   useEffect(() => {
     startCarousel();
@@ -76,17 +76,17 @@ export default function HomePage() {
 
       {/* ===== Brands Section ===== */}
       <section className="brands">
-        <h2>Official Brands We Work With</h2>
-        <div className="brand-scroll">
-          <Image src="/brands/dsc.png" alt="DSC" width={120} height={60} />
-          <Image src="/brands/texecom.png" alt="Texecom" width={120} height={60} />
-          <Image src="/brands/paradox.png" alt="Paradox" width={120} height={60} />
-          <Image src="/brands/ids.png" alt="IDS" width={120} height={60} />
-          <Image src="/brands/hikvision.png" alt="Hikvision" width={120} height={60} />
-          <Image src="/brands/dahua.png" alt="Dahua" width={120} height={60} />
-          <Image src="/brands/hilook.png" alt="HiLook" width={120} height={60} />
-        </div>
-      </section>
+  <h2>Official Brands We Work With</h2>
+  <div className="brand-scroll">
+    <div className="brand-box"><Image src="/brands/dsc.png" alt="DSC" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/texecom.png" alt="Texecom" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/paradox.png" alt="Paradox" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/ids.png" alt="IDS" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hikvision.png" alt="Hikvision" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/dahua.png" alt="Dahua" width={120} height={60} /></div>
+    <div className="brand-box"><Image src="/brands/hilook.png" alt="HiLook" width={120} height={60} /></div>
+  </div>
+</section>
     </main>
   );
 }
