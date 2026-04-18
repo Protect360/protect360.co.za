@@ -198,76 +198,83 @@ body {
   flex: 1;
 }
 
-/* ===== Slideshow Services with Fade & Pulse ===== */
-.slideshow-services {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
-  overflow: hidden;
+/* ===== Interactive Services ===== */
+.interactive-services {
+  text-align: center;
 }
 
-.slideshow-box {
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-item {
   position: relative;
-  width: 240px;
-  height: 140px;
-  background-color: #0a1a2f;
-  border: 1px solid #1db954;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 600;
+  padding: 15px;
+}
+
+.glow-text {
   font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 0 55px rgba(29, 185, 84, 1);
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(29, 185, 84, 0.8);
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
   opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 1.2s ease, transform 1.2s ease;
-  animation: pulseGlow 2.5s infinite ease-in-out;
-}
-
-/* Fade in/out between slides */
-.slideshow-box.active {
-  opacity: 1;
-  transform: scale(1.4);
-}
-
-/* Pulse glow animation */
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 25px rgba(29, 185, 84, 0.6); }
-  50% { box-shadow: 0 0 55px rgba(29, 185, 84, 1); }
-  100% { box-shadow: 0 0 25px rgba(29, 185, 84, 0.6); }
-}
-
-/* Title text */
-.slideshow-title {
-  z-index: 2;
-  transition: opacity 0.3s ease;
-}
-
-/* Description reveal */
-.slideshow-description {
+  background-color: #1c3b5a;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
   position: absolute;
-  top: 50%;
+  top: 120%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  font-size: 0.9rem;
-  color: #cfd8dc;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  text-align: center;
-  z-index: 1;
+  transform: translateX(-50%);
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: opacity 0.3s ease;
+  z-index: 10;
 }
 
-/* Hover behavior */
-.slideshow-box:hover .slideshow-title {
-  opacity: 0;
-}
-
-.slideshow-box:hover .slideshow-description {
+.service-item:hover .tooltip {
+  visibility: visible;
   opacity: 1;
+}
+
+/* ===== Brands Section ===== */
+.brands {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.brands h2 {
+  margin-bottom: 20px;
+}
+
+.brand-scroll {
+  display: flex;
+  gap: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scrollBrands 25s linear infinite;
+}
+
+.brand-scroll img {
+  height: 60px;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.brand-scroll img:hover {
+  filter: brightness(1.2);
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
