@@ -194,11 +194,11 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: #081423;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  height: 160px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  height: 150px;
   overflow: hidden;
 }
 
@@ -209,8 +209,8 @@ html, body {
   font-size: 1.6rem;
   font-weight: 700;
   color: #1db954;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 6px;
   opacity: 1;
   transform: none;
 }
@@ -219,14 +219,14 @@ html, body {
 .carousel-box {
   background-color: #0a1a2f;
   border: 1px solid #1db954;
-  border-radius: 10px;
-  padding: 18px 36px;
+  border-radius: 5px;
+  padding: 15px 30px;
   color: #fff;
   font-weight: 600;
   font-size: 1.15rem;
   box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
   text-align: center;
   position: relative;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
