@@ -8,23 +8,23 @@ export default function ServicesPage() {
         <div className="services-grid">
           <div className="service-box">
             <strong>Alarm Systems</strong>
-            <span>Instant alerts for intrusion detection and rapid response through integrated monitoring.</span>
+            <span>Advanced intrusion detection, fire alarms, and environmental monitoring to protect your property and loved ones.</span>
+          </div>
+          <div className="service-box">
+            <strong>CCTV Systems</strong>
+            <span>High-definition surveillance cameras with remote access and intelligent analytics for comprehensive monitoring.</span>
           </div>
           <div className="service-box">
             <strong>Electric Fencing</strong>
             <span>Strong perimeter defense that deters threats and reinforces property boundaries.</span>
-          </div>
-          <div className="service-box">
-            <strong>CCTV Systems</strong>
-            <span>24/7 high-definition monitoring with clear footage and remote viewing access.</span>
-          </div>
+        </div>
           <div className="service-box">
             <strong>Gate & Door Automation</strong>
             <span>Secure and convenient entry solutions for residential and commercial properties.</span>
           </div>
           <div className="service-box">
             <strong>Access Control</strong>
-            <span>Biometric and card-based systems to manage and track authorized entry points.</span>
+            <span>Comprehensive access management systems for enhanced security, monitoring and control.</span>
           </div>
           <div className="service-box">
             <strong>Intercom Systems</strong>
@@ -39,24 +39,28 @@ export default function ServicesPage() {
         <p>Complete Service Lifecycle</p>
         <div className="services-grid">
           <div className="service-box">
-            <strong>Installation</strong>
-            <span>Professional setup, testing, and optimization for flawless performance.</span>
+            <strong>Installation & Integration</strong>
+            <span>Professional installation and seamless integration of security systems for optimal performance.</span>
           </div>
           <div className="service-box">
             <strong>Assessments & Quotes</strong>
-            <span>On-site evaluations and transparent, tailored quotations before commitment.</span>
+            <span>Comprehensive security assessments and personalized quotes to meet your specific needs and budget.</span>
           </div>
           <div className="service-box">
             <strong>Maintenance & Repairs</strong>
-            <span>Scheduled maintenance and responsive repairs to ensure system reliability.</span>
+            <span>Regular maintenance and prompt repairs to ensure your security systems operate at peak performance.</span>
           </div>
           <div className="service-box">
             <strong>Add-Ons & Upgrades</strong>
-            <span>Seamless expansion with additional cameras, access control, or fencing upgrades.</span>
+            <span>Enhance your security with add-ons and upgrades for improved functionality and protection.</span>
           </div>
           <div className="service-box">
             <strong>Fault-Finding & Troubleshooting</strong>
-            <span>Fast diagnostics and issue resolution to minimize downtime and restore security.</span>
+            <span>Expert diagnosis and resolution of security system issues to minimize downtime and ensure optimal performance.</span>
+          </div>
+          <div className="service-box">
+            <strong>24/7 Support</strong>
+            <span>Round-the-clock support for any security system emergencies or inquiries, ensuring your safety and peace of mind.</span>
           </div>
         </div>
       </section>

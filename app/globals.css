@@ -200,8 +200,7 @@ body {
 
 /* ===== Homepage Carousel ===== */
 .carousel-services {
-  overflow: hidden;
-  width: 100%; /* full width across the page */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,31 +208,15 @@ body {
   perspective: 1000px;
 }
 
-/* ===== Carousel Track ===== */
 .carousel-track {
   display: flex;
   gap: 40px;
-  width: max-content;
-  animation: scrollCarousel 40s linear infinite;
-  will-change: transform;
-  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
 }
 
-.carousel-services:hover .carousel-track {
-  animation-play-state: paused; /* pause on hover */
-}
-
-/* ===== Continuous Scroll ===== */
-@keyframes scrollCarousel {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ===== Carousel Boxes ===== */
 .carousel-box {
   width: 220px;
   height: 130px;
-  flex-shrink: 0;
   background-color: #0a1a2f;
   border: 1px solid #1db954;
   border-radius: 10px;
@@ -241,51 +224,23 @@ body {
   font-weight: 600;
   font-size: 1.1rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   box-shadow: 0 0 10px rgba(29, 185, 84, 0.4);
   transition: all 0.4s ease;
-  position: relative;
   opacity: 0.7;
 }
 
-/* ===== Center Focus Effect ===== */
-.carousel-box:nth-child(3) {
+.carousel-box.active {
   transform: scale(1.4);
   opacity: 1;
   box-shadow: 0 0 55px rgba(29, 185, 84, 1);
   z-index: 2;
 }
 
-/* ===== Side Boxes Smaller ===== */
-.carousel-box:nth-child(2),
-.carousel-box:nth-child(4) {
+.carousel-box.side {
   transform: scale(0.8);
   opacity: 0.6;
   box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
-}
-
-/* ===== Hover Behavior ===== */
-.carousel-box:hover {
-  color: transparent;
-}
-
-.carousel-box:hover .carousel-description {
-  opacity: 1;
-}
-
-/* ===== Description Reveal ===== */
-.carousel-description {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  font-size: 0.9rem;
-  color: #cfd8dc;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
 }

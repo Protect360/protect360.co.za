@@ -1,7 +1,34 @@
 "use client";
+import {useState, useEffect} from "react";
 import Image from "next/image";
 
 export default function HomePage() {
+  const boxes = [
+    "Alarm Systems",
+    "CCTV Systems",
+    "Electric Fencing",
+    "Gate & Door Automation",
+    "Access Control",
+    "Intercom Systems",
+    "Installation & Integration",
+    "Assessments & Quotes",
+    "Maintenance & Repairs",
+    "Add-Ons & Upgrades",
+    "Fault-Finding & Troubleshooting",
+    "24/7 Support"
+  ];
+  
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % boxes.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [paused, boxes.length]);
+
   return (
     <main className="home-page">
       {/* ===== Hero Slogan ===== */}
@@ -31,81 +58,23 @@ export default function HomePage() {
       </section>
 
       {/* ===== Carousel Services ===== */}
-      <section className="carousel-services">
+      <section
+        className="carousel-services"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         <div className="carousel-track">
-          <div className="carousel-box">
-            Alarm Systems
-            <div className="carousel-description">
-              Advanced intrusion detection, fire alarms, and environmental monitoring to protect your property and loved ones.
-            </div>
-          </div>
-          <div className="carousel-box">
-            CCTV Systems
-            <div className="carousel-description">
-              24/7 high-definition monitoring with clear footage and remote viewing access.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Electric Fencing
-            <div className="carousel-description">
-             Strong perimeter defense that deters threats and reinforces property boundaries. 
-            </div>
-          </div>
-          <div className="carousel-box">
-            Gate & Door Automation
-            <div className="carousel-description">
-              Secure and convenient entry solutions for residential and commercial properties.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Access Control
-            <div className="carousel-description">
-              Comprehensive access management systems for enhanced security, monitoring and control.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Intercom Systems
-            <div className="carousel-description">
-              Clear communication between entry points and occupants for tighter visitor control.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Installation & Integration
-            <div className="carousel-description">
-              Professional installation and seamless integration of security systems for optimal performance.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Assessments & Quotes
-            <div className="carousel-description">
-              Comprehensive security assessments and personalized quotes to meet your specific needs and budget.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Maintenance & Repairs
-            <div className="carousel-description">
-              Reliable maintenance and prompt repairs to ensure your security systems operate at peak performance.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Add-Ons & Upgrades
-            <div className="carousel-description">
-              Enhance your security with add-ons and upgrades for improved functionality and protection.
-            </div>
-          </div>
-          <div className="carousel-box">
-            Fault-Finding & Troubleshooting
-            <div className="carousel-description">
-              Expert diagnosis and resolution of security system issues to minimize downtime and ensure optimal performance.
-            </div>
-          </div>
-          <div className="carousel-box">
-            24/7 Support
-            <div className="carousel-description">
-              Round-the-clock support for any security system emergencies or inquiries, ensuring your safety and peace of mind.
-            </div>  
-          </div>
-        </div>      
+          {boxes.map((box, i) => {
+            let className = "carousel-box";
+            if (i === activeIndex) className += " active";
+            else if (
+              i === (activeIndex + 1) % boxes.length ||
+              i === (activeIndex - 1 + boxes.length) % boxes.length
+            )
+              className += " side";
+            return <div key={i} className={className}>{box}</div>;
+          })}
+        </div>
       </section>
 
       {/* ===== Brands Section ===== */}
