@@ -206,6 +206,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 30px 0;
+  perspective: 1000px; /* adds depth for scaling effect */
+  width: 900px; /* fits roughly three boxes */
+  margin: 0 auto;
 }
 
 /* ===== Carousel Track ===== */
@@ -215,6 +218,7 @@ body {
   width: max-content;
   animation: scrollCarousel 40s linear infinite;
   will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .carousel-services:hover .carousel-track {
@@ -228,24 +232,31 @@ body {
 
 /* ===== Carousel Boxes ===== */
 .carousel-box {
-  width: 280px;
-  min-height: 140px; /* ensures all boxes match tallest one */
+  width: 240px;
+  height: 140px;
   flex-shrink: 0;
   background-color: #0a1a2f;
   border: 1px solid #1db954;
   border-radius: 10px;
   color: #fff;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: flex;
-  flex-direction: column; /* stack title and description vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 0 0 15px rgba(29, 185, 84, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(29, 185, 84, 0.4);
+  transition: all 0.4s ease;
   position: relative;
-  overflow: hidden;
+  opacity: 0.7;
+}
+
+/* Center focus effect */
+.carousel-box:nth-child(3) {
+  transform: scale(1.25);
+  opacity: 1;
+  box-shadow: 0 0 40px rgba(29, 185, 84, 0.9);
 }
 
 /* Hide the title text when hovering */
