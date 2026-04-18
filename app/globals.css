@@ -251,7 +251,7 @@ html, body {
 }
 
 .brands h2 {
-  color: #0a1a2f;
+  color: #ffffff;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 30px;
@@ -290,5 +290,5 @@ html, body {
 
 @keyframes scrollBrands {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
 }
