@@ -95,7 +95,6 @@ body {
 /* ===== Hero Logo ===== */
 .hero-logo {
   display: block;
-  top: 50px;
   width: 85%;
   max-width: 720px;
   height: auto;
@@ -142,65 +141,24 @@ body {
   transform: scale(1.05);
 }
 
-/* ===== Footer ===== */
-.footer {
+/* ===== Slogan Above Carousel ===== */
+.slogan-slide {
   text-align: center;
-  padding: 25px 20px;
-  background-color: #081423;
-  color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid #1db954;
-}
-
-.footer-content p {
-  margin: 6px 0;
-}
-
-.footer-links a {
-  color: #1db954;
-  text-decoration: none;
-  margin: 0 6px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #fff;
-}
-
-/* ===== Layout Structure ===== */
-.layout-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-}
-
-/* ===== Slogan Box ===== */
-.slogan-box {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  background: linear-gradient(135deg, #0a1a2f, #1c3b5a);
-  border-radius: 10px;
-  padding: 14px 0;
-  color: #1db954;
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  text-align: center;
+  color: #1db954;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #0a1a2f, #1c3b5a);
+  border-radius: 10px;
+  padding: 12px 0;
   box-shadow: 0 0 5px rgba(29, 185, 84, 0.4);
-  z-index: 10;
 }
 
 /* ===== Homepage Sliding Carousel ===== */
 .carousel-services {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px 20px;
@@ -249,7 +207,7 @@ body {
 /* ===== Brands Section ===== */
 .brands {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .brands h2 {
@@ -279,58 +237,27 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* ===== Services Page ===== */
-.services-page {
+/* ===== Footer ===== */
+.footer {
   text-align: center;
-  padding: 60px 20px;
+  padding: 25px 20px;
+  background-color: #081423;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #1db954;
 }
 
-.services-block {
-  margin: 40px auto;
-  max-width: 1100px;
+.footer-content p {
+  margin: 6px 0;
 }
 
-.services-block h2 {
+.footer-links a {
   color: #1db954;
-  margin-bottom: 10px;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
 }
 
-.services-block p {
-  color: #cfd8dc;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-}
-
-/* Grid layout for individual service boxes */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
-.service-box {
-  background-color: #0f2a45;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-  text-align: left;
-}
-
-.service-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
-}
-
-.service-box strong {
-  color: #1db954;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.service-box span {
-  color: #cfd8dc;
-  font-size: 1rem;
-  line-height: 1.4;
+.footer-links a:hover {
+  color: #fff;
 }
