@@ -18,22 +18,23 @@ export default function HomePage() {
     "Fault‑Finding & Troubleshooting",
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
-
-const startCarousel = () => {
-  const id = setInterval(() => {
-    setActiveIndex((prev) => (prev + 1) % services.length);
-  }, 2500);
-  setIntervalId(id);
-};
+const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    startCarousel();
+    const id = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 2500);
+
     return () => {
-      if (intervalId) clearInterval(intervalId);
+      clearInterval(id);
     };
   }, []);
+
+  const startCarousel = () => {
+    const id = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 2500);
+  };
 
   return (
     <main className="home-page">
@@ -62,8 +63,6 @@ const startCarousel = () => {
       {/* ===== Carousel Services with Slogan ===== */}
       <section
         className="carousel-services"
-        onMouseEnter={() => intervalId && clearInterval(intervalId)}
-        onMouseLeave={() => startCarousel()}
       >
         <div className="slogan-slide">
           <p>Your first choice for uncompromising security solutions.</p>
