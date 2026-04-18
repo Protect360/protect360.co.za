@@ -198,22 +198,23 @@ body {
   flex: 1;
 }
 
-/* ===== Homepage Carousel (Swap Animation) ===== */
+/* ===== Homepage Carousel (True Center Focus) ===== */
 .carousel-services {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
-  perspective: 1000px;
   overflow: hidden;
+  perspective: 1000px;
 }
 
 .carousel-track {
   display: flex;
   gap: 40px;
-  transition: transform 0.8s ease;
   justify-content: center;
+  align-items: center;
+  transition: transform 0.8s ease;
 }
 
 .carousel-box {
@@ -234,6 +235,7 @@ body {
   opacity: 0.7;
 }
 
+/* Center box glow and scale */
 .carousel-box.active {
   transform: scale(1.4);
   opacity: 1;
@@ -241,8 +243,14 @@ body {
   z-index: 2;
 }
 
+/* Side boxes smaller and dimmer */
 .carousel-box.side {
   transform: scale(0.8);
   opacity: 0.6;
   box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
+}
+
+/* Smooth hover pause */
+.carousel-services:hover .carousel-track {
+  transition: none;
 }
