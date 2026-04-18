@@ -63,13 +63,13 @@ export default function HomePage() {
   onMouseEnter={() => setPaused(true)}
   onMouseLeave={() => setPaused(false)}
 >
-  <div className="carousel-focus"></div> {/* fixed center window */}
+  <div className="carousel-frame"></div> {/* fixed center window */}
   <div
-  className="carousel-track"
-  style={{
-    transform: `translateX(calc(50vw - 130px - ${offset * 260}px))`,
-  }}
->
+    className="carousel-track"
+    style={{
+      transform: `translateX(calc(50vw - 130px - ${offset * 260}px))`,
+    }}
+  >
     {boxes.map((box, i) => {
       const centerIndex = (offset + 2) % boxes.length;
       let className = "carousel-box";

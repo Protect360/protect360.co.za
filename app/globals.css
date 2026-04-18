@@ -198,20 +198,18 @@ body {
   flex: 1;
 }
 
-/* ===== Homepage Carousel (Fixed Center Focus) ===== */
+/* ===== Homepage Carousel (Perfect Center Focus) ===== */
 .carousel-services {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
+  padding: 40px 0;
   overflow: hidden;
-  perspective: 1000px;
 }
 
-/* Center focus window */
-.carousel-focus {
+.carousel-frame {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -221,7 +219,6 @@ body {
   z-index: 5;
 }
 
-/* Track scrolls behind the focus window */
 .carousel-track {
   display: flex;
   gap: 40px;
@@ -229,7 +226,6 @@ body {
   transition: transform 0.8s ease;
 }
 
-/* Boxes */
 .carousel-box {
   width: 220px;
   height: 130px;
@@ -248,7 +244,7 @@ body {
   opacity: 0.7;
 }
 
-/* Glow and scale for box in center focus */
+/* Center glow and scale */
 .carousel-box.active {
   transform: scale(1.4);
   opacity: 1;
