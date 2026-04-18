@@ -300,7 +300,7 @@ html, body {
   .hero {
     min-height: 42vh;
     margin-top: 40px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 10px;
   }
