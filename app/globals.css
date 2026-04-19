@@ -119,6 +119,7 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: -20px;
   padding-top: 40px;
   padding-bottom: 20px;
   background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
