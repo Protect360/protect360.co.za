@@ -250,7 +250,7 @@ html, body {
   100% { transform: translateX(-50%); }
 }
 
-/* ===== Homepage Layout Structure ===== */
+/* ===== Homepage Balance ===== */
 .home-page {
   display: flex;
   flex-direction: column;
@@ -259,7 +259,7 @@ html, body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #0a1a2f;
+  background-color: #081423;
 }
 
 .home-page .main-content {
@@ -271,34 +271,33 @@ html, body {
   flex: 1;
 }
 
-/* ===== Homepage Balance ===== */
-.home-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* evenly distribute hero → footer */
-  min-height: 100vh;              /* full viewport height */
-  overflow-x: hidden;
-}
-
+/* Hero section */
 .hero {
-  margin-bottom: 0;       /* remove extra space below hero */
-  padding-bottom: 20px;   /* keep internal breathing room */
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
 }
 
+/* Slogan / Services */
 .carousel-services {
-  margin-top: 0;          /* remove gap above services */
-  margin-bottom: 10px;    /* extend space below services */
-  padding-bottom: 10px;   /* smooth transition to brands */
+  margin: 0;
+  padding: 20px 0 25px 0;
+  background-color: #081423;
 }
 
+/* Brands section */
 .brands {
-  margin-top: -5px;       /* pull brands closer to services */
-  margin-bottom: 0;       /* remove gap above footer */
-  padding-top: 10px;      /* maintain subtle separation */
+  margin: 0;
+  padding: 10px 0 20px 0;
+  background-color: #081423;
 }
 
+/* Footer */
 .footer {
-  margin-top: 0;          /* attach footer directly under brands */
+  margin: 0;
+  padding: 20px 15px;
+  background-color: #081423;
 }
 
 /* ===== Responsive adjustments for mobile ===== */
