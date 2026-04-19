@@ -298,11 +298,11 @@ html, body {
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 45vh;
+    min-height: 50vh;
     margin-top: -5px;
     margin-bottom: 30px;
     padding-top: 15px;
-    padding-bottom: -10px;
+    padding-bottom: 0;
   }
 
   .slogan-slide {
