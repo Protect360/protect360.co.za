@@ -160,6 +160,7 @@ html, body {
   padding: 25px 0 20px 0;
 }
 
+/* Slogan */
 .slogan-slide {
   text-align: center;
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
@@ -169,20 +170,31 @@ html, body {
   margin: 10px 0;
 }
 
+/* Service Boxes */
 .carousel-box {
   background-color: #0a1a2f;
   border: 1px solid #1db954;
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 15px 30px;
   color: #fff;
   font-weight: 600;
   font-size: 1.3rem;
-  box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
   text-align: center;
   margin: 10px 0 20px 0;
+  box-shadow:
+    0 0 12px rgba(29, 185, 84, 0.7),
+    inset 0 0 8px rgba(29, 185, 84, 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* ===== Brands Section ===== */
+.carousel-box:hover {
+  box-shadow:
+    0 0 18px rgba(29, 185, 84, 0.9),
+    inset 0 0 10px rgba(29, 185, 84, 0.5);
+  transform: scale(1.03);
+}
+
+/* Brands Section */
 .brands {
   width: 100%;
   max-width: 1400px;
@@ -202,7 +214,6 @@ html, body {
   letter-spacing: 2px;
 }
 
-/* Scroll container */
 .brand-scroll {
   display: flex;
   flex-direction: row;
@@ -221,7 +232,6 @@ html, body {
   cursor: grab;
 }
 
-/* Logo boxes */
 .brand-box {
   background-color: #f7f7f7;
   border: 1px solid #ccc;
@@ -252,19 +262,29 @@ html, body {
 /* ===== Footer ===== */
 .footer {
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
-  padding: 12px 10px;
+  padding: 20px 15px;
   background-color: #081423;
   color: #aaa;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   border-top: 1px solid #1db954;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.footer-links {
+  margin-top: 10px;
 }
 
 .footer-links a {
   color: #1db954;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
