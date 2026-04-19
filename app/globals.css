@@ -271,6 +271,29 @@ html, body {
   flex: 1;
 }
 
+/* ===== Homepage Viewport Balance ===== */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* evenly distribute hero → footer */
+  min-height: 100vh;              /* full viewport height */
+  overflow-x: hidden;
+}
+
+.carousel-services {
+  margin-bottom: 0;               /* remove extra space below slogan/services */
+  padding-bottom: 5px;            /* keep slight breathing room */
+}
+
+.brands {
+  margin-top: -10px;              /* pull brands closer to slogan/services */
+  padding-top: 10px;              /* maintain visual separation */
+}
+
+.footer {
+  margin-top: 0;                  /* attach footer directly under brands */
+}
+
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
