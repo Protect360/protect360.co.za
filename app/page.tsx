@@ -47,11 +47,11 @@ export default function HomePage() {
 
   return (
     <main className="home-page">
-      {/* ===== Hero Section ===== */}
+{/* ===== Hero Section ===== */}
       <section className="hero">
         <div className="hero-content">
           <Image
-            src="/logos/logo-text.png" // text-only logo for hero
+            src="/logos/logo-text.png"
             alt="Protect 360 Logo Text"
             className="hero-logo"
             width={768}
@@ -69,14 +69,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Carousel Services with Slogan and Brands ===== */}
+{/* ===== Carousel Slogan/Services ===== */}
       <section className="carousel-services">
-        {/* Slogan */}
+    {/* Slogan */}
         <p className="slogan-slide">
           Your first choice for uncompromising security solutions.
         </p>
 
-        {/* Active service block */}
+    {/* Services */}
         <div
           key={activeIndex}
           className="carousel-box"
@@ -86,28 +86,33 @@ export default function HomePage() {
           {services[activeIndex]}
         </div>
 
-        {/* Official Brands Section */}
+{/* ===== Brands ===== */}
         <div className="brands">
-          <h2>Brands We Supply And Trust</h2>
+          <h2>Brands We Trust</h2>
           <div className="brand-scroll">
+      {/* 1st Sequence */}
             {brands.map((brand, i) => (
-              <Image
-                key={`brand-${i}`}
-                src={brand.src}
-                alt={brand.alt}
-                width={120}
-                height={60}
-              />
+              <div key={`brand-${i}`} className="brand-box">
+                <Image
+                  src={brand.src}
+                  alt={brand.alt}
+                  width={120}
+                  height={60}
+                  style={{ display: "inline-block" }}
+                />
+              </div>
             ))}
-            {/* Duplicate list for seamless scroll */}
+      {/* 2nd Sequence */}
             {brands.map((brand, i) => (
-              <Image
-                key={`brand-dup-${i}`}
-                src={brand.src}
-                alt={brand.alt}
-                width={120}
-                height={60}
-              />
+              <div key={`brand-dup-${i}`} className="brand-box">
+                <Image
+                  src={brand.src}
+                  alt={brand.alt}
+                  width={120}
+                  height={60}
+                  style={{ display: "inline-block" }}
+                />
+              </div>
             ))}
           </div>
         </div>
