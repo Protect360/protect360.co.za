@@ -286,16 +286,13 @@ html, body {
 
 /* Brands section */
 .brands {
-  margin: 0;
-  padding: 5px 0 15px 0;
-  background-color: #081423;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* Footer */
 .footer {
-  margin-top: auto;
-  padding: 20px 15px;
-  background-color: #081423;
+  margin-top: -5px;
 }
 
 /* ===== Responsive adjustments for mobile ===== */
