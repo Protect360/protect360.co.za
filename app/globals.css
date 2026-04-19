@@ -302,9 +302,7 @@ html, body {
     margin-top: -5px;
     margin-bottom: 30px;
     padding-top: 15px;
-    padding-bottom: 0;
-    background-color: radial-gradient(circle at top, #081423 0%, #081423 100%);
-    border-bottom: 1px solid #081423;
+    padding-bottom: 10px;
   }
 
   .slogan-slide {
