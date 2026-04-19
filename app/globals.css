@@ -271,7 +271,7 @@ html, body {
   flex: 1;
 }
 
-/* ===== Homepage Viewport Balance ===== */
+/* ===== Homepage Balance ===== */
 .home-page {
   display: flex;
   flex-direction: column;
@@ -281,21 +281,24 @@ html, body {
 }
 
 .hero {
-  margin-bottom: 10px; /* reduce hero bottom space to close gap above slogan */
+  margin-bottom: 0;       /* remove extra space below hero */
+  padding-bottom: 20px;   /* keep internal breathing room */
 }
 
 .carousel-services {
-  margin-bottom: 15px; /* extend space below services */
-  padding-bottom: 15px; /* add internal breathing room */
+  margin-top: 0;          /* remove gap above services */
+  margin-bottom: 10px;    /* extend space below services */
+  padding-bottom: 10px;   /* smooth transition to brands */
 }
 
 .brands {
-  margin-top: -15px;              /* pull brands closer to slogan/services */
-  padding-top: 5px;              /* maintain visual separation */
+  margin-top: -5px;       /* pull brands closer to services */
+  margin-bottom: 0;       /* remove gap above footer */
+  padding-top: 10px;      /* maintain subtle separation */
 }
 
 .footer {
-  margin-top: 0;                  /* attach footer directly under brands */
+  margin-top: 0;          /* attach footer directly under brands */
 }
 
 /* ===== Responsive adjustments for mobile ===== */
