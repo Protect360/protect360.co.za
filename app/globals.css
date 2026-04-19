@@ -269,30 +269,32 @@ html, body {
   flex: 1;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: -40px;
   padding-top: 40px;
   padding-bottom: 20px;
   background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
 }
 
-/* Slogan / Services */
+/* Slogan/Services Section */
 .carousel-services {
   margin: 0;
   padding: 20px 0 30px 0;
   background-color: #081423;
 }
 
-/* Brands section */
+/* Brands Section */
 .brands {
-  margin-bottom: 0;
+  margin-top: 0;
   padding-bottom: 0;
 }
 
 /* Footer */
 .footer {
-  margin-top: -5px;
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 /* ===== Responsive adjustments for mobile ===== */
