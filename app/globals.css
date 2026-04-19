@@ -66,7 +66,7 @@ body {
     right: 20px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   }
   .navbar-links.open {
     display: flex;
@@ -76,8 +76,6 @@ body {
 /* ===== Layout Structure ===== */
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .layout-container {
@@ -101,10 +99,6 @@ html, body {
   margin-top: auto;
 }
 
-.footer-content p {
-  margin: 6px 0;
-}
-
 .footer-links a {
   color: #1db954;
   text-decoration: none;
@@ -119,8 +113,6 @@ html, body {
 /* ===== Hero Section ===== */
 .hero {
   width: 100%;
-  margin-top: -50px;
-  margin-bottom: -50px;
   min-height: 45vh;
   display: flex;
   flex-direction: column;
@@ -133,19 +125,10 @@ html, body {
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
 .hero-logo {
   width: auto;
   max-width: 768px;
   height: 200px;
-  margin-top: -10px;
   margin-bottom: 10px;
 }
 
@@ -188,10 +171,7 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: #081423;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 0;
-  height: auto;
+  padding: 10px 0;
   overflow: hidden;
 }
 
@@ -201,8 +181,7 @@ html, body {
   font-size: 1.8rem;
   font-weight: 700;
   color: #1db954;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px 0;
 }
 
 .carousel-box {
@@ -215,16 +194,13 @@ html, body {
   font-size: 1.15rem;
   box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
   text-align: center;
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
 }
 
-/* ===== Brands Section (Seamless Scroll + Boxed Logos) ===== */
+/* ===== Brands Section ===== */
 .brands {
   text-align: center;
   width: 100%;
-  margin: 0 auto;
   padding: 10px 0 25px 0;
   background-color: #081423;
   overflow: hidden;
@@ -238,7 +214,6 @@ html, body {
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transform: translateY(-10px);
 }
 
 /* Scroll container */
@@ -260,77 +235,51 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .brand-box img {
   height: 60px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
 }
 
-/* Keyframes: seamless left scroll */
 @keyframes scrollBrands {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
-
-/* ===== Homepage Alignment Fix ===== */
-.home-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* Main content spacing */
-.home-page .main-content {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 /* ===== Responsive adjustments for mobile ===== */
 @media (max-width: 768px) {
   .hero {
     min-height: 45vh;
-    margin-top: -5px;
+    margin-top: 0;
     margin-bottom: 30px;
     padding-top: 15px;
-    padding-bottom: 0;
+    padding-bottom: 10px;
   }
 
-  .slogan-slide {
-    margin-top: -10px;
-    background-color: #081423;
-  }
-
-  .brands {
-    margin-bottom: -1px;
-    background-color: #081423;
-  }
-
-  .footer {
-    margin-top: 0;
-    background-color: #081423;
-  }
-  
   .hero-logo {
-    width: auto;
     height: 100px;
-    padding-top: 40px;
-    padding-bottom: 20px;
   }
 
   .hero-buttons {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
+  }
+
+  .slogan-slide {
+    margin-top: 0;
+  }
+
+  .brands {
+    margin-bottom: 0;
+  }
+
+  .footer {
+    margin-top: 0;
   }
 }
 
