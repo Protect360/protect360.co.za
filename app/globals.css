@@ -322,6 +322,8 @@ html, body {
   
   .hero-logo {
     height: 100px;
+    margin-top: -10px;
+    margin-bottom: 10px;
   }
 
   .hero-buttons {
