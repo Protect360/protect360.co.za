@@ -321,9 +321,10 @@ html, body {
   }
   
   .hero-logo {
+    width: auto;
     height: 100px;
-    margin-top: -10px;
-    margin-bottom: 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   .hero-buttons {
