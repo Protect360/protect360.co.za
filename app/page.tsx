@@ -88,7 +88,6 @@ export default function HomePage() {
 
 {/* ===== Brands ===== */}
         <div className="brands">
-          <h2>Brands We Trust</h2>
           <div className="brand-scroll">
       {/* 1st Sequence */}
             {brands.map((brand, i) => (

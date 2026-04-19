@@ -76,6 +76,7 @@ body {
 /* ===== Layout Structure ===== */
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 .layout-container {
@@ -88,8 +89,8 @@ html, body {
 .main-content {
   flex: 1;
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -104,10 +105,8 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 40px;
-  padding-bottom: 10px;
+  margin: 0;
+  padding: 40px 0 10px 0;
   background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
 }
 
@@ -149,17 +148,16 @@ html, body {
   transform: scale(1.05);
 }
 
-/* ===== Carousel Services ===== */
+/* ===== Slogan, Services & Brands ===== */
 .carousel-services {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   background-color: #081423;
-  padding: 20px 0 0 0;
-  margin: 0;
-  overflow: hidden;
+  padding: 25px 0 20px 0;
 }
 
 .slogan-slide {
@@ -168,30 +166,30 @@ html, body {
   font-size: 1.8rem;
   font-weight: 700;
   color: #1db954;
-  margin: 10px 0 5px 0;
+  margin: 10px 0;
 }
 
 .carousel-box {
   background-color: #0a1a2f;
   border: 1px solid #1db954;
   border-radius: 5px;
-  padding: 12px 25px;
+  padding: 15px 30px;
   color: #fff;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
   text-align: center;
-  margin: 5px 0 15px 0;
+  margin: 10px 0 20px 0;
 }
 
 /* ===== Brands Section ===== */
 .brands {
-  text-align: center;
   width: 100%;
-  margin: auto;
-  padding: 10px 0 0 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
   background-color: #081423;
-  overflow: hidden;
+  text-align: center;
 }
 
 .brands h2 {
@@ -199,7 +197,7 @@ html, body {
   font-style: italic;
   font-family: "Orbitron", "Poppins", sans-serif;
   font-size: 1.6rem;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -209,11 +207,18 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 12px;
   flex-wrap: nowrap;
   width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   animation: scrollBrands 30s linear infinite;
+}
+
+.brand-scroll:hover {
+  animation-play-state: paused;
+  cursor: grab;
 }
 
 /* Logo boxes */
@@ -221,26 +226,19 @@ html, body {
   background-color: #f7f7f7;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 10px 20px;
-  min-width: 140px;
-  height: 40px;
+  padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   margin: 5px 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.brand-box:hover {
-  transform: scale(1.25);
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.3s ease;
+  flex: 0 0 auto;
 }
 
 .brand-box img {
-  height: 100%;
-  max-height: auto;
   width: auto;
+  height: 50px;
   object-fit: contain;
   display: block;
   margin: auto;
@@ -253,19 +251,21 @@ html, body {
 
 /* ===== Footer ===== */
 .footer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   text-align: center;
-  padding: 8px 10px;
+  padding: 12px 10px;
   background-color: #081423;
   color: #aaa;
   font-size: 0.85rem;
   border-top: 1px solid #1db954;
-  margin-top: 0;
 }
 
 .footer-links a {
   color: #1db954;
-  text-decoration: none;
-  transition: color 0.3s ease,
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -277,8 +277,6 @@ html, body {
 @media (max-width: 768px) {
   .hero {
     min-height: 45vh;
-    margin-top: 0;
-    margin-bottom: 0;
     padding-top: 15px;
     padding-bottom: 10px;
   }
@@ -298,10 +296,14 @@ html, body {
   }
 
   .brands {
-    margin-bottom: 0;
+    padding: 10px 0;
+  }
+
+  .brand-scroll {
+    gap: 8px;
   }
 
   .footer {
-    margin-top: 0;
+    padding: 10px;
   }
 }
