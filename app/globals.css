@@ -255,43 +255,46 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 100vh;
-  overflow-y: hidden;
   overflow-x: hidden;
   background-color: #081423;
 }
 
+.home-page .main-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0;
+  flex: 1;
+}
+
 /* Hero section */
 .hero {
-  flex: 0 0 38vh;
   margin: 0;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   background: radial-gradient(circle at top, #d9d9d9 0%, #bfbfbf 80%);
 }
 
 /* Slogan / Services */
 .carousel-services {
-  flex: 0 0 22vh;
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 0 30px 0;
   background-color: #081423;
 }
 
 /* Brands section */
 .brands {
-  flex: 0 0 25vh;
   margin: 0;
-  padding: 10px 0;
+  padding: 5px 0 15px 0;
   background-color: #081423;
 }
 
 /* Footer */
 .footer {
-  flex: 0 0 15vh;
-  margin: 0;
-  padding: 20px 0;
+  margin-top: auto;
+  padding: 20px 15px;
   background-color: #081423;
 }
 
