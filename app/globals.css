@@ -299,7 +299,7 @@ html, body {
 @media (max-width: 768px) {
   .hero {
     min-height: 55vh;
-    margin-top: -5px;
+    margin-top: 10px;
     margin-bottom: 30px;
     padding-top: 15px;
     padding-bottom: 0;
