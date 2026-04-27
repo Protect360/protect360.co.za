@@ -1,0 +1,46 @@
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid gray;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid gray;
+  font-size: 12px;
+}
