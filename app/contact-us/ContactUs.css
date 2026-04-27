@@ -6,6 +6,7 @@ html, body {
                "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Theme variables */
 :root[data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #0A1A2F;
@@ -20,6 +21,7 @@ html, body {
   --box-bg: #101F33;
 }
 
+/* Page layout */
 main {
   min-height: 100vh;
   display: flex;
@@ -32,21 +34,21 @@ main {
 .contact-wrapper {
   flex: 1;
   display: flex;
-  align-items: center; /* fills full height */
+  align-items: center;
   justify-content: center;
   padding: 10px 24px;
-  min-height: calc(100vh - 120px); /* nearly touches Navbar and Footer */
+  min-height: calc(100vh - 120px);
 }
 
 /* Two-column grid */
 .contact-grid {
   display: grid;
-  grid-template-columns: 3fr 2fr; /* left larger */
+  grid-template-columns: 3fr 2fr;
   gap: 20px;
   width: 100%;
   max-width: 1200px;
   align-items: stretch;
-  margin: 0; /* remove top/bottom margin */
+  margin: 0;
 }
 
 /* Each block */
@@ -54,59 +56,61 @@ main {
   background-color: var(--box-bg);
   border: 1px solid var(--accent-color);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 174, 239, 0.2);
-  padding: 10px;
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 /* Info block */
+.contact-info-block {
+  text-align: left;
+  gap: 8px;
+}
+
+/* Headings — tightened spacing */
+.contact-info-block h4 {
+  margin: 2px 0 0 0; /* almost no visible gap */
+  font-weight: 700;
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+/* Paragraphs under headings */
+.contact-info-block p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+/* Business hours grid */
 .hours-grid {
   display: grid;
-  grid-template-columns: max-content max-content; /* two columns: day and time */
+  grid-template-columns: max-content max-content;
   column-gap: 6px;
   row-gap: 4px;
   align-items: center;
   justify-content: start;
 }
 
-.day {
-  font-size: 13px;
-  color: #000;
-  text-align: left;
-}
-
+/* Days and times enlarged */
+.day,
 .time {
-  font-size: 13px;
+  font-size: 15px;
   color: #000;
   text-align: left;
 }
 
-.contact-info-block {
-  text-align: left;
-  gap: 8px;
-}
-
-.contact-info-block h4 {
-  margin: 10px 0 4px 0;
-  font-weight: 700;
-  color: var(--accent-color);
-  font-size: 14px;
-}
-
-.contact-info-block p {
-  margin: 0;
-  font-size: 13px;
-  color: var(--text-color);
-}
-
+/* Availability line */
 .availability {
   margin-top: 6px;
   font-style: italic;
   color: var(--accent-color);
+  font-size: 14px;
 }
 
+/* Clickable links */
 .link {
   color: #000;
   text-decoration: none;
@@ -115,7 +119,7 @@ main {
 }
 
 .link:hover {
-  color: #00aeef;
+  color: #00AEEF;
   text-decoration: none;
 }
 
@@ -127,8 +131,8 @@ main {
 }
 
 .icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
