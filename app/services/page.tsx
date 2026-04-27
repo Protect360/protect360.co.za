@@ -7,11 +7,9 @@ export default function Services() {
     <main>
       <Navbar />
       <div className="services-wrapper">
-        {/* Section 1 */}
         <div className="services-container">
           <h2>SECURITY SYSTEMS</h2>
           <h3>Comprehensive Security Solutions</h3>
-
           <div className="services-grid">
             <div className="service-box">
               <h4>Alarm Systems</h4>
@@ -39,12 +37,9 @@ export default function Services() {
             </div>
           </div>
         </div>
-
-        {/* Section 2 */}
         <div className="services-container">
           <h2>OUR EXPERTISE BEYOND PRODUCTS</h2>
           <h3>Specialized Service Excellence</h3>
-
           <div className="services-grid">
             <div className="service-box">
               <h4>Installation & Integration</h4>
