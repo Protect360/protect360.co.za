@@ -1,0 +1,77 @@
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #0A1A2F;
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #0A1A2F;
+  --text-color: #F2F2F2;
+}
+
+html, body, main, section, footer, nav {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 24px;
+  border-bottom: 1px solid #00AEEF;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00AEEF;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.navbar-logo {
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
