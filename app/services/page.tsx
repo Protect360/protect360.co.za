@@ -26,13 +26,17 @@ export default function Services() {
           />
         </div>
         <ul className="nav-links">
-          <li>Home</li>
-          <li>Products</li>
-          <li>Services</li>
-          <li>Contact Us</li>
-          <li>About Us</li>
-          <li>Reviews</li>
-          <li>Gallery</li>
+          {!window.location.pathname.includes("/home") && <li><a href="/">Home</a></li>}
+          {!window.location.pathname.includes("/products") && <li><a href="/products">Products</a></li>}
+          {!window.location.pathname.includes("/services") && <li><a href="/services">Services</a></li>}
+          {!window.location.pathname.includes("/contact-us") && <li><a href="/contact-us">Contact Us</a></li>}
+          {!window.location.pathname.includes("/about-us") && <li><a href="/about-us">About Us</a></li>}
+          {window.location.pathname === "/" && (
+            <>
+              <li><a href="/reviews">Reviews</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+            </>
+          )}
         </ul>
         <button className="toggle-btn" onClick={toggleTheme}>
           <img
@@ -43,6 +47,7 @@ export default function Services() {
         </button>
       </nav>
 
+      {/* Content */}
       <section className="content">
         <div className="section">
           <h2>SECURITY SYSTEMS</h2>
@@ -143,6 +148,7 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="footer">
         <p>Copyright © 2026 Protect 360 (Pty) Ltd - All rights reserved.</p>
         <p className="footer-links">

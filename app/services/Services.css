@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
+/* Light and dark themes */
 body.light {
   background-color: #ffffff;
   color: #0A1A2F;
@@ -19,7 +20,7 @@ body.dark {
   align-items: center;
   padding: 6px 24px;
   border-bottom: 2px solid #00AEEF;
-  height: 50px; /* balanced height */
+  height: 50px;
 }
 
 .navbar-logo {
@@ -34,12 +35,14 @@ body.dark {
   font-size: 14px;
 }
 
-.nav-links li {
-  cursor: pointer;
+/* Navbar links */
+.nav-links a {
+  text-decoration: none; /* removes underline */
+  color: inherit;
   transition: color 0.3s ease;
 }
 
-.nav-links li:hover {
+.nav-links a:hover {
   color: #00AEEF;
 }
 
@@ -56,10 +59,10 @@ body.dark {
 
 /* Page content */
 .content {
-  padding: 20px 24px; /* restored breathing space */
+  padding: 20px 24px;
 }
 
-/* Section headings centered above grid */
+/* Section headings */
 .section {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -75,7 +78,7 @@ body.dark {
   margin-bottom: 6px;
   text-transform: uppercase;
   color: #0A1A2F;
-  font-size: 22px; /* increased ~15% for focus */
+  font-size: 22px; /* ~15% larger for focus */
   font-weight: 700;
 }
 
@@ -94,7 +97,7 @@ body.dark .section h2 {
 .section .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px; /* even spacing between boxes */
+  gap: 18px;
   justify-items: stretch;
   align-items: start;
 }
@@ -136,26 +139,21 @@ body.dark .service h4 {
 .service p {
   line-height: 1.4;
   font-size: 13px;
-  color: #0A1A2F;
-}
-
-body.dark .service p {
-  color: #F2F2F2;
 }
 
 /* Footer */
 .footer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* pushes text lower */
+  justify-content: flex-end; /* drops text lower */
   align-items: center;
   text-align: center;
   border-top: 1px solid #00AEEF;
   font-size: 11px;
   color: #0A1A2F;
   line-height: 1.26;
-  height: 36px; /* same height, no scroll */
-  padding-bottom: 4px; /* drops text visually lower */
+  height: 36px; /* compact, no scroll */
+  padding-bottom: 4px; /* visually lowers text */
   margin-top: 10px;
 }
 
