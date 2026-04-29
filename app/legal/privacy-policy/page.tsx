@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
 import "../Legal.css";
 
 export default function PrivacyPolicy() {
@@ -6,9 +8,9 @@ export default function PrivacyPolicy() {
     <main>
       <div className="legal-wrapper">
         <div className="legal-document">
-          <a href="/" title="Back to Home">
-            <img src="/logo-logo.png" alt="Protect 360 Logo" className="back-icon" />
-          </a>
+          <Link href="/" title="Back to Home">
+            <Image src="/logo-logo.png" alt="Protect 360 Logo" className="back-icon" width={40} height={40} />
+          </Link>
 
           <header className="legal-header">
             <h1>Privacy Policy</h1>
@@ -43,12 +45,12 @@ export default function PrivacyPolicy() {
           </footer>
 
           <ul className="legal-links">
-            <li><a href="/legal/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/legal/terms-and-conditions">Terms & Conditions</a></li>
-            <li><a href="/legal/cookies-policy">Cookies Policy</a></li>
-            <li><a href="/legal/disclaimer">Disclaimer</a></li>
-            <li><a href="/legal/copyright-notice">Copyright Notice</a></li>
-            <li><a href="/legal/accessibility-statement">Accessibility Statement</a></li>
+            <li><Link href="/legal/privacy-policy">Privacy Policy</Link></li>
+            <li><Link href="/legal/terms-and-conditions">Terms & Conditions</Link></li>
+            <li><Link href="/legal/cookies-policy">Cookies Policy</Link></li>
+            <li><Link href="/legal/disclaimer">Disclaimer</Link></li>
+            <li><Link href="/legal/copyright-notice">Copyright Notice</Link></li>
+            <li><Link href="/legal/accessibility-statement">Accessibility Statement</Link></li>
           </ul>
         </div>
       </div>
