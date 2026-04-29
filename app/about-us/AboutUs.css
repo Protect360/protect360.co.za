@@ -30,7 +30,7 @@ main {
 /* Container for all sections */
 .about-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -44,25 +44,39 @@ section {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
+  text-align: center; /* Center all headings and text */
 }
 
 /* Headings and titles use accent blue */
 section h1,
-section h2 {
+section h2,
+section h3 {
   color: #00AEEF;
   margin: 0 0 10px 0;
   font-weight: 700;
 }
 
 section h1 {
-  font-size: 26px;
+  font-size: 28px;
 }
 
 section h2 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
-/* Paragraphs and lists */
+section h3 {
+  font-size: 18px;
+}
+
+/* Slogan styling */
+.slogan {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+/* Paragraphs */
 section p {
   color: var(--text-color);
   font-size: 15px;
@@ -70,17 +84,63 @@ section p {
   margin: 0 0 10px 0;
 }
 
-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Top row: Mission | Who We Are | Vision */
+.mission-who-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
 }
 
-section ul li {
-  color: var(--text-color);
-  font-size: 15px;
-  line-height: 1.6;
+.mission-block,
+.overview-block,
+.vision-block {
+  background-color: var(--box-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
+  text-align: center;
+}
+
+/* Second row: What Drives Us blocks */
+.drives-grid {
+  background-color: var(--box-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
+}
+
+.drives-grid h2 {
+  margin-bottom: 16px;
+}
+
+.drives-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.drive-block {
+  background-color: var(--bg-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 0 8px rgba(0, 174, 239, 0.2);
+  text-align: center;
+}
+
+.drive-block h3 {
+  color: #00AEEF;
   margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.drive-block p {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* Legal links list centered vertically */
@@ -102,7 +162,6 @@ section ul li {
   transition: color 0.3s ease;
 }
 
-/* Accent blue hover visible in both themes */
 .link:hover {
   color: #00AEEF;
   text-decoration: none;
@@ -111,33 +170,26 @@ section ul li {
 /* CTA wrapper centered between last section and footer */
 .cta-wrapper {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  margin-top: 8px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .about-container {
-    padding: 0 12px;
+@media (max-width: 992px) {
+  .mission-who-vision-grid {
+    grid-template-columns: 1fr;
   }
 
-  section {
-    padding: 16px;
+  .drives-row {
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  section h1 {
-    font-size: 22px;
-  }
-
-  section h2 {
-    font-size: 18px;
-  }
-
-  section p,
-  section ul li {
-    font-size: 14px;
+@media (max-width: 600px) {
+  .drives-row {
+    grid-template-columns: 1fr;
   }
 }

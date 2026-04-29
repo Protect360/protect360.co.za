@@ -11,43 +11,68 @@ export default function AboutUs() {
       <Navbar />
       <div className="about-wrapper">
         <div className="about-container">
+          {/* Hero Section */}
           <section className="hero-section">
-            <h1>About Protect 360 (Pty) Ltd</h1>
-            <p>Your trusted partner in integrated security solutions.</p>
+            <h1>About Us</h1>
+            <h2>Protect 360 (Pty) Ltd</h2>
+            <p className="slogan">YOUR FIRST CHOICE FOR UNCOMPROMISING SECURITY</p>
           </section>
 
-          <section className="overview-section">
-            <h2>Who We Are</h2>
-            <p>
-              Founded in Gauteng, Protect 360 (Pty) Ltd specializes in comprehensive electronic
-              security systems, including CCTV, alarms, access control, and automation. Our approach
-              is simple: deliver high‑quality installations, responsive support, and long‑term
-              reliability. We serve residential, commercial, and industrial clients across South Africa,
-              ensuring every project meets strict safety and compliance standards.
-            </p>
+          {/* Top row: Mission | Who We Are | Vision */}
+          <section className="mission-who-vision-grid">
+            <div className="mission-block">
+              <h2>Our Mission</h2>
+              <p>
+                To provide peace of mind through advanced, reliable, and accessible security solutions
+                tailored to every client’s needs.
+              </p>
+            </div>
+
+            <div className="overview-block">
+              <h2>Who We Are</h2>
+              <p>
+                Founded in Gauteng, Protect 360 (Pty) Ltd specializes in comprehensive electronic
+                security systems, including CCTV, alarms, access control, and automation. Our approach
+                is simple: deliver high‑quality installations, responsive support, and long‑term
+                reliability. We serve residential, commercial, and industrial clients across South Africa,
+                ensuring every project meets strict safety and compliance standards.
+              </p>
+            </div>
+
+            <div className="vision-block">
+              <h2>Our Vision</h2>
+              <p>
+                To be South Africa’s most trusted name in integrated protection systems, setting the
+                standard for professionalism and innovation in the security industry.
+              </p>
+            </div>
           </section>
 
-          <section className="mission-section">
-            <h2>Our Mission & Vision</h2>
-            <p>
-              <strong>Mission:</strong> To provide peace of mind through advanced, reliable, and
-              accessible security solutions tailored to every client’s needs.
-            </p>
-            <p>
-              <strong>Vision:</strong> To be South Africa’s most trusted name in integrated protection
-              systems, setting the standard for professionalism and innovation in the security industry.
-            </p>
-          </section>
-
-          <section className="values-section">
+          {/* Second row: What Drives Us blocks */}
+          <section className="drives-grid">
             <h2>What Drives Us</h2>
-            <ul>
-              <li><strong>Integrity:</strong> We operate with honesty and accountability in every project.</li>
-              <li><strong>Professionalism:</strong> Our team delivers service excellence from start to finish.</li>
-              <li><strong>Innovation:</strong> We embrace technology to stay ahead of evolving security challenges.</li>
-              <li><strong>Customer Commitment:</strong> Your safety and satisfaction are our top priorities.</li>
-              <li><strong>Safety & Compliance:</strong> We adhere to all industry regulations and standards.</li>
-            </ul>
+            <div className="drives-row">
+              <div className="drive-block">
+                <h3>Integrity</h3>
+                <p>We operate with honesty and accountability in every project.</p>
+              </div>
+              <div className="drive-block">
+                <h3>Professionalism</h3>
+                <p>Our team delivers service excellence from start to finish.</p>
+              </div>
+              <div className="drive-block">
+                <h3>Innovation</h3>
+                <p>We embrace technology to stay ahead of evolving security challenges.</p>
+              </div>
+              <div className="drive-block">
+                <h3>Customer Commitment</h3>
+                <p>Your safety and satisfaction are our top priorities.</p>
+              </div>
+              <div className="drive-block">
+                <h3>Safety & Compliance</h3>
+                <p>We adhere to all industry regulations and standards.</p>
+              </div>
+            </div>
           </section>
 
           <section className="quality-section">
@@ -56,15 +81,6 @@ export default function AboutUs() {
               Protect 360 (Pty) Ltd is committed to maintaining full compliance with South African
               safety and electrical standards. As we continue to grow, we aim to expand our certifications
               and partnerships to further strengthen our professional standing.
-            </p>
-          </section>
-
-          <section className="team-section">
-            <h2>Our Team</h2>
-            <p>
-              Our team consists of skilled professionals with years of experience in electronic security,
-              networking, and automation. Each member is committed to delivering quality workmanship and
-              dependable support.
             </p>
           </section>
 
