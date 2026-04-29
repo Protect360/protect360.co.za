@@ -27,7 +27,6 @@ main {
   color: var(--text-color);
 }
 
-
 /* Container for all sections */
 .about-container {
   width: 100%;
@@ -47,10 +46,10 @@ section {
   box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
 }
 
-/* Headings */
+/* Headings and titles use accent blue */
 section h1,
 section h2 {
-  color: var(--accent-color);
+  color: #00AEEF;
   margin: 0 0 10px 0;
   font-weight: 700;
 }
@@ -84,10 +83,39 @@ section ul li {
   margin-bottom: 6px;
 }
 
-/* CTA wrapper */
+/* Legal links list centered vertically */
+.legal-links {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Links adapt to theme: black in light mode, white in dark mode */
+.link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Accent blue hover visible in both themes */
+.link:hover {
+  color: #00AEEF;
+  text-decoration: none;
+}
+
+/* CTA wrapper centered between last section and footer */
 .cta-wrapper {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Responsive adjustments */

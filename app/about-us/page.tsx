@@ -8,10 +8,7 @@ import "./AboutUs.css";
 export default function AboutUs() {
   return (
     <main>
-      {/* Global Navbar identical to other pages */}
       <Navbar />
-
-      {/* Wrapper fills viewport between Navbar and Footer */}
       <div className="about-wrapper">
         <div className="about-container">
           <section className="hero-section">
@@ -73,21 +70,22 @@ export default function AboutUs() {
 
           <section className="legal-section">
             <h2>Legal & Compliance Documents</h2>
-            <p>
-              For transparency and accountability, please review our official policies:
-              Privacy Policy, Terms & Conditions, Accessibility Statement, Cookies Policy,
-              Copyright Notice, and Disclaimer.
-            </p>
+            <p>For transparency and accountability, please review our official policies:</p>
+            <ul className="legal-links">
+              <li><a href="/privacy-policy" className="link">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions" className="link">Terms & Conditions</a></li>
+              <li><a href="/accessibility-statement" className="link">Accessibility Statement</a></li>
+              <li><a href="/cookies-policy" className="link">Cookies Policy</a></li>
+              <li><a href="/copyright-notice" className="link">Copyright Notice</a></li>
+              <li><a href="/disclaimer" className="link">Disclaimer</a></li>
+            </ul>
           </section>
 
-          {/* Global CTA Button */}
           <div className="cta-wrapper">
             <CTAButton />
           </div>
         </div>
       </div>
-
-      {/* Global Footer identical to other pages */}
       <Footer />
     </main>
   );
