@@ -1,51 +1,57 @@
 "use client";
-
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import "../Legal.css";
 
-export default function PrivacyPolicy() {
+export default function CopyrightNotice() {
   return (
     <main>
-      <Navbar />
       <div className="legal-wrapper">
-        <div className="legal-container">
-          <h1>Privacy Policy</h1>
-          <p>
-            Protect 360 (Pty) Ltd values your privacy. This policy explains how we collect,
-            use, and protect your personal information when you interact with our website,
-            services, or communication channels.
-          </p>
+        <div className="legal-document">
+          <a href="/" title="Back to Home">
+            <img src="/logo-logo.png" alt="Protect 360 Logo" className="back-icon" />
+          </a>
 
-          <h2>Information We Collect</h2>
-          <p>
-            We may collect personal details such as your name, contact information, and
-            service preferences when you submit forms or contact us directly.
-          </p>
+          <header className="legal-header">
+            <h1>Copyright Notice</h1>
+            <p>Protect 360 (Pty) Ltd</p>
+            <p className="legal-date">Effective Date: April 2026</p>
+          </header>
 
-          <h2>How We Use Your Information</h2>
-          <p>
-            Your information is used solely to provide requested services, respond to
-            inquiries, and improve our offerings. We do not sell or share your data with
-            third parties except as required by law.
-          </p>
+          <section className="legal-body">
+            <h2>1. Ownership of Content</h2>
+            <p>
+              All content, graphics, and materials on this website are the property of Protect 360 (Pty) Ltd unless otherwise stated.
+            </p>
 
-          <h2>Data Security</h2>
-          <p>
-            We implement industry‑standard security measures to protect your data from
-            unauthorized access, alteration, or disclosure.
-          </p>
+            <h2>2. Usage Rights</h2>
+            <p>
+              No part of this website may be reproduced, distributed, or transmitted without prior written permission from Protect 360 (Pty) Ltd.
+            </p>
 
-          <h2>Contact Us</h2>
-          <p>
-            For any privacy‑related inquiries, please contact us at{" "}
-            <a href="mailto:info@protect360.co.za" className="link">
-              info@protect360.co.za
-            </a>.
-          </p>
+            <h2>3. Trademarks</h2>
+            <p>
+              All trademarks, logos, and service marks displayed are registered and owned by Protect 360 (Pty) Ltd or its affiliates.
+            </p>
+
+            <h2>4. Reporting Infringement</h2>
+            <p>
+              If you believe any content infringes your copyright, please contact us at <a className="link">info@protect360.co.za</a> with full details.
+            </p>
+          </section>
+
+          <footer className="legal-footer">
+            <p>© 2026 Protect 360 (Pty) Ltd ‑ All Rights Reserved</p>
+          </footer>
+
+          <ul className="legal-links">
+            <li><a href="/legal/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/legal/terms-and-conditions">Terms & Conditions</a></li>
+            <li><a href="/legal/cookies-policy">Cookies Policy</a></li>
+            <li><a href="/legal/disclaimer">Disclaimer</a></li>
+            <li><a href="/legal/copyright-notice">Copyright Notice</a></li>
+            <li><a href="/legal/accessibility-statement">Accessibility Statement</a></li>
+          </ul>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }

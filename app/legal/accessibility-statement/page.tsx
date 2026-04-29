@@ -1,7 +1,7 @@
 "use client";
 import "../Legal.css";
 
-export default function TermsAndConditions() {
+export default function AccessibilityStatement() {
   return (
     <main>
       <div className="legal-wrapper">
@@ -11,35 +11,35 @@ export default function TermsAndConditions() {
           </a>
 
           <header className="legal-header">
-            <h1>Terms & Conditions</h1>
+            <h1>Accessibility Statement</h1>
             <p>Protect 360 (Pty) Ltd</p>
             <p className="legal-date">Effective Date: April 2026</p>
           </header>
 
           <section className="legal-body">
-            <h2>1. Acceptance of Terms</h2>
+            <h2>1. Our Commitment</h2>
             <p>
-              By accessing or using our website, you agree to comply with these Terms & Conditions.
+              Protect 360 (Pty) Ltd is committed to ensuring that our website and digital services are accessible to all users, including individuals with disabilities.
             </p>
 
-            <h2>2. Use of Services</h2>
+            <h2>2. Accessibility Standards</h2>
             <p>
-              Our services are provided for lawful purposes only. You agree not to misuse or attempt to compromise system integrity.
+              We strive to comply with recognized accessibility guidelines such as the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA to provide an inclusive experience for all visitors.
             </p>
 
-            <h2>3. Intellectual Property</h2>
+            <h2>3. Ongoing Improvements</h2>
             <p>
-              All content, trademarks, and materials on this site are the property of Protect 360 (Pty) Ltd and may not be reproduced without permission.
+              We continuously review and update our website to improve accessibility and usability. Feedback from users helps us identify and resolve potential barriers.
             </p>
 
-            <h2>4. Limitation of Liability</h2>
+            <h2>4. Feedback and Support</h2>
             <p>
-              Protect 360 (Pty) Ltd shall not be liable for any indirect or consequential damages arising from the use of our website or services.
+              If you encounter any accessibility issues or require assistance, please contact us at <a className="link">info@protect360.co.za</a> and we will respond promptly to address your concerns.
             </p>
 
-            <h2>5. Contact Us</h2>
+            <h2>5. Third‑Party Content</h2>
             <p>
-              For questions regarding these terms, contact us at <a className="link">info@protect360.co.za</a>.
+              While we aim to ensure accessibility across all areas of our site, some third‑party content or integrations may not fully meet accessibility standards. We encourage those providers to improve accessibility wherever possible.
             </p>
           </section>
 
