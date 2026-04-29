@@ -1,10 +1,13 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Theme variables */
 :root[data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #0A1A2F;
@@ -27,16 +30,18 @@ main {
   color: var(--text-color);
 }
 
+/* Wrapper fills viewport between Navbar and Footer */
 .services-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 20px;
   padding: 40px 24px;
 }
 
+/* Container for each section */
 .services-container {
   width: 100%;
   max-width: 1200px;
@@ -51,28 +56,29 @@ main {
   gap: 5px;
 }
 
-
+/* Headings */
 .services-container h2 {
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 700;
   color: var(--text-color);
-  margin: 0;
-  margin-bottom: 2px;
+  margin: 0 0 2px 0;
+  text-align: center;
 }
 
 .services-container h3 {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--accent-color);
   margin: 0;
+  text-align: center;
 }
 
-
+/* Grid layout */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 16px;
+  gap: 15px;
   width: 100%;
   justify-items: center;
 }
@@ -113,6 +119,7 @@ main {
   color: var(--text-color);
 }
 
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -123,4 +130,14 @@ main {
   .services-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* CTA wrapper below last section, compact spacing */
+.cta-wrapper {
+  text-align: center;
+  margin-top: 5px;      /* minimal top gap */
+  margin-bottom: 0;     /* minimal bottom gap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

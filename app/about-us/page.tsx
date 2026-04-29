@@ -88,12 +88,12 @@ export default function AboutUs() {
             <h2>Legal & Compliance Documents</h2>
             <p>For transparency and accountability, please review our official policies:</p>
             <ul className="legal-links">
-              <li><a href="/privacy-policy" className="link">Privacy Policy</a></li>
-              <li><a href="/terms-and-conditions" className="link">Terms & Conditions</a></li>
-              <li><a href="/accessibility-statement" className="link">Accessibility Statement</a></li>
-              <li><a href="/cookies-policy" className="link">Cookies Policy</a></li>
-              <li><a href="/copyright-notice" className="link">Copyright Notice</a></li>
-              <li><a href="/disclaimer" className="link">Disclaimer</a></li>
+              <li><a href="/legal/privacy-policy" className="link">Privacy Policy</a></li>
+              <li><a href="/legal/terms-and-conditions" className="link">Terms & Conditions</a></li>
+              <li><a href="/legal/accessibility-statement" className="link">Accessibility Statement</a></li>
+              <li><a href="/legal/cookies-policy" className="link">Cookies Policy</a></li>
+              <li><a href="/legal/copyright-notice" className="link">Copyright Notice</a></li>
+              <li><a href="/legal/disclaimer" className="link">Disclaimer</a></li>
             </ul>
           </section>
 

@@ -7,6 +7,21 @@ body {
                "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Theme variables */
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #0A1A2F;
+  --accent-color: #00AEEF;
+  --box-bg: #f9f9f9;
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #0A1A2F;
+  --text-color: #F2F2F2;
+  --accent-color: #00AEEF;
+  --box-bg: #101F33;
+}
+
 main {
   min-height: 100vh;
   display: flex;
@@ -24,7 +39,6 @@ main {
   padding: 10px 24px;
   min-height: calc(100vh - 120px);
   background-color: var(--bg-color);
-  color: var(--text-color);
 }
 
 /* Container for all sections */
@@ -44,10 +58,10 @@ section {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
-  text-align: center; /* Center all headings and text */
+  text-align: center;
 }
 
-/* Headings and titles use accent blue */
+/* Headings */
 section h1,
 section h2,
 section h3 {
@@ -68,7 +82,7 @@ section h3 {
   font-size: 18px;
 }
 
-/* Slogan styling */
+/* Slogan */
 .slogan {
   color: var(--text-color);
   font-size: 16px;
@@ -100,10 +114,9 @@ section p {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
-  text-align: center;
 }
 
-/* Second row: What Drives Us blocks */
+/* Second row: What Drives Us */
 .drives-grid {
   background-color: var(--box-bg);
   border: 1px solid var(--accent-color);
@@ -128,7 +141,6 @@ section p {
   border-radius: 8px;
   padding: 12px;
   box-shadow: 0 0 8px rgba(0, 174, 239, 0.2);
-  text-align: center;
 }
 
 .drive-block h3 {
@@ -143,7 +155,7 @@ section p {
   line-height: 1.5;
 }
 
-/* Legal links list centered vertically */
+/* Legal links */
 .legal-links {
   list-style: none;
   padding: 0;
@@ -154,7 +166,6 @@ section p {
   gap: 6px;
 }
 
-/* Links adapt to theme: black in light mode, white in dark mode */
 .link {
   color: var(--text-color);
   text-decoration: none;
@@ -164,10 +175,9 @@ section p {
 
 .link:hover {
   color: #00AEEF;
-  text-decoration: none;
 }
 
-/* CTA wrapper centered between last section and footer */
+/* CTA wrapper */
 .cta-wrapper {
   text-align: center;
   margin-top: 8px;
@@ -177,7 +187,7 @@ section p {
   align-items: center;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 992px) {
   .mission-who-vision-grid {
     grid-template-columns: 1fr;
