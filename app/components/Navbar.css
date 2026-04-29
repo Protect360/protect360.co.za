@@ -23,11 +23,14 @@ html, body, main, section, footer, nav {
   width: 100%;
   box-sizing: border-box;
   height: 50px;
-  position: sticky;
+  position: fixed; /* ✅ stays solid and fixed */
   top: 0;
-  background-color: var(--bg-color);
+  left: 0;
+  background-color: var(--bg-color); /* ✅ solid background */
   color: var(--text-color);
   z-index: 1000;
+  backdrop-filter: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .nav-left {

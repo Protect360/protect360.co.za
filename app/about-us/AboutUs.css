@@ -28,17 +28,20 @@ main {
   flex-direction: column;
   background-color: var(--bg-color);
   color: var(--text-color);
+  padding: 85px 0 10px 0;
+  box-sizing: border-box;
 }
 
 /* Wrapper fills viewport between Navbar and Footer */
 .about-wrapper {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 10px 24px;
-  min-height: calc(100vh - 120px);
+  justify-content: flex-start;
+  padding: 0 24px 20px; /* ✅ no top padding, only side and bottom */
   background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* Container for all sections */

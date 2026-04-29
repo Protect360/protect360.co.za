@@ -7,6 +7,7 @@ body {
                "Helvetica Neue", Arial, sans-serif;
 }
 
+html[data-theme="light"],
 :root[data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #0A1A2F;
@@ -14,6 +15,7 @@ body {
   --box-bg: #f9f9f9;
 }
 
+html[data-theme="dark"],
 :root[data-theme="dark"] {
   --bg-color: #0A1A2F;
   --text-color: #F2F2F2;
@@ -98,6 +100,7 @@ main {
   color: var(--accent-color);
   font-size: 28px;
   margin-bottom: 6px;
+  transition: color 0.4s ease;
 }
 
 .legal-header p {
@@ -123,12 +126,14 @@ main {
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 8px;
+  transition: color 0.4s ease;
 }
 
 .legal-body p {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 12px;
+  transition: color 0.4s ease;
 }
 
 /* Email plain black, normal weight, not clickable */

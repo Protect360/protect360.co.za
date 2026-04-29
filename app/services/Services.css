@@ -28,6 +28,8 @@ main {
   flex-direction: column;
   background-color: var(--bg-color);
   color: var(--text-color);
+  padding: 70px 0 10px 0;
+  box-sizing: border-box;
 }
 
 /* Wrapper fills viewport between Navbar and Footer */
@@ -36,9 +38,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 24px;
+  justify-content: flex-start;
+  padding: 0 20px 0 20px; /* ✅ no top padding, only side and bottom */
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* Container for each section */
@@ -49,7 +52,7 @@ main {
   border: 1px solid var(--accent-color);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 174, 239, 0.2);
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,10 +80,8 @@ main {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 15px;
-  width: 100%;
-  justify-items: center;
+  gap: 20px;
+  margin-top: 10px; /* ✅ small gap below heading */
 }
 
 .service-box {
@@ -135,9 +136,13 @@ main {
 /* CTA wrapper below last section, compact spacing */
 .cta-wrapper {
   text-align: center;
-  margin-top: 5px;      /* minimal top gap */
+  margin-top: 22px;      /* minimal top gap */
   margin-bottom: 0;     /* minimal bottom gap */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.services-container + .services-container {
+  margin-top: 40px;
 }
