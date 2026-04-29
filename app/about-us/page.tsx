@@ -8,7 +8,10 @@ import "./AboutUs.css";
 export default function AboutUs() {
   return (
     <main>
+      {/* Global Navbar identical to other pages */}
       <Navbar />
+
+      {/* Wrapper fills viewport between Navbar and Footer */}
       <div className="about-wrapper">
         <div className="about-container">
           <section className="hero-section">
@@ -29,8 +32,14 @@ export default function AboutUs() {
 
           <section className="mission-section">
             <h2>Our Mission & Vision</h2>
-            <p><strong>Mission:</strong> To provide peace of mind through advanced, reliable, and accessible security solutions tailored to every client’s needs.</p>
-            <p><strong>Vision:</strong> To be South Africa’s most trusted name in integrated protection systems, setting the standard for professionalism and innovation in the security industry.</p>
+            <p>
+              <strong>Mission:</strong> To provide peace of mind through advanced, reliable, and
+              accessible security solutions tailored to every client’s needs.
+            </p>
+            <p>
+              <strong>Vision:</strong> To be South Africa’s most trusted name in integrated protection
+              systems, setting the standard for professionalism and innovation in the security industry.
+            </p>
           </section>
 
           <section className="values-section">
@@ -71,12 +80,14 @@ export default function AboutUs() {
             </p>
           </section>
 
-          {/* CTA Button */}
+          {/* Global CTA Button */}
           <div className="cta-wrapper">
             <CTAButton />
           </div>
         </div>
       </div>
+
+      {/* Global Footer identical to other pages */}
       <Footer />
     </main>
   );
