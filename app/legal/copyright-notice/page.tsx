@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import "../Legal.css";
+import "./Legal.css";
 
 export default function CopyrightNotice() {
   return (

@@ -1,0 +1,216 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+}
+
+html[data-theme="light"],
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #0A1A2F;
+  --accent-color: #00AEEF;
+  --box-bg: #f9f9f9;
+}
+
+html[data-theme="dark"],
+:root[data-theme="dark"] {
+  --bg-color: #0A1A2F;
+  --text-color: #F2F2F2;
+  --accent-color: #00AEEF;
+  --box-bg: #101F33;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Center everything vertically */
+.legal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Document block */
+.legal-document {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--box-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
+  padding: 40px;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* Watermark locked to box size and scales dynamically */
+.legal-document::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; /* fits box proportionally */
+  opacity: 0.12; /* slightly brighter for clarity */
+  z-index: 0;
+  pointer-events: none; /* allows clicks through watermark */
+}
+
+/* Back icon inside document corner */
+.back-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.back-icon:hover {
+  opacity: 1;
+}
+
+/* Header */
+.legal-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.legal-header h1 {
+  color: var(--accent-color);
+  font-size: 28px;
+  margin-bottom: 6px;
+  transition: color 0.4s ease;
+}
+
+.legal-header p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.legal-date {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--accent-color);
+}
+
+/* Body */
+.legal-body {
+  position: relative;
+  z-index: 1;
+}
+
+.legal-body h2 {
+  color: var(--accent-color);
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  transition: color 0.4s ease;
+}
+
+.legal-body p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  transition: color 0.4s ease;
+}
+
+/* Email plain black, normal weight, not clickable */
+.legal-body a.link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+/* Footer */
+.legal-footer {
+  text-align: center;
+  margin-top: 10px; /*Current*/
+  font-size: 14px;
+  color: var(--text-color);
+  border-top: 1px solid var(--accent-color);
+  padding-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Navigation links below footer with vertical dividers */
+.legal-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px; /*Current*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.legal-links li {
+  display: flex;
+  align-items: center;
+}
+
+.legal-links li:not(:last-child)::after {
+  content: "|";
+  color: var(--accent-color);
+  margin-left: 12px;
+}
+
+/* Page links clickable with hover color change only */
+.legal-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #00AEEF; /* Protect 360 blue */
+}
+
+@media (max-width: 768px) {
+  .legal-document {
+    padding: 24px;
+  }
+
+  .legal-header h1 {
+    font-size: 22px;
+  }
+
+  .legal-body h2 {
+    font-size: 16px;
+  }
+
+  .legal-body p {
+    font-size: 14px;
+  }
+
+  .back-icon {
+    width: 30px;
+  }
+}
