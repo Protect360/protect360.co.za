@@ -52,7 +52,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* ✅ balanced vertical spacing between sections */
+  gap: 1.2rem; /* ✅ balanced vertical spacing between sections */
   overflow: hidden;
 }
 
@@ -63,15 +63,15 @@ main {
 }
 .hero img {
   display: block;
-  margin: 0 auto 10px auto;
-  width: 520px; /* ✅ increase logo size by 50% safely */
+  margin: 0 auto 5px auto;
+  width: 620px; /* ✅ increase logo size by 50% safely */
   height: auto;
 }
 .cta-buttons {
   display: flex;
   gap: 0.6rem;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 5px 0 0 0;
 }
 .cta-btn {
   padding: 0.4rem 0.6rem;
@@ -90,13 +90,14 @@ main {
 }
 .hero .slogan {
   font-size: 1.1rem;
-  margin-top: 0.3rem;
+  margin-top: 4px 0 0 0;
   color: var(--text-color);
 }
 
 /* Services Section */
 .simple-services {
   text-align: center;
+  margin-top: 5px 0 0 0;
 }
 .simple-services h2 {
   margin: 0.2rem 0 0.4rem;
@@ -132,9 +133,10 @@ main {
 /* Brands Section */
 .brands-section {
   text-align: center;
+  margin-top: 5px 0 0 0;
 }
 .brands-section h2 {
-  margin: 4px 0 0 0;
+  margin: 5px 0 0 0;
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--accent-color);
@@ -188,7 +190,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px; /* ✅ ensures footer sits below CTA */
+  margin-bottom: 20px; /* ✅ ensures footer sits below CTA */
   width: 100%;
 }
 
