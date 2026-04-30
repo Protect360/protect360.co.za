@@ -52,7 +52,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem; /* ✅ balanced vertical spacing between sections */
+  gap: 0.8rem; /* ✅ balanced vertical spacing between sections */
   overflow: hidden;
 }
 
@@ -64,7 +64,7 @@ main {
 .hero img {
   display: block;
   margin: 0 auto 5px auto;
-  width: 620px; /* ✅ increase logo size by 50% safely */
+  width: 1040px; /* ✅ increase logo size by 50% safely */
   height: auto;
 }
 .cta-buttons {
