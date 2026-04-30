@@ -81,22 +81,35 @@ export default function Home() {
 
       {/* Brands Section */}
       <section className="brands-section">
-        <h2>Trusted Brands</h2>
-        <div className="brands-scroll">
-          <div className="brand-track">
-            {brands.map((brand) => (
-              <div key={brand} className="brand-box">
-                <Image src={`/brands/${brand}.png`} alt={brand} width={100} height={60} />
-              </div>
-            ))}
-            {brands.map((brand) => (
-              <div key={`${brand}-dup`} className="brand-box">
-                <Image src={`/brands/${brand}.png`} alt={brand} width={100} height={60} />
-              </div>
-            ))}
-          </div>
+  <h2>Trusted Brands</h2>
+  <div className="brands-scroll">
+    <div className="brand-track">
+      {/* ✅ First set */}
+      {brands.map((brand) => (
+        <div key={brand} className="brand-box">
+          <Image
+            src={`/brands/${brand}.png`}
+            alt={brand}
+            width={100}
+            height={60}
+          />
         </div>
-      </section>
+      ))}
+
+      {/* ✅ Second set — duplicate for seamless loop */}
+      {brands.map((brand, i) => (
+        <div key={`dup-${i}`} className="brand-box">
+          <Image
+            src={`/brands/${brand}.png`}
+            alt={brand}
+            width={100}
+            height={60}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       <div className="cta-wrapper">
         <CTAButton />
