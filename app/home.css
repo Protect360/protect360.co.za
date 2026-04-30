@@ -1,25 +1,61 @@
 html, body {
   height: 100%;
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Wrapper */
+/* ✅ Wrapper fills viewport minus navbar/footer */
 .home-wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px 5px;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+/* ✅ Navbar fixed at top */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* match your actual navbar height */
+  background-color: var(--bg-color);
+  z-index: 1000;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+/* ✅ Footer fixed at bottom */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* match your actual footer height */
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--accent-color);
+  text-align: center;
+  line-height: 50px;
+  font-size: 0.9rem;
+}
+
+/* ✅ Main content fits between navbar and footer */
+main {
+  flex: 1;
+  padding-top: 60px;  /* equal to navbar height */
+  padding-bottom: 50px; /* equal to footer height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
-  margin: 30px 0 5px 0;
+  margin: 0;
 }
 .hero img {
   display: block;
@@ -53,69 +89,39 @@ html, body {
 }
 
 /* Services Section */
-.services-carousel {
-  margin: 0.5rem 0;
+.simple-services {
   text-align: center;
+  margin: 0.5rem 0;
 }
-
-.services-carousel h2 {
+.simple-services h2 {
   margin: 0.2rem 0 0.4rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent-color);
 }
-
-/* Container */
-.service-slider {
+.service-display {
   position: relative;
-  width: 100%;
   height: 70px;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-
-/* Service boxes */
-.service-item {
-  position: absolute;
-  width: 260px;
-  padding: 0.4rem 0.6rem;
-  border: 1px solid var(--accent-color);
-  box-shadow: 0 0 5px rgba(0, 174, 239, 0.3);
-  border-radius: 6px;
+.fade-text {
   font-weight: 600;
   color: var(--text-color);
   background-color: var(--box-bg);
-  text-align: center;
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideOne 120s linear infinite;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  box-shadow: 0 0 5px rgba(0, 174, 239, 0.3);
+  animation: fadeInOut 4s ease-in-out;
 }
-
-/* ✅ one-by-one slide in/out */
-@keyframes slideOne {
-  0%, 8.33%   { opacity: 1; transform: translateX(0); }      /* visible for 10s */
-  9.16%, 100% { opacity: 0; transform: translateX(-100%); }  /* hidden */
-}
-
-/* ✅ each starts exactly 10 s apart */
-.service-item:nth-child(1)  { animation-delay: 0s; }
-.service-item:nth-child(2)  { animation-delay: 10s; }
-.service-item:nth-child(3)  { animation-delay: 20s; }
-.service-item:nth-child(4)  { animation-delay: 30s; }
-.service-item:nth-child(5)  { animation-delay: 40s; }
-.service-item:nth-child(6)  { animation-delay: 50s; }
-.service-item:nth-child(7)  { animation-delay: 60s; }
-.service-item:nth-child(8)  { animation-delay: 70s; }
-.service-item:nth-child(9)  { animation-delay: 80s; }
-.service-item:nth-child(10) { animation-delay: 90s; }
-.service-item:nth-child(11) { animation-delay: 100s; }
-.service-item:nth-child(12) { animation-delay: 110s; }
-
-/* ✅ Pause on hover */
-.service-slider:hover .service-item {
-  animation-play-state: paused;
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /* Brands Section */
@@ -123,23 +129,18 @@ html, body {
   margin: 10px;
   text-align: center;
 }
-
 .brands-section h2 {
   margin: 4px 0 0 0;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent-color);
 }
-
-/* ✅ Cleaned scroll container — no scrollbar */
 .brands-scroll {
   position: relative;
   overflow: hidden;
   width: 100%;
   padding: 12px 0;
 }
-
-/* ✅ Continuous auto-scroll */
 .brand-track {
   display: flex;
   gap: 16px;
@@ -147,13 +148,9 @@ html, body {
   animation: scrollBrands 120s linear infinite;
   will-change: transform;
 }
-
-/* ✅ Pause animation on hover */
 .brands-scroll:hover .brand-track {
   animation-play-state: paused;
 }
-
-/* Brand boxes */
 .brand-box {
   flex: 0 0 auto;
   border: 2px solid var(--accent-color);
@@ -167,20 +164,16 @@ html, body {
   transition: transform 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
 }
-
 .brand-box img {
   max-height: 65px;
   height: auto;
   width: auto;
   object-fit: contain;
 }
-
 .brand-box:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 174, 239, 0.5);
 }
-
-/* ✅ Seamless loop */
 @keyframes scrollBrands {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
