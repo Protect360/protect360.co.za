@@ -47,7 +47,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % services.length);
-    }, 4000); // 4 s per service (fade in/out)
+    }, 4000);
     return () => clearInterval(interval);
   }, [services.length]);
 
@@ -55,21 +55,30 @@ export default function Home() {
     <main className="home-wrapper">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* ✅ Unified Hero Section */}
       <section className="hero">
-        <Image src="/logo-text.png" alt="Protect 360 Logo" width={520} height={200} />
-        <div className="cta-buttons">
-          <Link href="https://wa.me/27791836591" className="cta-btn whatsapp">
-            WhatsApp
-          </Link>
-          <Link href="tel:+27791836591" className="cta-btn phone">
-            Phone
-          </Link>
+        <div className="hero-box">
+          <Image
+            src="/logo-text.png"
+            alt="Protect 360 Logo"
+            width={1040}
+            height={400}
+          />
+
+          <div className="cta-buttons">
+            <Link href="https://wa.me/27791836591" className="cta-btn whatsapp">
+              WhatsApp
+            </Link>
+            <Link href="tel:+27791836591" className="cta-btn phone">
+              Phone
+            </Link>
+          </div>
+
+          <p className="slogan">Your first choice for uncompromising security.</p>
         </div>
-        <p className="slogan">Your first choice for uncompromising security.</p>
       </section>
 
-      {/* Services Section */}
+      {/* ✅ Services Section */}
       <section className="simple-services">
         <h2>What We Do</h2>
         <div className="service-display">
@@ -79,38 +88,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Brands Section */}
+      {/* ✅ Brands Section */}
       <section className="brands-section">
-  <h2>Trusted Brands</h2>
-  <div className="brands-scroll">
-    <div className="brand-track">
-      {/* ✅ First set */}
-      {brands.map((brand) => (
-        <div key={brand} className="brand-box">
-          <Image
-            src={`/brands/${brand}.png`}
-            alt={brand}
-            width={100}
-            height={60}
-          />
+        <h2>Trusted Brands</h2>
+        <div className="brands-scroll">
+          <div className="brand-track">
+            {[...brands, ...brands].map((brand, i) => (
+              <div key={i} className="brand-box">
+                <Image
+                  src={`/brands/${brand}.png`}
+                  alt={brand}
+                  width={100}
+                  height={60}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
+      </section>
 
-      {/* ✅ Second set — duplicate for seamless loop */}
-      {brands.map((brand, i) => (
-        <div key={`dup-${i}`} className="brand-box">
-          <Image
-            src={`/brands/${brand}.png`}
-            alt={brand}
-            width={100}
-            height={60}
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      {/* ✅ CTA Footer */}
       <div className="cta-wrapper">
         <CTAButton />
       </div>

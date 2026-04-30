@@ -1,12 +1,13 @@
+/* ========== GLOBAL RESET ========== */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* ✅ removes vertical scroll */
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* ✅ Wrapper fills viewport minus navbar/footer */
+/* ========== LAYOUT WRAPPER ========== */
 .home-wrapper {
   height: 100vh;
   display: flex;
@@ -17,62 +18,88 @@ html, body {
   box-sizing: border-box;
 }
 
-/* ✅ Navbar fixed at top */
-nav {
+/* ========== NAVBAR & FOOTER ========== */
+nav, footer {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
   background-color: var(--bg-color);
+  border-color: var(--accent-color);
   z-index: 1000;
+}
+
+nav {
+  top: 0;
+  height: 60px;
   border-bottom: 1px solid var(--accent-color);
 }
 
-/* ✅ Footer below CTA button, fixed bottom */
 footer {
-  position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
   height: 50px;
-  background-color: var(--bg-color);
   border-top: 1px solid var(--accent-color);
   text-align: center;
   line-height: 50px;
   font-size: 0.9rem;
 }
 
-/* ✅ Main content fits between navbar and footer */
+/* ========== MAIN CONTENT ========== */
 main {
   flex: 1;
-  padding-top: 60px;   /* equal to navbar height */
-  padding-bottom: 50px; /* equal to footer height */
+  padding-top: 60px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem; /* ✅ balanced vertical spacing between sections */
+  gap: 0.6rem;
   overflow: hidden;
 }
 
-/* Hero Section */
+/* ========== HERO SECTION ========== */
 .hero {
   text-align: center;
   margin: 0;
 }
-.hero img {
-  display: block;
-  margin: 0 auto 5px auto;
-  width: 1040px; /* ✅ increase logo size by 50% safely */
-  height: auto;
+
+/* ✅ Unified hero box with glow */
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 28px;
+  border-radius: 10px;
+  background-color: #ffffff; /* ✅ solid white background for both themes */
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.6); /* ✅ glowing border */
+  backdrop-filter: blur(4px);
+  margin: 0 auto;
+  max-width: 90vw;
 }
-.cta-buttons {
+
+/* ✅ identical look in dark mode */
+[data-theme="dark"] .hero-box {
+  background-color: #ffffff; /* stays white in dark mode */
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 14px rgba(0, 174, 239, 0.7);
+}
+
+.hero-box img {
+  width: 1040px;
+  height: auto;
+  filter: none; /* ✅ removed brightness/contrast */
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 6px;
+}
+
+.hero-box .cta-buttons {
   display: flex;
   gap: 0.6rem;
   justify-content: center;
-  margin-top: 5px 0 0 0;
+  margin: 4px 0;
 }
+
 .cta-btn {
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
@@ -82,29 +109,44 @@ main {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   border: none;
 }
+
 .cta-btn.whatsapp { background-color: #25D366; color: #fff; }
 .cta-btn.phone { background-color: #007BFF; color: #fff; }
+
 .cta-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 10px rgba(0, 174, 239, 0.6);
 }
-.hero .slogan {
+
+.hero-box .slogan {
   font-size: 1.1rem;
-  margin-top: 4px 0 0 0;
+  margin-top: 2px;
   color: var(--text-color);
 }
+/* ✅ Light theme slogan weight */
+[data-theme="light"] .hero-box .slogan {
+  font-weight: 700; /* matches dark mode weight */
+}
 
-/* Services Section */
+/* ✅ Dark theme slogan adjustment — deeper tone */
+[data-theme="dark"] .hero-box .slogan {
+  color: #1A2E45; /* deep slate-blue for strong contrast */
+  font-weight: 700; /* same weight for consistency */
+}
+
+/* ========== SERVICES SECTION ========== */
 .simple-services {
   text-align: center;
-  margin-top: 5px 0 0 0;
+  margin-top: 4px;
 }
+
 .simple-services h2 {
   margin: 0.2rem 0 0.4rem;
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--accent-color);
 }
+
 .service-display {
   position: relative;
   height: 70px;
@@ -113,6 +155,7 @@ main {
   align-items: center;
   overflow: hidden;
 }
+
 .fade-text {
   font-weight: 600;
   color: var(--text-color);
@@ -123,6 +166,7 @@ main {
   box-shadow: 0 0 5px rgba(0, 174, 239, 0.3);
   animation: fadeInOut 4s ease-in-out;
 }
+
 @keyframes fadeInOut {
   0% { opacity: 0; }
   10% { opacity: 1; }
@@ -130,7 +174,7 @@ main {
   100% { opacity: 0; }
 }
 
-/* Brands Section */
+/* ========== BRANDS SECTION ========== */
 .brands-section {
   text-align: center;
   margin-top: 3px;
@@ -143,11 +187,10 @@ main {
   color: var(--accent-color);
 }
 
-/* ✅ Continuous infinite scroll */
 .brands-scroll {
   position: relative;
   overflow: hidden;
-  width: 100vw; /* full viewport width */
+  width: 100vw;
   padding: 10px 0;
   white-space: nowrap;
 }
@@ -181,31 +224,31 @@ main {
   object-fit: contain;
 }
 
-/* ✅ seamless infinite scroll */
 @keyframes scrollBrands {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* CTA Wrapper */
+/* ========== CTA WRAPPER ========== */
 .cta-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* ✅ ensures footer sits below CTA */
+  margin-bottom: 20px;
   width: 100%;
 }
 
-/* Theme Variables */
+/* ========== THEME VARIABLES ========== */
 :root[data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #0A1A2F;
   --accent-color: #00AEEF;
   --box-bg: #f9f9f9;
 }
+
 :root[data-theme="dark"] {
   --bg-color: #0A1A2F;
   --text-color: #F2F2F2;
   --accent-color: #00AEEF;
-  --box-bg: #101F33;
+  --box-bg: #101F33; /* ✅ restored subtle dark tone for service boxes */
 }
