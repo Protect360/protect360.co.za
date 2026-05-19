@@ -6,7 +6,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CTAButton from "./components/CTAButton";
-import "./Home.css";
+import "./home.css";
 
 export default function Home() {
   const services = [
@@ -37,9 +37,6 @@ export default function Home() {
     "nemtek",
     "paradox",
     "sherlotronics",
-    "texecom",
-    "tiandy",
-    "zkteco",
   ];
 
   const [index, setIndex] = useState(0);
