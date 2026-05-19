@@ -1,0 +1,292 @@
+/* ========== REVIEWS PAGE LAYOUT ========== */
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 65px; /* ✅ exact offset for navbar */
+}
+
+/* ✅ Two-column viewport layout */
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 90%;
+  max-width: 1200px;
+  flex: 1;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 10px 0; /* ✅ balanced top/bottom spacing */
+}
+
+/* ========== LEFT SIDE — SCROLLABLE REVIEWS ========== */
+.reviews-left,
+.reviews-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--box-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 174, 239, 0.3);
+  height: calc(100vh - 165px); /* ✅ equal height for both sections */
+  overflow: hidden;
+}
+
+/* ✅ Left content scrollable */
+.reviews-left {
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.reviews-left h1 {
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.reviews-scroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--bg-color);
+}
+
+.reviews-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reviews-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 6px;
+}
+
+.review-box {
+  background-color: var(--bg-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 174, 239, 0.25);
+}
+
+.review-stars {
+  margin-bottom: 4px;
+}
+
+.star {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.review-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 4px;
+  color: var(--accent-color);
+}
+
+/* ========== RIGHT SIDE — LOGO + AVERAGE + FORM ========== */
+.leave-review-heading {
+  color: var(--accent-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+/* ✅ Compact logo + rating block */
+.logo-rating-section {
+  text-align: center;
+  margin: 0;
+}
+
+.stats-logo {
+  width: 320px; /* ✅ slightly reduced logo to fit viewport */
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+
+.stars-display {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin: 0;
+}
+
+.stars-display .star {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.stars-display .star.filled {
+  color: #FFD700;
+}
+
+.avg-rating {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+/* ✅ Form section below logo */
+.review-form-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* ✅ Anonymous checkbox — simple, no border */
+.checkbox-group {
+  align-items: flex-start;
+  padding: 4px 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+  margin-top: 8px;
+}
+
+/* ✅ Name + Surname side-by-side */
+.name-surname-row {
+  display: flex;
+  gap: 10px;
+}
+
+.name-surname-row .form-input {
+  flex: 1;
+}
+
+/* ✅ Optional Town/City field */
+.town-field {
+  margin-top: 4px;
+}
+
+/* ✅ Field boxes with clear borders */
+.form-input,
+.form-textarea {
+  width: calc(100% - 15px);
+  margin: 0;
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 0 0 6px rgba(0, 174, 239, 0.25);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #00AEEF;
+  box-shadow: 0 0 10px rgba(0, 174, 239, 0.4);
+}
+
+.form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ✅ Rating section with catchy label */
+.rating-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.rating-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 4px;
+}
+
+.stars-input {
+  display: flex;
+  gap: 4px;
+}
+
+.stars-input .star {
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.stars-input .star:hover {
+  transform: scale(1.2);
+}
+
+/* ✅ Submit button — full width, solid accent background + border */
+.form-btn {
+  background-color: #00AEEF;
+  color: #fff;
+  border: 2px solid #00AEEF;
+  border-radius: 6px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+  margin-top: auto; /* ✅ anchors button at bottom of form */
+}
+
+.form-btn:hover {
+  background-color: transparent;
+  color: #00AEEF;
+  transform: scale(1.05);
+}
+
+/* ✅ Footer alignment fix */
+footer {
+  margin-top: auto;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .reviews-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .reviews-left,
+  .reviews-right {
+    height: auto;
+  }
+
+  .name-surname-row {
+    flex-direction: column;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+  }
+}
