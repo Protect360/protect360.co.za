@@ -82,7 +82,7 @@ export default function ContactUs() {
             <h4>Business Address</h4>
             <p>
               <a
-                href="https://maps.app.goo.gl/THEMx1NNr9nbDnNG9"
+                href="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57814.35833837004!2d30.42344305372737!3d-25.088405777583393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec20dbb5f2f8c6f%3A0x93d61d8e9a9f4959!2sMashishing!5e0!3m2!1sen!2sza!4v1794326702536!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"
