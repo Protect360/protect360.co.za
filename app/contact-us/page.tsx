@@ -57,11 +57,11 @@ export default function ContactUs() {
           <div className="contact-block contact-info-block">
             <h4>Business Hours</h4>
             <div className="hours-grid">
-              <div className="day">Monday:</div><div className="time">07:30 - 16:30</div>
-              <div className="day">Tuesday:</div><div className="time">07:30 - 16:30</div>
-              <div className="day">Wednesday:</div><div className="time">07:30 - 16:30</div>
-              <div className="day">Thursday:</div><div className="time">07:30 - 16:30</div>
-              <div className="day">Friday:</div><div className="time">08:00 - 15:00</div>
+              <div className="day">Monday:</div><div className="time">08:00 - 16:30</div>
+              <div className="day">Tuesday:</div><div className="time">08:00 - 16:30</div>
+              <div className="day">Wednesday:</div><div className="time">08:00 - 16:30</div>
+              <div className="day">Thursday:</div><div className="time">08:00 - 16:30</div>
+              <div className="day">Friday:</div><div className="time">08:30 - 15:00</div>
               <div className="day">Saturday:</div><div className="time">Closed</div>
               <div className="day">Sunday:</div><div className="time">Closed</div>
             </div>
