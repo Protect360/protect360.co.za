@@ -188,3 +188,77 @@ footer {
   .reviews-right { height: auto; }
   .reviews-right { border-left: none; }
 }
+/* ===== REVIEW FORM LAYOUT FIXES ===== */
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.name-surname-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.town-field {
+  width: 100%;
+}
+
+.rating-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rating-label {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.stars-input {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.stars-input .star {
+  font-size: 1.3rem;
+}
+
+.form-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-btn {
+  width: 100%;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] .form-textarea::placeholder {
+  color: #b0b0b0;
+}

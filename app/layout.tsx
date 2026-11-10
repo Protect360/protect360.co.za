@@ -1,29 +1,46 @@
 "use client";
 
+import "./globals.css";
 import { useEffect } from "react";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // ✅ React hydration theme persistence
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
+    const savedTheme =
+      localStorage.getItem("theme") || "light";
+
+    document.documentElement.setAttribute(
+      "data-theme",
+      savedTheme
+    );
   }, []);
 
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
       <head>
-        {/* ✅ Prevent white flash before hydration */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                const savedTheme = localStorage.getItem('theme') || 'light';
-                document.documentElement.setAttribute('data-theme', savedTheme);
-              })();
+              try {
+                const theme =
+                  localStorage.getItem('theme') || 'light';
+
+                document.documentElement.setAttribute(
+                  'data-theme',
+                  theme
+                );
+              } catch(e) {}
             `,
           }}
         />
       </head>
+
       <body>{children}</body>
     </html>
   );
