@@ -62,7 +62,7 @@ export default function ContactUs() {
               <div className="day">Wednesday:</div><div className="time">07:30 - 16:30</div>
               <div className="day">Thursday:</div><div className="time">07:30 - 16:30</div>
               <div className="day">Friday:</div><div className="time">08:00 - 15:00</div>
-              <div className="day">Saturday:</div><div className="time">08:30 - 13:00</div>
+              <div className="day">Saturday:</div><div className="time">Closed</div>
               <div className="day">Sunday:</div><div className="time">Closed</div>
             </div>
             <p className="availability">
@@ -82,7 +82,7 @@ export default function ContactUs() {
             <h4>Business Address</h4>
             <p>
               <a
-                href="https://www.google.com/maps?q=79+Voortrekker+Road+Nigel+Gauteng+South+Africa"
+                href="https://maps.app.goo.gl/THEMx1NNr9nbDnNG9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"
