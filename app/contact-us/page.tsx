@@ -87,7 +87,7 @@ export default function ContactUs() {
                 rel="noopener noreferrer"
                 className="link"
               >
-                79 Voortrekker Road, Nigel, 1490, Gauteng, South Africa
+                Lydenburg, 1120, Mpumalanga, South Africa
               </a>
             </p>
 
