@@ -71,7 +71,7 @@ export default function ContactUs() {
 
             <h4>Phone / WhatsApp</h4>
             <p>
-              <a href="tel:+27791836591" className="link">079 183 6591</a>
+              <a href="tel:+27791836591" className="link">+27 79 183 6591</a>
             </p>
 
             <h4>Email</h4>
