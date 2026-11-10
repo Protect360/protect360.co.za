@@ -12,17 +12,6 @@ export default function Reviews() {
   const [anonymous, setAnonymous] = useState(false);
   const [reviews, setReviews] = useState([
     { name: "John Doe", text: "Excellent service and fast installation. Highly recommend Protect 360!", stars: 5 },
-    { name: "Sarah Keller", text: "Professional team, great communication, and reliable systems.", stars: 4 },
-    { name: "Michael Thompson", text: "Quick response and solid workmanship.", stars: 5 },
-    { name: "John Doe", text: "Excellent service and fast installation. Highly recommend Protect 360!", stars: 5 },
-    { name: "Sarah Keller", text: "Professional team, great communication, and reliable systems.", stars: 4 },
-    { name: "Michael Thompson", text: "Quick response and solid workmanship.", stars: 5 },
-    { name: "John Doe", text: "Excellent service and fast installation. Highly recommend Protect 360!", stars: 5 },
-    { name: "Sarah Keller", text: "Professional team, great communication, and reliable systems.", stars: 4 },
-    { name: "Michael Thompson", text: "Quick response and solid workmanship.", stars: 5 },
-    { name: "John Doe", text: "Excellent service and fast installation. Highly recommend Protect 360!", stars: 5 },
-    { name: "Sarah Keller", text: "Professional team, great communication, and reliable systems.", stars: 4 },
-    { name: "Michael Thompson", text: "Quick response and solid workmanship.", stars: 5 },
   ]);
 
   const averageRating =
