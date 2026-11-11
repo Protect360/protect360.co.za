@@ -85,7 +85,11 @@ export default function AboutUs() {
           </section>
 
           <section className="legal-section">
-            <h2>Legal & Compliance Documents</h2>
+            <h2>
+              Legal & Compliance
+              <br />
+              Documents
+            </h2>
             <p>For transparency and accountability, please review our official policies:</p>
             <ul className="legal-links">
               <li><a href="/legal/privacy-policy" className="link">Privacy Policy</a></li>
