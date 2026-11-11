@@ -22,7 +22,7 @@ main {
   align-items: center;
   justify-content: flex-start;
 
-  padding: 50px 50px 50px;
+  padding: 35px 50px 50px;
 
   background-color: var(--bg-color);
   color: var(--text-color);
