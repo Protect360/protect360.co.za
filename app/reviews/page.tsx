@@ -10,12 +10,12 @@ export default function Reviews() {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [anonymous, setAnonymous] = useState(false);
-  const [reviews, setReviews] = useState([
-    { name: "John Doe", text: "Excellent service and fast installation. Highly recommend Protect 360!", stars: 5 },
-  ]);
+  const [reviews, setReviews] = useState([]);
 
   const averageRating =
-    reviews.reduce((sum, r) => sum + r.stars, 0) / reviews.length;
+    reviews.length > 0
+    ? reviews.reduce((sum, r) => sum + r.stars, 0) / reviews.length
+    : 0;
 
   // ✅ Dynamic color logic for average rating
   const getRatingColor = (rating: number) => {
@@ -57,6 +57,16 @@ export default function Reviews() {
         <div className="reviews-left">
           <h1>Customer Reviews</h1>
           <div className="reviews-scroll">
+            {reviews.length === 0 && (
+              <div className="review-box">
+                <p className="review-text">
+                  No reviews have been submitted yet.
+                </p>
+                <p className="review-author">
+                  Be the first to leave a review.
+                </p>
+              </div>
+            )}
             {reviews.map((r, i) => (
               <div key={i} className="review-box">
                 <div className="review-stars">
@@ -93,9 +103,16 @@ export default function Reviews() {
             </div>
             <p
               className="avg-rating"
-              style={{ color: getRatingColor(averageRating) }}
+              style={{
+                color:
+                  reviews.length > 0
+                    ? getRatingColor(averageRating)
+                    : "var(--text-color)",
+              }}
             >
-              Average Rating: <span>{averageRating.toFixed(1)}</span> / 5
+              {reviews.length > 0
+                ? `Average Rating: ${averageRating.toFixed(1)} / 5`
+                : "No Ratings Yet"}
             </p>
           </div>
 
