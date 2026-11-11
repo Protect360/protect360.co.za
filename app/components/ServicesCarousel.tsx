@@ -24,20 +24,70 @@ export default function ServicesCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % services.length);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [services.length]);
 
-  return (
-    <section className="simple-services">
-      <h2>What We Do</h2>
+  const previousService = () => {
+    setIndex((prev) =>
+      prev === 0 ? services.length - 1 : prev - 1
+    );
+  };
 
-      <div className="service-display">
-        <div key={index} className="fade-text">
-          {services[index]}
+  const nextService = () => {
+    setIndex((prev) => (prev + 1) % services.length);
+  };
+
+  return (
+    <section className="services-showcase">
+
+      <h2>Everything You Need. One Security Partner.</h2>
+
+      <div className="services-carousel">
+
+        <button
+          className="service-nav-btn"
+          onClick={previousService}
+        >
+          ‹
+        </button>
+
+        <div className="service-card">
+
+          <div className="scanner-border">
+            <div className="scanner-dot"></div>
+          </div>
+
+          <div className="service-content">
+            {services[index]}
+          </div>
+
         </div>
+
+        <button
+          className="service-nav-btn"
+          onClick={nextService}
+        >
+          ›
+        </button>
+
       </div>
+
+      <div className="service-dots">
+        {services.map((_, dotIndex) => (
+          <button
+            key={dotIndex}
+            className={
+              index === dotIndex
+                ? "service-dot active"
+                : "service-dot"
+            }
+            onClick={() => setIndex(dotIndex)}
+          />
+        ))}
+      </div>
+
     </section>
   );
 }
