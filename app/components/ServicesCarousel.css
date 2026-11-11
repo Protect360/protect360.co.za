@@ -11,6 +11,10 @@
   margin-bottom: 15px;
 }
 
+.mobile-break {
+  display: none;
+}
+
 .service-card {
   position: relative;
 
@@ -116,6 +120,13 @@
 
   .service-content {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .mobile-break {
+    display: inline;
   }
 }
 

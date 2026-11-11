@@ -18,6 +18,9 @@ export default function BrandCarousel() {
     "nemtek",
     "paradox",
     "sherlotronics",
+    "texecom",
+    "tiandy",
+    "zkteco",
   ];
 
   const itemsPerPage = 4;
@@ -55,7 +58,7 @@ export default function BrandCarousel() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <h2>Trusted Technology Partners</h2>
+      <h2>Brands We Trust</h2>
 
       <div className="brands-carousel">
 

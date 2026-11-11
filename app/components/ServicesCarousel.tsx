@@ -43,8 +43,13 @@ export default function ServicesCarousel() {
 
   return (
     <section className="services-showcase">
+
       <h2>
-        Everything You Need. One Security Partner.
+        Everything You Need.
+        <span className="mobile-break">
+          <br />
+        </span>
+        {" "}One Security Partner.
       </h2>
 
       <div className="service-card">
@@ -54,6 +59,7 @@ export default function ServicesCarousel() {
           {currentService}
         </div>
       </div>
+
     </section>
   );
 }
