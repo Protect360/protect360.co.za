@@ -6,7 +6,7 @@
 
 .brands-section h2 {
   color: var(--accent-color);
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   width: 100%;
 }
 
@@ -23,6 +23,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+
   width: 100%;
   max-width: 950px;
 }
@@ -31,57 +32,60 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   min-height: 110px;
+
   background: #f2f2f2;
+
   border: 2px solid var(--accent-color);
   border-radius: 10px;
-  padding: 12px;
-  box-shadow: 0 0 6px rgba(0, 174, 239, 0.25);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
 
-.brand-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(0, 174, 239, 0.45);
+  padding: 12px;
+
+  box-shadow: 0 0 6px rgba(0, 174, 239, 0.25);
 }
 
 .brand-card img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 180px;
   max-height: 75px;
+
   object-fit: contain;
 }
 
 .carousel-btn {
   width: 40px;
   height: 40px;
+
   border: none;
   border-radius: 50%;
-  font-size: 24px;
+
   cursor: pointer;
+
   background: var(--accent-color);
   color: white;
-  transition: transform 0.2s ease;
-}
 
-.carousel-btn:hover {
-  transform: scale(1.1);
+  font-size: 24px;
 }
 
 .carousel-dots {
   display: flex;
   justify-content: center;
+
   gap: 8px;
+
   margin-top: 15px;
 }
 
 .dot {
   width: 12px;
   height: 12px;
+
   border-radius: 50%;
   border: none;
+
   cursor: pointer;
+
   background: #888;
 }
 
@@ -92,13 +96,29 @@
 /* MOBILE */
 
 @media (max-width: 768px) {
-  .brands-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 480px) {
+  .brands-carousel {
+    gap: 6px;
+  }
+
   .brands-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 6px;
+  }
+
+  .brand-card {
+    min-height: 70px;
+    padding: 4px;
+  }
+
+  .brand-card img {
+    max-height: 40px;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
   }
 }

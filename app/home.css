@@ -13,13 +13,19 @@
 
 main {
   flex: 1;
-  padding-top: 60px;
-  padding-bottom: 50px;
+
+  padding-top: 85px;
+  padding-bottom: 20px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  justify-content: flex-start;
+
   align-items: center;
-  gap: 0.6rem;
+
+  gap: 1.5rem;
+
   overflow: hidden;
 }
 
@@ -35,46 +41,69 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding: 18px 28px;
+
   border-radius: 10px;
+
   background-color: #ffffff;
+
   border: 2px solid var(--accent-color);
+
   box-shadow: 0 0 12px rgba(0, 174, 239, 0.6);
+
   backdrop-filter: blur(4px);
+
   margin: 0 auto;
+
   max-width: 90vw;
 }
 
 [data-theme="dark"] .hero-box {
   background-color: #ffffff;
+
   border: 2px solid var(--accent-color);
+
   box-shadow: 0 0 14px rgba(0, 174, 239, 0.7);
 }
 
-/* IMPROVED */
 .hero-box img {
   width: 100%;
   max-width: 1040px;
   height: auto;
+
   filter: none;
+
   transition: transform 0.3s ease-in-out;
+
   margin-bottom: 6px;
 }
 
 .hero-box .cta-buttons {
   display: flex;
+
   gap: 0.6rem;
+
   justify-content: center;
+
   margin: 4px 0;
 }
 
 .cta-btn {
   padding: 0.4rem 0.6rem;
+
   border-radius: 6px;
+
   font-weight: 600;
+
   text-decoration: none;
+
   box-shadow: 0 0 6px rgba(0, 174, 239, 0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
   border: none;
 }
 
@@ -90,12 +119,15 @@ main {
 
 .cta-btn:hover {
   transform: scale(1.08);
+
   box-shadow: 0 0 10px rgba(0, 174, 239, 0.6);
 }
 
 .hero-box .slogan {
   font-size: 1.1rem;
+
   margin-top: 2px;
+
   color: var(--text-color);
 }
 
@@ -112,8 +144,55 @@ main {
 
 .cta-wrapper {
   display: flex;
+
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+
   width: 100%;
+
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 768px) {
+
+  main {
+    padding-top: 75px;
+    gap: 1.25rem;
+  }
+
+  .hero-box {
+    padding: 14px 18px;
+    max-width: 95vw;
+  }
+
+  .hero-box .slogan {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  main {
+    padding-top: 70px;
+    gap: 1rem;
+  }
+
+  .hero-box {
+    padding: 12px;
+  }
+
+  .hero-box .cta-buttons {
+    flex-wrap: wrap;
+  }
+
+  .hero-box .slogan {
+    font-size: 0.85rem;
+  }
 }

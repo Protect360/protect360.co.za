@@ -1,36 +1,75 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("light");
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const pathname = usePathname();
 
-  // ✅ Load saved theme on mount
+  const menuRef = useRef<HTMLUListElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
+
     if (savedTheme) {
       setTheme(savedTheme);
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
+      document.documentElement.setAttribute(
+        "data-theme",
+        savedTheme
+      );
     }
   }, []);
 
-  // ✅ Apply theme and save to localStorage whenever it changes
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.setAttribute(
+      "data-theme",
+      theme
+    );
+
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(target)
+      ) {
+        setMenuOpen(false);
+      }
+    }
+
+    document.addEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+
+    return () => {
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      );
+    };
+  }, []);
+
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(
+      theme === "light"
+        ? "dark"
+        : "light"
+    );
   };
 
-  // ✅ Define all links
   const allLinks = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
@@ -41,17 +80,20 @@ export default function Navbar() {
     { href: "/gallery", label: "Gallery" },
   ];
 
-  // ✅ Conditional display logic
   let visibleLinks: { href: string; label: string }[] = [];
 
   if (pathname === "/") {
-    // Home page → show all links except Home itself
-    visibleLinks = allLinks.filter((link) => link.href !== pathname);
-  } else if (pathname === "/reviews" || pathname === "/gallery") {
-    // Reviews or Gallery page → show only Home
-    visibleLinks = allLinks.filter((link) => link.href === "/");
+    visibleLinks = allLinks.filter(
+      (link) => link.href !== pathname
+    );
+  } else if (
+    pathname === "/reviews" ||
+    pathname === "/gallery"
+  ) {
+    visibleLinks = allLinks.filter(
+      (link) => link.href === "/"
+    );
   } else {
-    // Other pages → hide current page and hide Reviews & Gallery
     visibleLinks = allLinks.filter(
       (link) =>
         link.href !== pathname &&
@@ -62,7 +104,8 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="nav-left">
+
+      <a href="/" aria-label="Home">
         <Image
           src="/logo-logo.png"
           alt="Protect 360 Logo"
@@ -70,20 +113,52 @@ export default function Navbar() {
           height={40}
           className="navbar-logo"
         />
-      </div>
+      </a>
 
-      <ul className="nav-links">
+      <button
+        ref={hamburgerRef}
+        className="hamburger"
+        onClick={() =>
+          setMenuOpen(!menuOpen)
+        }
+        aria-label="Menu"
+      >
+        ☰
+      </button>
+
+      <ul
+        ref={menuRef}
+        className={
+          menuOpen
+            ? "nav-links open"
+            : "nav-links"
+        }
+      >
         {visibleLinks.map((link) => (
           <li key={link.href}>
-            <a href={link.href}>{link.label}</a>
+            <a
+              href={link.href}
+              onClick={() =>
+                setMenuOpen(false)
+              }
+            >
+              {link.label}
+            </a>
           </li>
         ))}
       </ul>
 
       <div className="nav-right">
-        <button className="toggle-btn" onClick={toggleTheme}>
+        <button
+          className="toggle-btn"
+          onClick={toggleTheme}
+        >
           <Image
-            src={theme === "dark" ? "/bulb-off.png" : "/bulb-on.png"}
+            src={
+              theme === "dark"
+                ? "/bulb-off.png"
+                : "/bulb-on.png"
+            }
             alt="Theme Toggle"
             width={26}
             height={26}
@@ -91,6 +166,7 @@ export default function Navbar() {
           />
         </button>
       </div>
+
     </nav>
   );
 }
