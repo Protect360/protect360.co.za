@@ -4,7 +4,7 @@ main {
   flex-direction: column;
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding: 80px 0 10px 0;
+  padding: 0px 0 10px 0;
   box-sizing: border-box;
 }
 
@@ -14,7 +14,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 24px 20px;
+  padding: 0 50px 20px;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -26,7 +26,7 @@ main {
   width: 100%;
   max-width: 1200px;
   align-items: stretch;
-  margin: 0;
+  margin: 85px 0;
 }
 
 .contact-block {
@@ -256,4 +256,70 @@ main {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-size: 13px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .contact-wrapper {
+    padding: 20px 18px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    margin: 40px 0;
+
+    max-width: 100%;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-block {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact-wrapper {
+    padding: 15px 12px;
+  }
+
+  .contact-grid {
+    gap: 15px;
+
+    margin: 25px 0;
+  }
+
+  .optional-address .address-row {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 4px;
+  }
+
+  .optional-address label,
+  .optional-address input {
+    width: 100%;
+  }
+
+  .hours-grid {
+    column-gap: 12px;
+  }
+
+  .map-container {
+    height: 250px;
+  }
 }

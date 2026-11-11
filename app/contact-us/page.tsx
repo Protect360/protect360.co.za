@@ -125,7 +125,7 @@ export default function ContactUs() {
             <div className="map-container">
               <iframe
                 title="Protect 360 Location"
-                src="https://www.google.com/maps?q=79+Voortrekker+Road+Nigel+Gauteng+South+Africa&output=embed"
+                src="https://www.google.com/maps?q=Lydenburg+1120+Mpumalanga+South+Africa&output=embed"
                 loading="lazy"
               ></iframe>
             </div>
@@ -180,15 +180,15 @@ export default function ContactUs() {
                 </div>
                 <div className="address-row">
                   <label htmlFor="town">Town / City (Optional)</label>
-                  <input id="town" type="text" placeholder="e.g. Nigel" />
+                  <input id="town" type="text" placeholder="e.g. Lydenburg" />
                 </div>
                 <div className="address-row">
                   <label htmlFor="postal">Postal Code (Optional)</label>
-                  <input id="postal" type="text" placeholder="e.g. 1490" />
+                  <input id="postal" type="text" placeholder="e.g. 1120" />
                 </div>
                 <div className="address-row">
                   <label htmlFor="province">Province (Optional)</label>
-                  <input id="province" type="text" placeholder="e.g. Gauteng" />
+                  <input id="province" type="text" placeholder="e.g. Mpumalanga" />
                 </div>
               </div>
             </form>
