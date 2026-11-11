@@ -1,0 +1,38 @@
+.simple-services {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.simple-services h2 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.service-display {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fade-text {
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: var(--box-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  box-shadow: 0 0 5px rgba(0, 174, 239, 0.3);
+  animation: fadeInOut 4s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}

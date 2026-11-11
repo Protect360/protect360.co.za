@@ -1,58 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CTAButton from "./components/CTAButton";
+import ServicesCarousel from "./components/ServicesCarousel";
+import BrandCarousel from "./components/BrandCarousel";
 import "./home.css";
 
 export default function Home() {
-  const services = [
-    "Alarm Systems",
-    "CCTV Systems",
-    "Electric Fencing",
-    "Gate & Door Automation",
-    "Access Control",
-    "Intercom Systems",
-    "Installation & Integration",
-    "Assessments & Quotes",
-    "Maintenance & Repairs",
-    "Add‑Ons & Upgrades",
-    "Fault‑Finding & Troubleshooting",
-    "24/7 Support",
-  ];
-
-  const brands = [
-    "ajax",
-    "centurion",
-    "csb",
-    "dahua",
-    "dsc",
-    "forbatt",
-    "hikvision",
-    "hilook",
-    "ids",
-    "nemtek",
-    "paradox",
-    "sherlotronics",
-  ];
-
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % services.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [services.length]);
-
   return (
     <main className="home-wrapper">
       <Navbar />
 
-      {/* ✅ Unified Hero Section */}
       <section className="hero">
         <div className="hero-box">
           <Image
@@ -63,48 +24,31 @@ export default function Home() {
           />
 
           <div className="cta-buttons">
-            <Link href="https://wa.me/27791836591" className="cta-btn whatsapp">
+            <Link
+              href="https://wa.me/27791836591"
+              className="cta-btn whatsapp"
+            >
               WhatsApp
             </Link>
-            <Link href="tel:+27791836591" className="cta-btn phone">
+
+            <Link
+              href="tel:+27791836591"
+              className="cta-btn phone"
+            >
               Phone
             </Link>
           </div>
 
-          <p className="slogan">Your first choice for uncompromising security.</p>
+          <p className="slogan">
+            Your first choice for uncompromising security.
+          </p>
         </div>
       </section>
 
-      {/* ✅ Services Section */}
-      <section className="simple-services">
-        <h2>What We Do</h2>
-        <div className="service-display">
-          <div key={index} className="fade-text">
-            {services[index]}
-          </div>
-        </div>
-      </section>
+      <ServicesCarousel />
 
-      {/* ✅ Brands Section */}
-      <section className="brands-section">
-        <h2>Trusted Brands</h2>
-        <div className="brands-scroll">
-          <div className="brand-track">
-            {[...brands, ...brands].map((brand, i) => (
-              <div key={i} className="brand-box">
-                <Image
-                  src={`/brands/${brand}.png`}
-                  alt={brand}
-                  width={100}
-                  height={60}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BrandCarousel />
 
-      {/* ✅ CTA Footer */}
       <div className="cta-wrapper">
         <CTAButton />
       </div>

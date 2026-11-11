@@ -1,10 +1,9 @@
 /* ========== LAYOUT WRAPPER ========== */
 
 .home-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: var(--bg-color);
   color: var(--text-color);
   box-sizing: border-box;
@@ -52,8 +51,10 @@ main {
   box-shadow: 0 0 14px rgba(0, 174, 239, 0.7);
 }
 
+/* IMPROVED */
 .hero-box img {
-  width: 1040px;
+  width: 100%;
+  max-width: 1040px;
   height: auto;
   filter: none;
   transition: transform 0.3s ease-in-out;
@@ -105,119 +106,6 @@ main {
 [data-theme="dark"] .hero-box .slogan {
   color: #1A2E45;
   font-weight: 700;
-}
-
-/* ========== SERVICES SECTION ========== */
-
-.simple-services {
-  text-align: center;
-  margin-top: 4px;
-}
-
-.simple-services h2 {
-  margin: 0.2rem 0 0.4rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--accent-color);
-}
-
-.service-display {
-  position: relative;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.fade-text {
-  font-weight: 600;
-  color: var(--text-color);
-  background-color: var(--box-bg);
-  border: 1px solid var(--accent-color);
-  border-radius: 6px;
-  padding: 0.4rem 0.6rem;
-  box-shadow: 0 0 5px rgba(0, 174, 239, 0.3);
-  animation: fadeInOut 4s ease-in-out;
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-/* ========== BRANDS SECTION ========== */
-
-.brands-section {
-  text-align: center;
-  margin-top: 3px;
-}
-
-.brands-section h2 {
-  margin: 4px 0 0 0;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--accent-color);
-}
-
-.brands-scroll {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  padding: 10px 0;
-  white-space: nowrap;
-}
-
-.brand-track {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: max-content;
-  animation: scrollBrands 40s linear infinite;
-  will-change: transform;
-}
-
-.brand-box {
-  flex: 0 0 auto;
-  border: 2px solid var(--accent-color);
-  box-shadow: 0 0 4px rgba(0, 174, 239, 0.3);
-  border-radius: 6px;
-  background-color: #F2F2F2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.brand-box img {
-  max-height: 65px;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-}
-
-@keyframes scrollBrands {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
 }
 
 /* ========== CTA WRAPPER ========== */
