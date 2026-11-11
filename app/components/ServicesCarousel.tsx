@@ -19,75 +19,38 @@ export default function ServicesCarousel() {
     "24/7 Support",
   ];
 
-  const [index, setIndex] = useState(0);
+  const [currentService, setCurrentService] = useState(
+    services[0]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % services.length);
+      let randomService;
+
+      do {
+        randomService =
+          services[
+            Math.floor(Math.random() * services.length)
+          ];
+      } while (randomService === currentService);
+
+      setCurrentService(randomService);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [services.length]);
-
-  const previousService = () => {
-    setIndex((prev) =>
-      prev === 0 ? services.length - 1 : prev - 1
-    );
-  };
-
-  const nextService = () => {
-    setIndex((prev) => (prev + 1) % services.length);
-  };
+  }, [currentService]);
 
   return (
     <section className="services-showcase">
-
       <h2>Everything You Need. One Security Partner.</h2>
 
-      <div className="services-carousel">
+      <div className="service-card">
+        <div className="scanner-dot" />
 
-        <button
-          className="service-nav-btn"
-          onClick={previousService}
-        >
-          ‹
-        </button>
-
-        <div className="service-card">
-
-          <div className="scanner-border">
-            <div className="scanner-dot"></div>
-          </div>
-
-          <div className="service-content">
-            {services[index]}
-          </div>
-
+        <div className="service-content">
+          {currentService}
         </div>
-
-        <button
-          className="service-nav-btn"
-          onClick={nextService}
-        >
-          ›
-        </button>
-
       </div>
-
-      <div className="service-dots">
-        {services.map((_, dotIndex) => (
-          <button
-            key={dotIndex}
-            className={
-              index === dotIndex
-                ? "service-dot active"
-                : "service-dot"
-            }
-            onClick={() => setIndex(dotIndex)}
-          />
-        ))}
-      </div>
-
     </section>
   );
 }
