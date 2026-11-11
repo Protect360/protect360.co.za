@@ -112,24 +112,28 @@ export default function Reviews() {
                 </label>
               </div>
 
-              {!anonymous && (
-                <div className="name-surname-row">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    className="form-input"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="surname"
-                    placeholder="Surname"
-                    className="form-input"
-                    required
-                  />
-                </div>
-              )}
+              <div
+                className="name-surname-row"
+                  style={{
+                    visibility: anonymous ? "hidden" : "visible",
+                    pointerEvents: anonymous ? "none" : "auto",
+                  }}
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  className="form-input"
+                  required={!anonymous}
+                />
+                <input
+                  type="text"
+                  name="surname"
+                  placeholder="Surname"
+                  className="form-input"
+                  required={!anonymous}
+                />
+              </div>
 
               <div className="form-group town-field">
                 <input
