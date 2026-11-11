@@ -19,22 +19,23 @@ export default function ServicesCarousel() {
     "24/7 Support",
   ];
 
-  const [currentService, setCurrentService] = useState(
-    services[0]
-  );
+  const [currentService, setCurrentService] =
+    useState(services[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      let randomService;
+      let nextService;
 
       do {
-        randomService =
+        nextService =
           services[
             Math.floor(Math.random() * services.length)
           ];
-      } while (randomService === currentService);
+      } while (
+        nextService === currentService
+      );
 
-      setCurrentService(randomService);
+      setCurrentService(nextService);
     }, 5000);
 
     return () => clearInterval(interval);
@@ -42,10 +43,12 @@ export default function ServicesCarousel() {
 
   return (
     <section className="services-showcase">
-      <h2>Everything You Need. One Security Partner.</h2>
+      <h2>
+        Everything You Need. One Security Partner.
+      </h2>
 
       <div className="service-card">
-        <div className="scanner-dot" />
+        <div className="scanner-dot"></div>
 
         <div className="service-content">
           {currentService}

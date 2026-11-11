@@ -1,21 +1,21 @@
 .services-showcase {
   width: 100%;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .services-showcase h2 {
   color: var(--accent-color);
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .service-card {
   position: relative;
 
-  width: 700px;
-  height: 180px;
+  width: 550px;
+  height: 150px;
 
   margin: 0 auto;
 
@@ -25,28 +25,16 @@
 
   background-color: var(--box-bg);
 
-  border: 2px solid rgba(0, 174, 239, 0.4);
   border-radius: 14px;
 
-  overflow: hidden;
+  overflow: visible;
 
   box-shadow:
-    0 0 12px rgba(0, 174, 239, 0.25);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: scale(1.03);
-
-  box-shadow:
-    0 0 26px rgba(0, 174, 239, 0.6);
+    0 0 8px rgba(0, 174, 239, 0.08);
 }
 
 .service-content {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
 
   color: var(--text-color);
@@ -58,7 +46,9 @@
   z-index: 2;
 }
 
-/* Scanner */
+/* =========================
+   SCANNER DOT
+========================= */
 
 .scanner-dot {
   position: absolute;
@@ -71,14 +61,19 @@
   background: #00AEEF;
 
   box-shadow:
-    0 0 12px #00AEEF,
+    0 0 8px #00AEEF,
+    0 0 16px #00AEEF,
     0 0 24px #00AEEF,
-    0 0 40px rgba(0, 174, 239, 0.9);
+    0 0 40px rgba(0, 174, 239, 0.8);
+
+  z-index: 5;
 
   animation: scanBorder 5s linear infinite;
 }
 
-/* Border Animation */
+/* =========================
+   PERIMETER SCAN
+========================= */
 
 @keyframes scanBorder {
 
@@ -108,27 +103,29 @@
   }
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
 
   .service-card {
     width: 90%;
-    height: 160px;
+    height: 140px;
   }
 
   .service-content {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 600px) {
 
   .service-card {
-    height: 140px;
+    height: 120px;
   }
 
   .service-content {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
