@@ -110,11 +110,11 @@ main {
 /* ========== MOBILE ========== */
 @media (max-width: 768px) {
   main {
-    padding-top: 15px;
+    padding-top: 40px;
     gap: 1.25rem;
   }
   .hero-box {
-    padding: 14px 18px;
+    padding: 20px 18px;
     max-width: 95vw;
   }
   .hero-box .slogan {
@@ -130,7 +130,7 @@ main {
     gap: 1rem;
   }
   .hero-box {
-    padding: 12px;
+    padding: 20px 18px;
   }
   .hero-box .cta-buttons {
     flex-wrap: wrap;
