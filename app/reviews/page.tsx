@@ -6,16 +6,22 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import "./Reviews.css";
 
+type Review = {
+  name: string;
+  text: string;
+  stars: number;
+};
+
 export default function Reviews() {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [anonymous, setAnonymous] = useState(false);
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState<Review[]>([]);
 
   const averageRating =
     reviews.length > 0
-    ? reviews.reduce((sum, r) => sum + r.stars, 0) / reviews.length
-    : 0;
+      ? reviews.reduce((sum, r) => sum + r.stars, 0) / reviews.length
+      : 0;
 
   // ✅ Dynamic color logic for average rating
   const getRatingColor = (rating: number) => {
