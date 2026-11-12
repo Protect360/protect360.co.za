@@ -3,22 +3,22 @@
 import { useEffect, useState } from "react";
 import "./ServicesCarousel.css";
 
-export default function ServicesCarousel() {
-  const services = [
-    "Alarm Systems",
-    "CCTV Systems",
-    "Electric Fencing",
-    "Gate & Door Automation",
-    "Access Control",
-    "Intercom Systems",
-    "Installation & Integration",
-    "Assessments & Quotes",
-    "Maintenance & Repairs",
-    "Add‑Ons & Upgrades",
-    "Fault‑Finding & Troubleshooting",
-    "24/7 Support",
-  ];
+const services = [
+  "Alarm Systems",
+  "CCTV Systems",
+  "Electric Fencing",
+  "Gate & Door Automation",
+  "Access Control",
+  "Intercom Systems",
+  "Installation & Integration",
+  "Assessments & Quotes",
+  "Maintenance & Repairs",
+  "Add‑Ons & Upgrades",
+  "Fault‑Finding & Troubleshooting",
+  "24/7 Support",
+];
 
+export default function ServicesCarousel() {
   const [currentService, setCurrentService] =
     useState(services[0]);
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./Footer.css";
 
 export default function Footer() {
@@ -5,9 +6,9 @@ export default function Footer() {
     <footer className="footer">
       <p>Copyright © 2026 Protect 360 (Pty) Ltd - All rights reserved.</p>
       <p className="footer-links">
-        <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
+        <Link href="/legal/privacy-policy" className="footer-link">Privacy Policy</Link>
         <span className="divider">|</span>
-        <a href="/terms-and-conditions" className="footer-link">Terms & Conditions</a>
+        <Link href="/legal/terms-and-conditions" className="footer-link">Terms & Conditions</Link>
       </p>
     </footer>
   );
