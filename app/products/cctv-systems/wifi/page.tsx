@@ -2,38 +2,39 @@
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import Image from "next/image";
 import "./Category.css";
 
 const products = [
   {
-    code: "38TC-C320N-WIFI",
-    title: "Tiandy 2MP WiFi Bullet",
-    description: "2MP WiFi Bullet Camera, 50M IR + 15M White Light",
+    code: "38TC-C32QN-WIFI",
+    name: "Tiandy 2MP WiFi Bullet",
+    image: "/products/cctv/wifi/38TC-C32QN-WIFI.jpg",
   },
   {
-    code: "38TC-C340N-WIFI",
-    title: "Tiandy 4MP WiFi Bullet",
-    description: "4MP WiFi Bullet Camera, 50M IR + 15M White Light",
+    code: "38TC-C34QN-WIFI",
+    name: "Tiandy 4MP WiFi Bullet",
+    image: "/products/cctv/wifi/38TC-C34QN-WIFI.jpg",
   },
   {
     code: "38TC-H322A",
-    title: "Tiandy 2MP WiFi Astro PT",
-    description: "2MP PT Camera, 15M IR + 10M White Light",
+    name: "Tiandy 2MP WiFi Astro PT",
+    image: "/products/cctv/wifi/38TC-H322A.jpg",
   },
   {
     code: "38TC-H322N 9DA-4",
-    title: "Tiandy 2MP WiFi Home PT",
-    description: "2MP Home PT Camera, 15M IR + 10M White Light",
+    name: "Tiandy 2MP WiFi Home PT",
+    image: "/products/cctv/wifi/38TC-H322N 9DA-4.jpg",
   },
   {
     code: "38TC-H342A",
-    title: "Tiandy 4MP WiFi Astro PT",
-    description: "4MP PT Camera, 15M IR + 10M White Light",
+    name: "Tiandy 4MP WiFi Astro PT",
+    image: "/products/cctv/wifi/38TC-H342A.jpg",
   },
   {
     code: "38TC-H342N 9DA-4",
-    title: "Tiandy 4MP WiFi Home PT",
-    description: "4MP Home PT Camera, 15M IR + 10M White Light",
+    name: "Tiandy 4MP WiFi Home PT",
+    image: "/products/cctv/wifi/38TC-H342N 9DA-4.jpg",
   },
 ];
 
@@ -72,19 +73,33 @@ export default function WifiProducts() {
               key={product.code}
               className="product-card"
             >
-              <h2>{product.title}</h2>
+              <div className="product-image-container">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={300}
+                  height={300}
+                  className="product-image"
+                />
+              </div>
 
-              <p className="product-code">
-                {product.code}
-              </p>
+              <div className="product-info">
+                <h2>{product.name}</h2>
 
-              <p className="product-description">
-                {product.description}
-              </p>
+                <p className="product-code">
+                  {product.code}
+                </p>
+              </div>
 
-              <button className="product-btn">
-                View Product
-              </button>
+              <div className="product-actions">
+                <button className="quote-btn">
+                  Request Quote
+                </button>
+
+                <button className="details-btn">
+                  Details
+                </button>
+              </div>
             </div>
           ))}
         </div>
