@@ -1,39 +1,42 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import "./Navbar.css";
 
+type Theme = "light" | "dark";
+
+const themeChangeEvent = "protect360-theme-change";
+
+function subscribeToTheme(callback: () => void) {
+  window.addEventListener(themeChangeEvent, callback);
+  return () => window.removeEventListener(themeChangeEvent, callback);
+}
+
+function getThemeSnapshot(): Theme {
+  return document.documentElement.getAttribute("data-theme") === "dark"
+    ? "dark"
+    : "light";
+}
+
+function getServerThemeSnapshot(): Theme {
+  return "light";
+}
+
 export default function Navbar() {
-  const [theme, setTheme] = useState("light");
+  const theme = useSyncExternalStore(
+    subscribeToTheme,
+    getThemeSnapshot,
+    getServerThemeSnapshot
+  );
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pathname = usePathname();
 
   const menuRef = useRef<HTMLUListElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute(
-        "data-theme",
-        savedTheme
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      theme
-    );
-
-    localStorage.setItem("theme", theme);
-  }, [theme]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -63,16 +66,14 @@ export default function Navbar() {
   }, []);
 
   const toggleTheme = () => {
-    setTheme(
-      theme === "light"
-        ? "dark"
-        : "light"
-    );
+    const nextTheme = theme === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    window.dispatchEvent(new Event(themeChangeEvent));
   };
 
   const allLinks = [
     { href: "/", label: "Home" },
-    { href: "/products", label: "Products" },
     { href: "/services", label: "Services" },
     { href: "/contact-us", label: "Contact Us" },
     { href: "/about-us", label: "About Us" },
@@ -105,7 +106,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
 
-      <a href="/" aria-label="Home">
+      <Link href="/" aria-label="Home">
         <Image
           src="/logo-logo.png"
           alt="Protect 360 Logo"
@@ -113,7 +114,7 @@ export default function Navbar() {
           height={40}
           className="navbar-logo"
         />
-      </a>
+      </Link>
 
       <button
         ref={hamburgerRef}
@@ -136,14 +137,14 @@ export default function Navbar() {
       >
         {visibleLinks.map((link) => (
           <li key={link.href}>
-            <a
+            <Link
               href={link.href}
               onClick={() =>
                 setMenuOpen(false)
               }
             >
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
