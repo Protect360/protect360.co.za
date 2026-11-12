@@ -21,8 +21,8 @@ export default function Gallery() {
           <h2>Gallery Coming Soon</h2>
 
           <p>
-            Images and company updates will appear here as new content is
-            added through the Protect 360 (PTY) Ltd administration.
+            Images and company updates will appear here as content is
+            added through Protect 360 (PTY) Ltd administration.
           </p>
         </div>
       </section>
