@@ -9,19 +9,21 @@ export default function Gallery() {
     <main className="gallery-wrapper">
       <Navbar />
 
-      {/* ✅ Gallery Section */}
       <section className="gallery-section">
-        <h1>Project Gallery</h1>
+        <h1>Gallery</h1>
+
         <p className="gallery-subtitle">
-          Showcasing our completed installations and company progress.
+          A collection of company photos, workmanship, installations,
+          equipment, events and highlights from Protect 360.
         </p>
 
-        {/* ✅ Placeholder grid */}
-        <div className="gallery-grid">
-          <div className="gallery-item placeholder">Image 1</div>
-          <div className="gallery-item placeholder">Image 2</div>
-          <div className="gallery-item placeholder">Image 3</div>
-          <div className="gallery-item placeholder">Image 4</div>
+        <div className="gallery-coming-soon">
+          <h2>Gallery Coming Soon</h2>
+
+          <p>
+            Images and company updates will appear here as new content
+            is added through the Protect 360 administration portal.
+          </p>
         </div>
       </section>
 
