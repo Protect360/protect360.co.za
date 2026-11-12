@@ -14,7 +14,7 @@ export default function Gallery() {
 
         <p className="gallery-subtitle">
           A collection of company photos, workmanship, installations,
-          equipment, events and highlights from Protect 360.
+          equipment, events and highlights from Protect 360 (PTY) Ltd.
         </p>
 
         <div className="gallery-coming-soon">
@@ -22,7 +22,7 @@ export default function Gallery() {
 
           <p>
             Images and company updates will appear here as new content is
-            added through the Protect 360 administration portal.
+            added through the Protect 360 (PTY) Ltd administration.
           </p>
         </div>
       </section>
