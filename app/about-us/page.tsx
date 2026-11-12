@@ -31,7 +31,7 @@ export default function AboutUs() {
             <div className="overview-block">
               <h2>Who We Are</h2>
               <p>
-                Founded in Gauteng, Protect 360 (Pty) Ltd specializes in comprehensive electronic
+                Protect 360 (Pty) Ltd specializes in comprehensive electronic
                 security systems, including CCTV, alarms, access control, and automation. Our approach
                 is simple: deliver high‑quality installations, responsive support, and long‑term
                 reliability. We serve residential, commercial, and industrial clients across South Africa,
