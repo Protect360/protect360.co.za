@@ -45,28 +45,20 @@ export default function WifiProducts() {
       <Navbar />
 
       <section className="wifi-section">
-        <h1>WiFi CCTV</h1>
 
-        <p className="wifi-subtitle">
-          Browse our range of WiFi CCTV cameras and wireless surveillance
-          solutions.
-        </p>
-
-        <div className="wifi-controls">
-          <input
-            type="text"
-            placeholder="Search WiFi CCTV Products..."
-            className="wifi-search"
-            disabled
-          />
-
-          <select
-            className="wifi-filter"
-            disabled
-          >
-            <option>All WiFi Products</option>
-          </select>
+        <div className="breadcrumbs">
+          <Link href="/">Home</Link>
+          <span>›</span>
+          <Link href="/products">Products</Link>
+          <span>›</span>
+          <Link href="/products/cctv-systems">
+            CCTV Systems
+          </Link>
+          <span>›</span>
+          <span>WiFi</span>
         </div>
+
+        <h1>WiFi CCTV</h1>
 
         <div className="products-grid">
           {products.map((product) => (
@@ -93,10 +85,6 @@ export default function WifiProducts() {
               </div>
 
               <div className="product-actions">
-                <button className="quote-btn">
-                  Request Quote
-                </button>
-
                 {product.code === "38TC-C34QN-WIFI" ? (
                   <Link
                     href="/products/cctv-systems/wifi/38TC-C34QN-WIFI"
@@ -113,6 +101,7 @@ export default function WifiProducts() {
             </div>
           ))}
         </div>
+
       </section>
 
       <Footer />
