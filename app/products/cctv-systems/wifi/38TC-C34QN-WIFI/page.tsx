@@ -77,6 +77,10 @@ export default function ProductPage() {
               <button className="quote-btn">
                 Request Quote
               </button>
+
+              <p className="quote-note">
+                Coming Soon.
+              </p>
             </div>
 
           </div>
