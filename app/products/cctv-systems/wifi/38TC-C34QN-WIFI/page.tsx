@@ -75,12 +75,9 @@ export default function ProductPage() {
 
             <div className="product-actions">
               <button className="quote-btn">
-                Request Quote
+                <span>Request Quote</span>
+                <small>COMING SOON</small>
               </button>
-
-              <p className="quote-note">
-                Coming Soon.
-              </p>
             </div>
 
           </div>
