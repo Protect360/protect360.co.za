@@ -30,27 +30,16 @@ export default function CCTVSystems() {
       <Navbar />
 
       <section className="category-section">
-        <h1>CCTV Systems</h1>
 
-        <p className="category-subtitle">
-          Browse our CCTV product categories and solutions.
-        </p>
-
-        <div className="category-controls">
-          <input
-            type="text"
-            placeholder="Search CCTV Products..."
-            className="category-search"
-            disabled
-          />
-
-          <select
-            className="category-filter"
-            disabled
-          >
-            <option>All CCTV Categories</option>
-          </select>
+        <div className="breadcrumbs">
+          <Link href="/">Home</Link>
+          <span>›</span>
+          <Link href="/products">Products</Link>
+          <span>›</span>
+          <span>CCTV Systems</span>
         </div>
+
+        <h1>CCTV Systems</h1>
 
         <div className="category-grid">
           {categories.map((category) => (
@@ -59,10 +48,6 @@ export default function CCTVSystems() {
               className="category-card"
             >
               <h2>{category.title}</h2>
-
-              <p>
-                Products coming soon.
-              </p>
 
               <Link
                 href={`/products/cctv-systems/${category.slug}`}
@@ -73,6 +58,7 @@ export default function CCTVSystems() {
             </div>
           ))}
         </div>
+
       </section>
 
       <Footer />
