@@ -3,6 +3,7 @@
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import "./Category.css";
 
 const products = [
@@ -96,9 +97,18 @@ export default function WifiProducts() {
                   Request Quote
                 </button>
 
-                <button className="details-btn">
-                  Details
-                </button>
+                {product.code === "38TC-C34QN-WIFI" ? (
+                  <Link
+                    href="/products/cctv-systems/wifi/38TC-C34QN-WIFI"
+                    className="details-btn"
+                  >
+                    Details
+                  </Link>
+                ) : (
+                  <button className="details-btn">
+                    Details
+                  </button>
+                )}
               </div>
             </div>
           ))}

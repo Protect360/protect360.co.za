@@ -1,0 +1,160 @@
+.product-wrapper {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.product-section {
+  flex: 1;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 20px 24px 40px;
+
+  box-sizing: border-box;
+}
+
+.product-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+
+  align-items: start;
+}
+
+.product-image-side {
+  background-color: var(--box-bg);
+
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+
+  padding: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+
+  max-width: 500px;
+
+  object-fit: contain;
+}
+
+.product-details-side {
+  background-color: var(--box-bg);
+
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+
+  padding: 30px;
+}
+
+.product-details-side h1 {
+  color: var(--accent-color);
+
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 2rem;
+}
+
+.product-code {
+  opacity: 0.75;
+
+  margin-bottom: 25px;
+}
+
+.product-section-block {
+  margin-bottom: 25px;
+}
+
+.product-section-block h2 {
+  color: var(--accent-color);
+
+  margin-bottom: 12px;
+
+  font-size: 1.2rem;
+}
+
+.product-section-block ul {
+  padding-left: 20px;
+
+  line-height: 1.8;
+}
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  margin-top: 30px;
+}
+
+.datasheet-btn,
+.quote-btn {
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.datasheet-btn {
+  background-color: transparent;
+
+  border: 1px solid var(--accent-color);
+
+  color: var(--accent-color);
+}
+
+.datasheet-btn:hover {
+  background-color: rgba(0, 174, 239, 0.10);
+}
+
+.quote-btn {
+  border: none;
+
+  background-color: var(--accent-color);
+
+  color: white;
+}
+
+.quote-btn:hover {
+  background-color: #0088cc;
+}
+
+@media (max-width: 900px) {
+
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image-side {
+    order: 1;
+  }
+
+  .product-details-side {
+    order: 2;
+  }
+
+  .product-details-side h1 {
+    font-size: 1.7rem;
+  }
+}
