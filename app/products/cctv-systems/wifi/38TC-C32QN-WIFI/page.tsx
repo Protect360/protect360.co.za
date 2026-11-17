@@ -15,8 +15,8 @@ export default function ProductPage() {
 
           <div className="product-image-side">
             <Image
-              src="/products/cctv/wifi/38TC-C34QN-WIFI.jpg"
-              alt="Tiandy 4MP WiFi Bullet"
+              src="/products/cctv/wifi/38TC-C32QN-WIFI.jpg"
+              alt="Tiandy 2MP WiFi Bullet"
               width={600}
               height={600}
               className="product-image"
@@ -26,20 +26,21 @@ export default function ProductPage() {
 
           <div className="product-details-side">
 
-            <h1>Tiandy 4MP WiFi Bullet</h1>
+            <h1>Tiandy 2MP WiFi Bullet</h1>
 
             <p className="product-code">
-              Product Code: 38TC-C34QN-WIFI
+              Product Code: 38TC-C32QN-WIFI
             </p>
 
             <div className="product-section-block">
               <h2>Overview</h2>
 
               <p>
-                The Tiandy 4MP WiFi Bullet Camera is designed for
+                The Tiandy 2MP WiFi Bullet Camera is designed for
                 residential and commercial surveillance applications,
-                delivering high-resolution video, wireless connectivity
-                and reliable day and night performance.
+                offering reliable wireless connectivity, excellent
+                night vision performance and weatherproof protection
+                for indoor and outdoor installations.
               </p>
             </div>
 
@@ -47,7 +48,7 @@ export default function ProductPage() {
               <h2>Key Features</h2>
 
               <ul>
-                <li>4MP Resolution (2560 × 1440)</li>
+                <li>2MP Resolution (1920 × 1080)</li>
                 <li>WiFi Connectivity</li>
                 <li>Built-in Microphone</li>
                 <li>Built-in Speaker</li>
@@ -64,7 +65,7 @@ export default function ProductPage() {
               <h2>Downloads</h2>
 
               <a
-                href="/datasheets/cctv/wifi/38TC-C34QN-WIFI.pdf"
+                href="/datasheets/cctv/wifi/38TC-C32QN-WIFI.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="datasheet-link"

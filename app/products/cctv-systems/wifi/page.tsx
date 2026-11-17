@@ -49,12 +49,19 @@ export default function WifiProducts() {
         <div className="breadcrumbs">
           <Link href="/">Home</Link>
           <span>›</span>
-          <Link href="/products">Products</Link>
+
+          <Link href="/products">
+            Products
+          </Link>
+
           <span>›</span>
+
           <Link href="/products/cctv-systems">
             CCTV Systems
           </Link>
+
           <span>›</span>
+
           <span>WiFi</span>
         </div>
 
@@ -85,18 +92,12 @@ export default function WifiProducts() {
               </div>
 
               <div className="product-actions">
-                {product.code === "38TC-C34QN-WIFI" ? (
-                  <Link
-                    href="/products/cctv-systems/wifi/38TC-C34QN-WIFI"
-                    className="details-btn"
-                  >
-                    Details
-                  </Link>
-                ) : (
-                  <button className="details-btn">
-                    Details
-                  </button>
-                )}
+                <Link
+                  href={`/products/cctv-systems/wifi/${product.code}`}
+                  className="details-btn"
+                >
+                  Details
+                </Link>
               </div>
             </div>
           ))}
