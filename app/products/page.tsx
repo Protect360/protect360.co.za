@@ -48,10 +48,6 @@ export default function Products() {
       <section className="products-section">
         <h1>Products</h1>
 
-        <p className="products-subtitle">
-          Browse our available security solutions and product categories.
-        </p>
-
         <div className="products-controls">
           <input
             type="text"
@@ -60,7 +56,10 @@ export default function Products() {
             disabled
           />
 
-          <select className="products-filter" disabled>
+          <select
+            className="products-filter"
+            disabled
+          >
             <option>All Categories</option>
           </select>
         </div>
@@ -72,10 +71,6 @@ export default function Products() {
               className="category-card"
             >
               <h2>{category.title}</h2>
-
-              <p>
-                Products coming soon.
-              </p>
 
               <Link
                 href={`/products/${category.slug}`}
